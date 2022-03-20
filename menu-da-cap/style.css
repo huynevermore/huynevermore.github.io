@@ -47,7 +47,8 @@ ul {
     color: #f36d00;
 }
 .menu li:hover .sub-menu,
-.menu li:hover .sub-menu1
+.menu li:hover .sub-menu1,
+.menu li:hover .sub-menu2
  {
     display: block;
 
@@ -57,7 +58,8 @@ ul {
     background-color: #eceff1;
 }
 .sub-menu,
-.sub-menu1
+.sub-menu1,
+.sub-menu2
 {
     position: absolute;
     top:0;
@@ -72,7 +74,8 @@ ul {
 
 
 .sub-menu>li:hover a,
-.sub-menu1>li:hover a
+.sub-menu1>li:hover a,
+.sub-menu2>li:hover a
 {
     background-color: #eceff1;
     color: #f36d00;
