@@ -1,0 +1,41 @@
+* {
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+h1 {
+  text-align: center;
+  font-size: 40px;
+  margin: 20px auto;
+  color: #16a085;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+.contain {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 4px 16px;
+  box-sizing: border-box;
+}
+.flower {
+  width: 30%;
+  height: 500px;
+  margin: 16px;
+  box-shadow: 3px 3px 3px #16a085;
+  border-radius: 10px;
+}
+.flower-img img {
+  height: 400px;
+  width: 100%;
+  object-fit: cover;
+}
+.flower-name p {
+  text-align: center;
+  color: #16a085;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
