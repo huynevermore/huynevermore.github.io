@@ -30,7 +30,7 @@ a {
   margin: 16px;
   box-shadow: 3px 3px 3px #16a085;
   border-radius: 10px;
-  transition: 0.3;
+  transition: 0.5s;
 }
 .flower:hover{
     transform: scale(1.01);
