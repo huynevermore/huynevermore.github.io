@@ -30,12 +30,17 @@ a {
   margin: 16px;
   box-shadow: 3px 3px 3px #16a085;
   border-radius: 10px;
+  transition: 0.3;
+}
+.flower:hover{
+    transform: scale(1.01);
 }
 .flower-img img {
   height: 400px;
   width: 100%;
   object-fit: cover;
 }
+
 .flower-name p {
   text-align: center;
   color: #16a085;
