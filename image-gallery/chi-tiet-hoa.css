@@ -37,6 +37,7 @@ a:hover {
   box-sizing: border-box;
   box-shadow: 3px 3px 3px #16a085;
   border-radius: 10px;
+  background-color: antiquewhite;
 }
 .flower-img img {
   object-fit: cover;
@@ -44,7 +45,9 @@ a:hover {
   height: 600px;
   margin: auto;
 }
+.flower-detail{
 
+}
 .flower-name {
   font-size: 24px;
   font-weight: 600;
@@ -52,6 +55,9 @@ a:hover {
 }
 
 .flower-desc {
+  color: #991f13;
   font-size: 20px;
   line-height: 1.6;
+  text-shadow: 1px 1px 1px #95a5a6;
+  
 }
