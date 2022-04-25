@@ -76,8 +76,20 @@ a {
     font-weight: 700;
 }
 
-@media only screen and (max-width:550px) {
+@media only screen and (max-width: 550px) {
     .contain {
         grid-template-columns: 1fr;
+    }
+    .flower {
+        height: 400px;
+    }
+}
+
+@media only screen and (max-width: 900px) and (min-width:551px) {
+    .contain {
+        grid-template-columns: 1fr 1fr;
+    }
+    .flower {
+        height: 400px;
     }
 }
