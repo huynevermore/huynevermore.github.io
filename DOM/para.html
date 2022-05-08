@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="param-1" class="param">
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      Lorem Ipsum has been the industry's standard dummy text ever since the
+      1500s, when an unknown printer took a galley of type and scrambled it to
+      make a type specimen book. It has survived not only five centuries, but
+      also the leap into electronic typesetting, remaining essentially
+      unchanged. It was popularised in the 1960s with the release of Letraset
+      sheets containing Lorem Ipsum passages, and more recently with desktop
+      publishing software like Aldus PageMaker including versions of Lorem
+      Ipsum.
+    </div>
+
+    <div id="param-2" class="param">
+      Contrary to popular belief, Lorem Ipsum is not simply random text. It has
+      roots in a piece of classical Latin literature from 45 BC, making it over
+      2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney
+      College in Virginia, looked up one of the more obscure Latin words,
+      consectetur, from a Lorem Ipsum passage, and going through the cites of
+      the word in classical literature, discovered the undoubtable source. Lorem
+      Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et
+      Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This
+      book is a treatise on the theory of ethics, very popular during the
+      Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit
+      amet..", comes from a line in section 1.10.32.
+    </div>
+    <div id="param-3" class="param">
+      The standard chunk of Lorem Ipsum used since the 1500s is reproduced below
+      for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus
+      Bonorum et Malorum" by Cicero are also reproduced in their exact original
+      form, accompanied by English versions from the 1914 translation by H.
+      Rackham.
+    </div>
+    <p id="text">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur debitis
+      pariatur accusantium eius, tempora, dignissimos eaque deleniti temporibus
+      magnam molestiae inventore id ut atque impedit ab cum? Id, aut placeat!
+    </p>
+
+    <ul>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+  </ul>
+    <script>
+      function changeColor() {
+        document.getElementById("param-1").style.color = "green";
+        document.getElementById("param-2").style.color = "yellow";
+        document.getElementById("param-3").style.color = "red";
+      }
+      changeColor();
+      function changeBgColor(color) {
+        document.body.style.background = color;
+      }
+      changeBgColor("#ccc");
+      function changeFontSize(x) {
+        document.getElementById("param-1").style.fontSize = x + "px";
+        document.getElementById("param-2").style.fontSize = x + "px";
+        document.getElementById("param-3").style.fontSize = x + "px";
+      }
+      changeFontSize(50);
+
+      // function increaseFontSize(id){
+      //     let para = document.getElementById(id);
+      //     let currentFontSize= window.getComputedStyle(para).getPropertyValue("font-size");
+      //     let newCurrentFontSize =parseInt(currentFontSize.replace("px",""));
+      //     newCurrentFontSize +=1;
+      //     document.getElementById(id).style.fontSize = newCurrentFontSize +"px"
+      // }
+      // increaseFontSize("param-1")
+      function increaseFontSize(id) {
+        let para = document.getElementById(id);
+        let currentFontSize = window
+          .getComputedStyle(para)
+          .getPropertyValue("font-size");
+        let newCurrentFontSize = parseInt(currentFontSize.replace("px", ""));
+        newCurrentFontSize += 1;
+        if (newCurrentFontSize <= 30) {
+          document.getElementById(id).style.fontSize =
+            newCurrentFontSize + "px";
+        } else document.getElementById(id).style.fontSize = "30px";
+      }
+      increaseFontSize("param-1");
+
+      function copyContent(x, y) {
+        let text = document.querySelector(
+          `.param:nth-of-type(${y})`
+        ).textContent;
+        document.querySelector(`.param:nth-of-type(${x})`).textContent = text;
+      }
+      copyContent(1, 2);
+    </script>
+  </body>
+</html>
