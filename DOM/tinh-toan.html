@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        font-size: 20px;
+      }
+
+      span {
+        margin: 0 15px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div>
+      <button id="tru">-</button>
+      <span id="result">0</span>
+      <button id="cong">+</button>
+      <script>
+        let tru = document.getElementById("tru");
+        let cong = document.getElementById("cong");
+        let result = document.getElementById("result");
+        function changeColor() {
+          if (parseInt(result.innerText) < 0) {
+            result.style.color = "red";
+          } else if (parseInt(result.innerText) > 0) {
+            result.style.color = "blue";
+          } else if (parseInt(result.innerText) == 0) {
+            result.style.color = "#333333";
+          }
+        }
+        function clickAdd() {
+          let currentResult = parseInt(result.innerText) + 1;
+          result.textContent = currentResult;
+          changeColor();
+        }
+        function clickMinus() {
+          let currentResult = parseInt(result.innerText) - 1;
+          result.textContent = currentResult;
+          changeColor();
+        }
+
+        cong.addEventListener("click", clickAdd);
+        tru.addEventListener("click", clickMinus);
+      </script>
+    </div>
+  </body>
+</html>
