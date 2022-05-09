@@ -46,6 +46,7 @@
 
     <script>
       // Viết mã ở đây
+
       let colors = ["#3498db", "#9b59b6", "#e74c3c", "#2c3e50", "#d35400"];
       let btn = document.getElementById("btn");
       let boxes = document.querySelector(".boxes");
@@ -64,9 +65,10 @@
           x.className = "box";
           x.style.backgroundColor = colors[i];
           document.querySelector(".boxes").appendChild(x);
-          totalBox();
         }
+        totalBox();
       }
+      moreBox();
       btn.addEventListener("click", moreBox);
       boxes.addEventListener("click", deleteBox);
     </script>
