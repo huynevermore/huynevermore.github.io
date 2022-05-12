@@ -24,6 +24,10 @@
     </ul>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
+      let li1=$('ul li')[0];
+      $(li1).css('color','red')
+      let li3=$('ul li')[2];
+      $(li3).css('background','blue')
       console.log($("ul li"));
       for (let i = 8; i <= 10; i++) {
         let li = document.createElement("li");
