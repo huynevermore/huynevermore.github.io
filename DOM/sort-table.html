@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      td {
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Bài 5</h1>
+    <!--  
+Cho table với dữ liệu như sau. Hãy viết hàm sortByAge để sort học viên theo độ tuổi từ lớn đến bé và in lại vào table.
+-->
+    <table id="table">
+      <thead>
+        <tr>
+          <th>Họ</th>
+          <th>Tên</th>
+          <th>Tuổi</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Đỗ</td>
+          <td>Tiến Anh</td>
+          <td>20</td>
+        </tr>
+        <tr>
+          <td>Đỗ</td>
+          <td>Hồng Quân</td>
+          <td>19</td>
+        </tr>
+        <tr>
+          <td>Cung</td>
+          <td>Toàn</td>
+          <td>28</td>
+        </tr>
+        <tr>
+          <td>Trịnh</td>
+          <td>Nam</td>
+          <td>22</td>
+        </tr>
+        <tr>
+          <td>Phạm</td>
+          <td>Phúc</td>
+          <td>18</td>
+        </tr>
+      </tbody>
+    </table>
+    <script>
+      function sortByAge() {
+        let table = document.getElementById("table");
+        let trs = table.rows; // lấy ra list row của table
+
+        Array.from(trs) // sort tr có thuộc tính cell
+          .sort(function (a, b) {
+            return b.cells[2].textContent - a.cells[2].textContent;
+          })
+          .forEach(function (tr) {
+            return table.tBodies[0].appendChild(tr);
+          }); // for list r append vào table
+      }
+      sortByAge();
+    </script>
+  </body>
+</html>

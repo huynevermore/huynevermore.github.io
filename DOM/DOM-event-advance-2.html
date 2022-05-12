@@ -1,51 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <style>
-        body{
-            background-color: #74b9ff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-        }
-        *{
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-        }
-        #container{
-            margin-top: 100px;
-            height: 50vh;
-            width: 80%;
-            background-color: #ffffff;
-        }
-        #tittle{
-            background-color: #0984e3;
-            width: 100%;
-        }
-        .box{
-            padding: 30px;
-        }
-    </style>
-</head>
-<body>
-    <div id="container">
-        <div id="tittle">
-            <p>THỬ TÀI TÍNH TOÁN NÀO CÁC BẠN ƠI!</p>
+  </head>
+  <style>
+    body {
+      background: #1890ff;
+    }
+
+    .cantainer {
+      margin: 100px auto;
+      background: white;
+      width: 500px;
+      height: 300px;
+      padding: 0 30px;
+    }
+
+    .frame {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      justify-content: space-around;
+    }
+
+    input {
+      width: 50px;
+      height: 50px;
+      font-size: 24px;
+      text-align: center;
+      border: 2px solid rgb(14, 64, 156);
+      outline: none;
+    }
+
+    button {
+      width: 80px;
+      height: 40px;
+    }
+    button:hover {
+      background: #1890ff;
+      border: none;
+      color: white;
+    }
+    .text {
+      text-align: center;
+      width: 100%;
+      background: rgb(14, 64, 156);
+      height: 50px;
+    }
+    .text p {
+      height: 100%;
+      margin: 0;
+      justify-content: center;
+      display: flex;
+      align-items: center;
+      font-size: 17px;
+      font-weight: 600;
+    }
+  </style>
+
+  <body>
+    <div class="cantainer">
+      <div class="text">
+        <p>THỬ TÀI TÍNH TOÁN NÀO BẠN ƠI</p>
+      </div>
+      <div
+        style="display: flex; align-items: center; height: calc(100% - 50px)"
+      >
+        <div class="frame">
+          <input class="input1" type="text" />
+          <span style="height: 30px; width: 50px">
+            <select
+              id="cars"
+              style="height: 100%; width: 100%; font-size: 26px"
+            >
+              <option value="*">*</option>
+              <option value="-">-</option>
+              <option value="+">+</option>
+              <option value="/">/</option>
+            </select>
+          </span>
+          <input class="input2" type="text" />
+          <span style="font-size: 26px">=</span>
+          <input class="input3" type="text" />
+          <button>Kiểm tra</button>
         </div>
-        <div id="content">
-            <input type="text" class="box"></input>
-            <span>+</span>
-            <input type="text" class="box"></input>
-            <span>=</span>
-            <input type="text" class="box"></input>
-            <button id="btn">Kiểm tra</button>
-        </div>
+      </div>
     </div>
-</body>
+
+    <script>
+      var btn = document.querySelector("button");
+      var operators = document.querySelector("#cars");
+      var input1 = document.querySelector(".input1");
+      var input2 = document.querySelector(".input2");
+      var input3 = document.querySelector(".input3");
+
+      const listOperators = ["+", "-", "*", "/"];
+
+      let mapOperator = {
+        "+": function (a, b) {
+          return a + b;
+        },
+        "-": function (a, b) {
+          return a - b;
+        },
+        "*": function (a, b) {
+          return a * b;
+        },
+        "/": function (a, b) {
+          return a / b;
+        },
+      };
+
+      function random() {
+        input1.value = Math.floor(Math.random() * 10);
+        input2.value = Math.floor(Math.random() * 10);
+        // TODO: random phép tính mỗi lần load trang
+      }
+
+      function condition(res, vl3) {
+        if (res === +vl3) {
+          alert("đúng");
+        } else {
+          alert("sai");
+        }
+        input3.value = "";
+        random();
+      }
+
+      btn.onclick = function () {
+        var data = operators.value;
+        var vl1 = input1.value;
+        var vl2 = input2.value;
+        var vl3 = input3.value;
+        let result = mapOperator[data](+vl1, +vl2);
+        condition(result, vl3);
+      };
+
+      window.addEventListener("load", random);
+    </script>
+  </body>
 </html>

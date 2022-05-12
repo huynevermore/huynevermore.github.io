@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="text">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius, dolorum
+      ducimus architecto magni sequi nisi obcaecati natus quaerat magnam
+      veritatis! Ea minima odit unde aliquam voluptatibus doloremque illum ad
+      molestiae?
+    </p>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $("#text").css({'color':'#777','font-size':'2rem'}).html("Tôi có thể làm <em> bất cứ điều gì </em> tôi muốn với JavaScript.");
+
+        for(let i=0; i<$("ul li").length;i++){
+            $("li").css("color","blue")
+        }
+    </script>
+  </body>
+</html>
