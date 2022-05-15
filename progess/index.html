@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Progress</title>
+    <style>
+      #myProgress {
+        width: 100%;
+        background-color: #ccc;
+        border-radius: 10px;
+        overflow: hidden;
+      }
+
+      #myBar {
+        width: 0%;
+        height: 30px;
+        background-color: blue;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+      }
+      #btn-gr {
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 30px;
+      }
+      button {
+        padding: 10px;
+        color: #ccc;
+        font-weight: 600;
+        background-color: blue;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        min-width: 150px;
+        cursor: pointer;
+        transition: 0.2s linear;
+      }
+      button:hover {
+        opacity: 0.7;
+      }
+      #percent {
+        color: white;
+        font-size: 16px;
+        display: flex;
+        justify-content: center;
+        line-height: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="myProgress">
+      <div id="myBar"><span id="percent"></span></div>
+    </div>
+    <div id="btn-gr">
+      <button id="start">Start</button>
+      <button id="active">Pause</button>
+      <button id="reset">Reset</button>
+    </div>
+    <script>
+      let btnStart = document.getElementById("start");
+      let percent = document.getElementById("percent");
+      let bar = document.getElementById("myBar");
+      let active = document.getElementById("active");
+      let btnReset = document.getElementById("reset");
+      let interval;
+      let width = 0;
+      active.disabled = true;
+      active.style.opacity = "0.4";
+      function move() {
+        clearInterval(interval);
+        interval = setInterval(frame, 1000);
+
+        function frame() {
+          if (width >= 100) {
+            clearInterval(interval);
+          } else {
+            width++;
+            bar.style.width = width + "%";
+          }
+          percent.innerText = width + "%";
+        }
+        btnStart.style.opacity = "0.4";
+        btnStart.disabled = true;
+        active.disabled = false;
+        active.style.opacity = "1";
+      }
+
+      function reset() {
+        clearInterval(interval);
+        width = 0;
+        bar.style.width = "0%";
+        percent.innerHTML = "";
+        btnStart.disabled = false;
+        btnStart.style.opacity = "1";
+        active.disabled = true;
+        active.style.opacity = "0.4";
+      }
+
+      function pause() {
+        clearInterval(interval);
+        active.innerHTML = "Resume";
+      }
+      function resume() {
+        active.innerHTML = "Pause";
+        interval = setInterval(frame, 1000);
+
+        function frame() {
+          if (width >= 100) {
+            clearInterval(interval);
+          } else {
+            width++;
+            bar.style.width = width + "%";
+          }
+          percent.innerText = width + "%";
+        }
+      }
+
+      btnStart.addEventListener("click", move);
+      active.addEventListener("click", pause);
+
+      // Doan nay sai cho nao vay a ?
+      if (active.innerText == "Pause") {
+        active.addEventListener("click", pause);
+      } else if (active.innerText == "Resume") {
+        active.removeEventListener();
+        active.addEventListener("click", resume);
+      }
+      //
+      btnReset.addEventListener("click", reset);
+    </script>
+  </body>
+</html>

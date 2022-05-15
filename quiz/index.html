@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Quiz</title>
+  </head>
+  <body>
+    <div id="container">
+      <div class="totalAnswerCorrect">
+        <span class="answerCorrect">3</span> /
+        <span class="totalQuestion">5</span>
+      </div>
+      <div id="question">Câu hỏi</div>
+
+      <div id="listAnswer">
+          <div class="answer"></div>
+          <div class="answer"></div>
+          <div class="answer"></div>
+          <div class="answer"></div>
+      </div>
+      <button class="btn">Tiếp tục</button>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      let data = {
+        1: {
+          question: "Chữ đầu tiên trong bảng chữ cái là gì ?",
+          answer: ["a", "b", "c", "d"],
+          correctAnser: "a",
+        },
+        2: {
+          question: "Con chó có mấy chân",
+          answer: ["1", "2", "3", "4"],
+          correctAnser: "4",
+        },
+        3: {
+          question: "Thủ đô của Việt Nam ở đâu?",
+          answer: ["Yên Bái", "Hà Nội", "Sơn La", "Điện Biên"],
+          correctAnser: "Hà Nội",
+        },
+        4: {
+          question: "Techmaster là trung tâm về ngành gì?",
+          answer: ["Nấu ăn", "Thời trang", "Công nghệ", "Kinh tế"],
+          correctAnser: "Công nghệ",
+        },
+        5: {
+          question: "Việt Nam có bao nhiêu tỉnh?",
+          answer: ["60", "61", "62", "63"],
+          correctAnser: "3",
+        },
+      };
+      //Render quiz
+      let curentQuiz = 1;
+      function renderQuiz() {
+        let quiz = data[curentQuiz];
+        $("#question").text(quiz.question);
+        let frag= new DocumentFragment
+        for (let i = 0; i < quiz.answer.length; i++) {
+        //   let answer = document.createElement("div");
+        //   answer.className = "answer";
+          let x=$(`<div class="answer"></div>`);
+          $(x).text(quiz.answer[i])
+          $(frag).append(x)// append cái element có rồi nó chỉ đẩy lên chứ ko thêm vào
+        }
+        $('#listAnswer').html(frag)
+      }
+      renderQuiz();
+
+
+      function nextQuestion(){
+        curentQuiz+=1;
+        renderQuiz() 
+        
+      }
+      $('.btn').on('click',nextQuestion)
+    </script>
+  </body>
+</html>
