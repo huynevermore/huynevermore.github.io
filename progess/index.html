@@ -93,6 +93,7 @@
         percent.innerHTML = "";
         btnStart.disabled = false;
         btnStart.style.opacity = "1";
+        active.innerHTML = "Pause";
         active.disabled = true;
         active.style.opacity = "0.4";
       }
@@ -117,15 +118,36 @@
       }
 
       btnStart.addEventListener("click", move);
-      active.addEventListener("click", pause);
+      active.addEventListener("click", function () {
+        if (active.innerText == "Pause") {
+          pause();
+        } else if (active.innerText == "Resume") {
+          resume();
+        }
+      });
 
       // Doan nay sai cho nao vay a ?
-      if (active.innerText == "Pause") {
-        active.addEventListener("click", pause);
-      } else if (active.innerText == "Resume") {
-        active.addEventListener("click", resume);
-      }
+
       //
+
+      // active.addEventListener("click", function(e) {
+      //   const text = active.innerText.toLowerCase();
+      //   switch (text) {
+      //     case "pause":
+      //       pause();
+      //       active.innerText = "Resume";
+      //       break;
+
+      //     case "resume":
+      //       resume();
+      //       active.innerText = "Pause";
+      //       break;
+
+      //     default:
+      //     // nothing to do
+      //   }
+      // });
+
       btnReset.addEventListener("click", reset);
     </script>
   </body>
