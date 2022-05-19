@@ -19,7 +19,7 @@
   <body>
     <div>
       <button id="tru">-</button>
-      <span id="result">0</span>
+      <input type="text" id="result" value="0"></input>
       <button id="cong">+</button>
       <script>
         let tru = document.getElementById("tru");
@@ -35,14 +35,16 @@
           }
         }
         function clickAdd() {
-          let currentResult = parseInt(result.innerText) + 1;
-          result.textContent = currentResult;
-          changeColor();
+          let currentResult = parseInt(result.value) + 1;
+          result.value = currentResult;
         }
         function clickMinus() {
-          let currentResult = parseInt(result.innerText) - 1;
-          result.textContent = currentResult;
-          changeColor();
+          let currentResult = parseInt(result.value) - 1;
+         if(currentResult<0){
+          result.value=0;
+         } else{
+          result.value = currentResult;
+         }
         }
 
         cong.addEventListener("click", clickAdd);
