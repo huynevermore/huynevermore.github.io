@@ -75,10 +75,11 @@
               <div class="row ">
                 <div class="col-xl-8">
                   <div class="row w-100 ">
-                    <div class="col-xl-4  padding0 bg-colorf1"><img src="img/image 41.png" alt=""  class="max-w100 block m-auto p-3"></div>
+                    <div class="col-xl-4  padding0 bg-colorf1"><img src="img/image 41.png" alt=""
+                        class="max-w100 block m-auto p-3"></div>
                     <div class="col-xl-8 h-100">
                       <p class="font-size-15rem ">Way Kambas Mini Ebony</p>
-                      <p id="sale-off-price"  class="sale-off-price">Rp 1.280.000</p>
+                      <p id="sale-off-price" class="sale-off-price">Rp 1.280.000</p>
                       <p id="current-price" class="current-price">Rp 1.024.000</p>
                       <p>Custom Engrave</p>
                       <p>“Happy | Birthday | from”</p>
@@ -92,7 +93,7 @@
                     <option value="saab">Saab</option>
                     <option value="opel">Opel</option>
                     <option value="audi">Audi</option>
-                  </select> 
+                  </select>
                   <div class="mt-xl-4 mt-4 padding-child-03rem">
                     <button id="cart-add">+</button>
                     <span id="cart-count">10</span>
@@ -109,7 +110,8 @@
               <div class="row mt-4 cus-hr">
                 <div class="col-xl-8">
                   <div class="row w-100 ">
-                    <div class="col-xl-4  padding0 bg-colorf1"><img src="img/image 41.png" alt=""  class="max-w100 block m-auto p-3"></div>
+                    <div class="col-xl-4  padding0 bg-colorf1"><img src="img/image 41.png" alt=""
+                        class="max-w100 block m-auto p-3"></div>
                     <div class="col-xl-8 h-100">
                       <p class="font-size-15rem ">Way Kambas Mini Ebony</p>
                       <p class="sale-off-price">Rp 1.280.000</p>
@@ -126,7 +128,7 @@
                     <option value="saab">Saab</option>
                     <option value="opel">Opel</option>
                     <option value="audi">Audi</option>
-                  </select> 
+                  </select>
                   <div class="mt-xl-4 mt-4 padding-child-03rem">
                     <button id="cart-add">-</button>
                     <span id="cart-count">10</span>
@@ -140,7 +142,7 @@
               <div class="row cus-hr mt-4">
                 <div class="col-xl-6 d-flex justify-content-around align-center">
                   <span class="sale-off-cart color333">Kode Promo</span>
-                  <input type="text" name="" id="" value="INDONESIA" >
+                  <input type="text" name="" id="" value="INDONESIA">
                   <span class="sale-off-cart">35% OFF</span>
                 </div>
                 <div class="col-xl-6 d-flex justify-content-around align-center margin-top-2rem">
@@ -489,25 +491,25 @@
       })
     }
 
-    let cartCount=$('#cart-count');
-    let add=$('#cart-add');
-    let minus=$('#cart-minus')
-    let currentPrice=$('#current-price').text();
-    add.on('click',function add(){
-      let currentCount=parseInt(cartCount.text())+1
+    let cartCount = $('#cart-count');
+    let add = $('#cart-add');
+    let minus = $('#cart-minus')
+    let currentPrice = $('#current-price').text();
+    add.on('click', function add() {
+      let currentCount = parseInt(cartCount.text()) + 1
       cartCount.text(currentCount)
       total()
     })
-    minus.on('click',function minus(){
-      let currentCount=parseInt(cartCount.text())-1
-      if(currentCount>0){
+    minus.on('click', function minus() {
+      let currentCount = parseInt(cartCount.text()) - 1
+      if (currentCount > 0) {
         cartCount.text(currentCount)
       }
       total()
     })
-    function total(){
-      let x= parseInt(currentPrice.replace('Rp ','').replaceAll('.','')) * parseInt(cartCount.text())
-      $('#total-cart').text('RP '+x)
+    function total() {
+      let x = parseInt(currentPrice.replace('Rp ', '').replaceAll('.', '')) * parseInt(cartCount.text())
+      $('#total-cart').text('RP ' + x)
 
     }
     total()

@@ -337,6 +337,12 @@
   font-weight: 600;
   font-size: 1.5rem;
   line-height: 2rem;
+  
+}
+#total-cart{
+  display: inline-block;
+  min-width: 200px;
+  text-align: center;
 }
 .sale-off-cart{
   font-size: 1.4rem;
