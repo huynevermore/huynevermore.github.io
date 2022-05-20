@@ -358,7 +358,10 @@
   line-height: 2rem;
   font-weight: 400;
 }
-.cus-hover>li:hover a{
-  background-color: papayawhip;
-  border-radius: 50%;
+
+@media screen and (max-width:575px) {
+  .modal-content {
+    transform: translate(9%, 10px);
+  }
+  
 }
