@@ -61,6 +61,7 @@
           <li class="nav-item">
             <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#cartModal">
               <i class="fa-solid fa-bag-shopping"></i></a>
+            <span id="cardItem"> </span>
           </li>
 
         </ul>
@@ -207,7 +208,7 @@
             <button id="tru">-</button>
             <input type="text" id="result" value="0" style="width:80px"></input>
             <button id="cong">+</button>
-            <div class="btn btn-outline-danger">
+            <div class="btn btn-outline-danger" id="addToCart">
               <i class="fa-solid fa-cart-plus"></i>Add to cart
             </div>
             <div class="btn btn-outline-danger">Cicil</div>
@@ -469,6 +470,7 @@
   <script>
 
 
+
     function clickAdd() {
       let currentResult = parseInt(result.value) + 1;
       result.value = currentResult;
@@ -513,6 +515,42 @@
 
     }
     total()
+
+
+    $(document).ready(function () {
+
+      let cart = JSON.parse(window.localStorage.getItem('cartItem')) || [];
+
+      $('#addToCart').click(function () {
+        console.log('init cart', cart);
+        let currentProduct = {
+          id: 2,
+          name: "product 2",
+          prices: 200000,
+        };
+        let numOfItem = parseInt($('#result').val());
+
+        if (cart.findIndex(product => product.id == currentProduct.id) == -1) {
+          // add to cart
+          console.log('add item to cart');
+          currentProduct.qty = numOfItem;
+          cart.push(currentProduct);
+          window.localStorage.setItem('cartItem', JSON.stringify(cart));
+
+        } else {
+          console.log('exist item in cart');
+          //update qty cart
+          let newCart = cart.map(o => {
+            if (o.id == currentProduct.id) {
+              o.qty += numOfItem
+            }
+          });
+          window.localStorage.setItem('cartItem', JSON.stringify(cart));
+        };
+        console.log('cart', cart);
+      });
+    })
+
 
   </script>
 </body>
