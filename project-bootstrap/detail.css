@@ -365,3 +365,12 @@
   }
   
 }
+.relative{
+  position: relative;
+}
+#cartItem{
+  position: absolute;
+  top: 0;
+  right: 0.7rem;
+  color: #d84727;
+}
