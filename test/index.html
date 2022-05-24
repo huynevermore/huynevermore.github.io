@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <table id="table">
+        <tr>
+            <th>Tên</th>
+            <th>Tuổi</th>
+            <th>Địa chỉ</th>
+        </tr>
+    </table> 
+    <script>
+        let localSR=JSON.parse(localStorage.getItem('localStorage'))// Lấy biến từ local SR
+       
+        let arr = [
+            { name: "huy", age: 16, address: "phu tho" },
+            { name: "Hoan", age: 23, address: "Ha noi" },
+        ];
+        localStorage.setItem('localStorage',JSON.stringify(arr));// Luu arr vào SR
+        function render(arr) {
+            let table = document.getElementById("table");
+            let content = arr.map(function (arr) {
+                return `<tr><td>${arr.age}</td><td>${arr.age}</td><td>${arr.address}</td></tr>`;
+            });
+            table.innerHTML += content.join('');
+        }
+        render(arr);
+    </script>
+</body>
+
+</html>

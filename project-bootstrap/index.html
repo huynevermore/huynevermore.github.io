@@ -717,39 +717,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-    <script>
-      function addToCart() {
-        console.log("init cart", cart);
-        let currentProduct = {
-          id: 2,
-          name: "product 2",
-          prices: 200000,
-        };
-        let numOfItem = parseInt($("#result").val());
-        let countCartItem = parseInt($("#cartItem").text());
-
-        if (
-          cart.findIndex((product) => product.id == currentProduct.id) == -1
-        ) {
-          // add to cart
-          console.log("add item to cart");
-          currentProduct.qty = numOfItem;
-          cart.push(currentProduct);
-          window.localStorage.setItem("cartItem", JSON.stringify(cart)); //Luu vao LS
-        } else {
-          console.log("exist item in cart");
-          //update qty cart
-          let newCart = cart.map((o) => {
-            if (o.id == currentProduct.id) {
-              o.qty += numOfItem;
-            }
-          });
-          window.localStorage.setItem("cartItem", JSON.stringify(cart)); //Luu vao LS
-        }
-        console.log("cart", cart);
-        $("#cartItem").text(cart[0].qty);
-        $("#cart-count").text(cart[0].qty);
-      }
+    <script src="main.js">
     </script>
   </body>
 </html>
