@@ -10,8 +10,8 @@ function clickMinus() {
     result.value = currentResult;
   }
 }
-cong.addEventListener("click", clickAdd);
-tru.addEventListener("click", clickMinus);
+document.getElementById('cong').addEventListener("click", clickAdd);
+document.getElementById('tru').addEventListener("click", clickMinus);
 
 for (let i = 0; i < $(".img-mini img").length; i++) {
   $($(".img-mini img")[i]).click(function () {
@@ -60,7 +60,7 @@ $(document).ready(function () {
   // $('#cartItem').text(cart[0].qty)
 
   function addToCart() {
-    console.log("init cart", cart);
+
     let currentProduct = {
       id: 2,
       name: "product 2",
@@ -94,4 +94,59 @@ $(document).ready(function () {
   $("#addToCart").click(addToCart);
 
   window.onload = addToCart();
+
+
+  $('#showCart').click(function(){
+
+    // lấy thông tin trong giỏ hàng
+    var strCart = window.localStorage.getItem('cartItem');
+    var cart = strCart ? JSON.parse(strCart) : [];
+
+    if(cart.length > 0){
+      for(let i = 0; i < cart.length; i++){
+        let item = cart[i];
+        let htmlItem = `<div class="row ">
+                <div class="col-xl-8">
+                  <div class="row w-100 ">
+                    <div class="col-xl-4  padding0 bg-colorf1"><img src="img/image 41.png" alt="" class="max-w100 block m-auto p-3"></div>
+                    <div class="col-xl-8 h-100">
+                      <p class="font-size-15rem ">Way Kambas Mini Ebony</p>
+                      <p id="sale-off-price" class="sale-off-price">Rp 1.280.000</p>
+                      <p id="current-price" class="current-price">Rp 1.024.000</p>
+                      <p>Custom Engrave</p>
+                      <p>“Happy | Birthday | from”</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-4  text-xl-end space-between-col">
+                  <p class="cus-select-packaging">Select Packaging</p>
+                  <select name="cars" id="watches" form="watchform">
+                    <option value="volvo">Wooden Packaging (Rp 50.000)</option>
+                    <option value="saab">Saab</option>
+                    <option value="opel">Opel</option>
+                    <option value="audi">Audi</option>
+                  </select>
+                  <div class="mt-xl-4 mt-4 padding-child-03rem">
+                    <button id="cart-add">+</button>
+                    <span id="cart-count">0</span>
+                    <button id="cart-minus">-</button>
+                    <span id="total-cart" class="current-price">RP 1024000</span>
+                    <i class="fa-solid fa-trash-can" style="color: #d84727; padding:3px; border:1px solid"></i>
+
+                  </div>
+                </div>
+              </div>`;
+        $('#cartContent').append(htmlItem);
+      }
+
+
+    } else {
+       $('#cartContent').append(`<p>không có sản phẩm trong giỏ hàng </p>`);
+    }
+    
+
+    // hiển thị giỏ hàng
+    $("#cartModal").modal("show");
+  });
+
 });
