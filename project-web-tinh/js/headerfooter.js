@@ -1,6 +1,6 @@
 let header = `<nav class="navbar navbar-expand-lg bg-white cus-padding-0 fixed-top">
 <div class="container-md ">
-  <a class="navbar-brand p-0 m-0" href="#">
+  <a class="navbar-brand p-0 m-0" href="index.html">
     <img src="img/about us/logo.png" alt="" width="80" />
   </a>
   <button
@@ -17,10 +17,10 @@ let header = `<nav class="navbar navbar-expand-lg bg-white cus-padding-0 fixed-t
   <div class="collapse navbar-collapse nav-header" id="navbarSupportedContent">
     <ul class="navbar-nav mb-2 mb-lg-0 cus-margin-auto">
       <li class="nav-item">
-        <a class="nav-link" href="#">Trang chủ</a>
+        <a class="nav-link" href="index.html">Trang chủ</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Sản phẩm</a>
+        <a class="nav-link" href="products.html">Sản phẩm</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Chúng tôi</a>
@@ -63,10 +63,10 @@ let footer = ` <div class="container-md margin-top-40 margin-bot-28">
   <div class="col-sm-6 col-lg-3 p-4 p-lg-5">
     <p class="footer-tittle">Menu</p>
     <div class="footer-list-item margin-top-28">
-      <a href="" class="footer-item">
+      <a href="index.html" class="footer-item">
         <p>Trang chủ</p>
       </a>
-      <a href="" class="footer-item">
+      <a href="products.html" class="footer-item">
         <p>Sản phẩm</p>
       </a>
       <a href="" class="footer-item">
@@ -164,7 +164,7 @@ let footer = ` <div class="container-md margin-top-40 margin-bot-28">
 </p>
 </div>`;
 
-window.onload = function () {
-  document.querySelector("#header").innerHTML = header;
-  document.querySelector("#footer").innerHTML = footer;
-};
+// window.onload = function () {
+//   document.querySelector("#header").innerHTML = header;
+//   document.querySelector("#footer").innerHTML = footer;
+// };

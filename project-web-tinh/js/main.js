@@ -197,7 +197,7 @@ const products = [
     origin: "Thái lan",
     type: "nuts",
     weight: 1,
-    img: "img/hat re/kisspng-ice-cream-hazelnut-flavor-praline-hazelnuts-5b21b10ddb9c54.4587866615289346698995.jpg",
+    img: "img/hat re/kisspng-ice-cream-hazelnut-flavor-praline-hazelnuts-5b21b10ddb9c54.4587866615289346698995-removebg-preview.png",
   },
   {
     id: 21,
@@ -360,5 +360,24 @@ const products = [
     img: "img/17.jpg",
   },
 ];
-
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+let btnCart = document.querySelector(".header .nav-cart");
+console.log(btnCart)
+let close =document.querySelector('span.close');
+let modalCart = document.querySelector(".modal-cart");
+console.log(modalCart)
+
+btnCart.addEventListener('click',()=>{
+  modalCart.style.display ="block";
+})
+
+close.addEventListener("click",()=>{
+  modalCart.style.display ="none";
+})
+
+window.onclick = function(event) {
+  if (event.target == modalCart) {
+    modalCart.style.display = "none";
+  }
+}

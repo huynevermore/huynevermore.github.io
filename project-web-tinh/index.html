@@ -32,10 +32,10 @@
 
   <body>
     <!-- Section header -->
-    <section id="header">
-      <!-- <nav class="navbar navbar-expand-lg navbar-light cus-padding-0">
-        <div class="container-md ">
-          <a class="navbar-brand p-0 m-0" href="#">
+    <section class="header">
+      <nav class="navbar navbar-expand-lg bg-white cus-padding-0 fixed-top">
+        <div class="container-md">
+          <a class="navbar-brand p-0 m-0" href="index.html">
             <img src="img/about us/logo.png" alt="" width="80" />
           </a>
           <button
@@ -49,50 +49,130 @@
           >
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse nav-header" id="navbarSupportedContent">
+          <div
+            class="collapse navbar-collapse nav-header"
+            id="navbarSupportedContent"
+          >
             <ul class="navbar-nav mb-2 mb-lg-0 cus-margin-auto">
               <li class="nav-item">
-                <a class="nav-link" href="#">Home</a>
+                <a class="nav-link" href="index.html">Trang chủ</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Products</a>
+                <a class="nav-link" href="products.html">Sản phẩm</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
+                <a class="nav-link" href="about-us.html">Chúng tôi</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Contact</a>
+                <a class="nav-link" href="contact.html">Liên hệ</a>
               </li>
             </ul>
             <ul class="navbar-nav mb-2 mb-lg-0">
               <li class="nav-item">
                 <a class="nav-link" href="#">
                   <div class="nav-search">
-                    <img src="img/icon/search.png" alt="">
+                    <img src="img/icon/search.png" alt="" />
                   </div>
                 </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">
                   <div class="nav-user">
-                    <img src="img/icon/user.png" alt="">
-                    
+                    <img src="img/icon/user.png" alt="" />
                   </div>
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">
+                <div class="nav-link">
                   <div class="nav-cart">
-                    <img src="img/icon/cart.png" alt="">
+                    <img src="img/icon/cart.png" alt="" />
                     <span>2</span>
                   </div>
-                </a>
+                </div>
               </li>
             </ul>
           </div>
         </div>
-      </nav> -->
+      </nav>
     </section>
+
+    <!-- section modal -->
+    <div class="modal-cart">
+      <div class="modal-cart-content">
+        <span class="close"><i class="fa-solid fa-xmark"></i></span>
+        <div class="wrap-cart-content">
+          <div class="list-items">
+            <div class="item">
+              <div class="item-main">
+                <div class="item-img">
+                  <img
+                    src="img/dao tien uc/upload_29119c10f90342c2b7a018c04455f1f3_large.png"
+                    alt=""
+                  />
+                </div>
+                <div class="item-info">
+                  <p class="item-info-name">Đào tiên úc</p>
+                  <p class="item-info-unit-price">Đơn giá: <span>10$</span></p>
+                  <p class="item-info-weight">Khối lượng: 1Kg</p>
+                </div>
+              </div>
+              <div class="item-remove">
+                <i class="fa-solid fa-trash-can"></i>
+              </div>
+            </div>
+            <div class="item">
+              <div class="item-main">
+                <div class="item-img">
+                  <img
+                    src="img/dao tien uc/upload_29119c10f90342c2b7a018c04455f1f3_large.png"
+                    alt=""
+                  />
+                </div>
+                <div class="item-info">
+                  <p class="item-info-name">Đào tiên úc</p>
+                  <p class="item-info-unit-price">Đơn giá: <span>10$</span></p>
+                  <p class="item-info-weight">Khối lượng: 1Kg</p>
+                </div>
+              </div>
+              <div class="item-remove">
+                <i class="fa-solid fa-trash-can"></i>
+              </div>
+            </div>
+            <div class="item">
+              <div class="item-main">
+                <div class="item-img">
+                  <img
+                    src="img/dao tien uc/upload_29119c10f90342c2b7a018c04455f1f3_large.png"
+                    alt=""
+                  />
+                </div>
+                <div class="item-info">
+                  <p class="item-info-name">Đào tiên úc</p>
+                  <p class="item-info-unit-price">Đơn giá: <span>10$</span></p>
+                  <p class="item-info-weight">Khối lượng: 1Kg</p>
+                </div>
+              </div>
+              <div class="item-remove">
+                <i class="fa-solid fa-trash-can"></i>
+              </div>
+            </div>
+          </div>
+          <div class="cart-content-bot">
+            <div class="sub-total">
+              <p>Tạm tính: <span>30$</span></p>
+            </div>
+            <div class="gr-button">
+              <a href="cart.html">
+                <button>Xem giỏ hàng</button>
+              </a>
+              <a href="checkout.html">
+                <button>Thanh toán</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Section Slider -->
     <section id="slider">
@@ -219,7 +299,7 @@
     <!-- Section about -->
     <section id="about">
       <div class="container-md margin-bot-40 margin-top-40">
-        <div class="row ">
+        <div class="row">
           <div class="col-md-5 col-lg-3 p-0">
             <div class="img-about">
               <img src="img/about us/about_us_home.jpg" alt="" />
@@ -236,38 +316,36 @@
               vụ, am hiểu về dinh dưỡng và y học.
             </p>
             <div class="container margin-top-40">
-         
-                <div class="row g-3">
-                  <div class="col-6 col-lg-3 cus-flex-center-vertical p-0">
-                    <div class="about-icon">
-                      <img src="img/icon/shipping truck.png" alt="" />
-                    </div>
-                    <p class="about-tittle cus-flex-center m-auto">FREESHIP</p>
-                    <p class="about-content m-auto">ORDER > 500$</p>
+              <div class="row g-3">
+                <div class="col-6 col-lg-3 cus-flex-center-vertical p-0">
+                  <div class="about-icon">
+                    <img src="img/icon/shipping truck.png" alt="" />
                   </div>
-                  <div class="col-6 col-lg-3 cus-flex-center-vertical p-0">
-                    <div class="about-icon">
-                      <img src="img/icon/headphone.png" alt="" />
-                    </div>
-                    <p class="about-tittle m-auto">SUPPORT</p>
-                    <p class="about-content m-auto">SUPPORT 24/24</p>
-                  </div>
-                  <div class="col-6 col-lg-3 cus-flex-center-vertical p-0">
-                    <div class="about-icon">
-                      <img src="img/icon/High quality.png" alt="" />
-                    </div>
-                    <p class="about-tittle m-auto">QUALITY</p>
-                    <p class="about-content m-auto">QUALITY ASSURANCE</p>
-                  </div>
-                  <div class="col-6 col-lg-3 cus-flex-center-vertical p-0">
-                    <div class="about-icon">
-                      <img src="img/icon/Contactless.png" alt="" />
-                    </div>
-                    <p class="about-tittle m-auto">CONTACT</p>
-                    <p class="about-content m-auto">1900 6789</p>
-                  </div>
+                  <p class="about-tittle cus-flex-center m-auto">FREESHIP</p>
+                  <p class="about-content m-auto">ORDER > 500$</p>
                 </div>
-             
+                <div class="col-6 col-lg-3 cus-flex-center-vertical p-0">
+                  <div class="about-icon">
+                    <img src="img/icon/headphone.png" alt="" />
+                  </div>
+                  <p class="about-tittle m-auto">SUPPORT</p>
+                  <p class="about-content m-auto">SUPPORT 24/24</p>
+                </div>
+                <div class="col-6 col-lg-3 cus-flex-center-vertical p-0">
+                  <div class="about-icon">
+                    <img src="img/icon/High quality.png" alt="" />
+                  </div>
+                  <p class="about-tittle m-auto">QUALITY</p>
+                  <p class="about-content m-auto">QUALITY ASSURANCE</p>
+                </div>
+                <div class="col-6 col-lg-3 cus-flex-center-vertical p-0">
+                  <div class="about-icon">
+                    <img src="img/icon/Contactless.png" alt="" />
+                  </div>
+                  <p class="about-tittle m-auto">CONTACT</p>
+                  <p class="about-content m-auto">1900 6789</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -275,7 +353,7 @@
     </section>
 
     <!-- Section Featured Products -->
-    <section id="featured-product">
+    <section class="featured-product bg-section">
       <div class="container-md margin-top-40 margin-bot-40">
         <p class="section-tittle text-center m-auto">sản phẩm nổi bật</p>
         <div class="row margin-top-40 g-3">
@@ -418,7 +496,7 @@
             ><span class="price-deal"> now 5$ only</span>
           </p>
 
-          <button>Mua ngay</button>
+          <button><a href="products.html">Xem thêm</a></button>
         </div>
       </div>
     </section>
@@ -756,7 +834,6 @@
       </div>
     </section>
 
-
     <!-- Section Map -->
     <section id="map" class="cus-padding-top-bot-20">
       <div class="container-fluid margin-bot-40 margin-top-40 p-0">
@@ -779,16 +856,16 @@
     </section>
 
     <!-- Section footer -->
-    <section id="footer">
-      <!-- <div class="container-md margin-top-40 margin-bot-28">
+    <section class="footer">
+      <div class="container-md margin-top-40 margin-bot-28">
         <div class="row g-lg-5 g-3">
           <div class="col-sm-6 col-lg-3 p-4 p-lg-5">
             <p class="footer-tittle">Menu</p>
             <div class="footer-list-item margin-top-28">
-              <a href="" class="footer-item">
+              <a href="index.html" class="footer-item">
                 <p>Trang chủ</p>
               </a>
-              <a href="" class="footer-item">
+              <a href="products.html" class="footer-item">
                 <p>Sản phẩm</p>
               </a>
               <a href="" class="footer-item">
@@ -800,24 +877,24 @@
             </div>
           </div>
           <div class="col-sm-6 col-lg-3 p-4 p-lg-5">
-            <p class="footer-tittle">Help</p>
+            <p class="footer-tittle">Giúp đỡ</p>
             <div class="footer-list-item margin-top-28">
               <a href="" class="footer-item">
-                <p>Shipping Information</p>
+                <p>Thông tin vận chuyển</p>
               </a>
               <a href="" class="footer-item">
-                <p>Returns & Exchange</p>
+                <p>Đổi và trả hàng</p>
               </a>
               <a href="" class="footer-item">
-                <p>Terms & Conditions</p>
+                <p>Điều khoản và điều kiện</p>
               </a>
               <a href="" class="footer-item">
-                <p>Privacy Policy</p>
+                <p>Chính sách bảo mật</p>
               </a>
             </div>
           </div>
           <div class="col-sm-6 col-lg-3 p-4 p-lg-5">
-            <p class="footer-tittle">Have a Questions?</p>
+            <p class="footer-tittle">Địa chỉ liên lạc</p>
             <div class="footer-list-item margin-top-28">
               <a href="" class="footer-item">
                 <p>
@@ -846,7 +923,7 @@
               tốt nhất cho cộng đồng.
             </p>
             <div class="footer-list-social">
-              <a href="https://www.youtube.com/c/TechMasterVietnam"
+              <a href="https://www.youtube.com/c/TechMasterVietnam "
                 ><div class="social-item">
                   <img src="img/social/youtube.png" alt="" /></div
               ></a>
@@ -855,7 +932,7 @@
                   <img src="img/social/Facebook.png" alt="" />
                 </div>
               </a>
-              <a href="https://www.instagram.com/thieuduongthuamuoi/ ">
+              <a href="https://www.instagram.com/thieuduongthuamuoi/">
                 <div class="social-item">
                   <img src="img/social/Instagram.png" alt="" />
                 </div>
@@ -884,8 +961,7 @@
           Copyright @ Made with a lot of <i class="fa-solid fa-heart"></i> by
           CQH
         </p>
-      </div> -->
-      <a href="http://" target="_blank" rel="noopener noreferrer"></a>
+      </div>
     </section>
 
     <!-- Bootstrap JavaScript Libraries -->
@@ -906,8 +982,5 @@
     ></script>
     <script src="js/main.js"></script>
     <script src="js/headerfooter.js"></script>
-
   </body>
 </html>
-
-
