@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Title</title>
+    <title>Sản phẩm</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta
@@ -29,8 +29,8 @@
     />
   </head>
   <body>
-     <!-- Section header -->
-     <section class="header">
+    <!-- Section header -->
+    <section class="header">
       <nav class="navbar navbar-expand-lg bg-white cus-padding-0 fixed-top">
         <div class="container-md">
           <a class="navbar-brand p-0 m-0" href="index.html">
@@ -114,7 +114,9 @@
                   <p class="item-info-weight">Khối lượng: 1Kg</p>
                 </div>
               </div>
-              <div class="item-remove"><i class="fa-solid fa-trash-can"></i></div>
+              <div class="item-remove">
+                <i class="fa-solid fa-trash-can"></i>
+              </div>
             </div>
             <div class="item">
               <div class="item-main">
@@ -130,7 +132,9 @@
                   <p class="item-info-weight">Khối lượng: 1Kg</p>
                 </div>
               </div>
-              <div class="item-remove"><i class="fa-solid fa-trash-can"></i></div>
+              <div class="item-remove">
+                <i class="fa-solid fa-trash-can"></i>
+              </div>
             </div>
             <div class="item">
               <div class="item-main">
@@ -146,23 +150,24 @@
                   <p class="item-info-weight">Khối lượng: 1Kg</p>
                 </div>
               </div>
-              <div class="item-remove"><i class="fa-solid fa-trash-can"></i></div>
+              <div class="item-remove">
+                <i class="fa-solid fa-trash-can"></i>
+              </div>
             </div>
-            
           </div>
-        <div class="cart-content-bot">
-          <div class="sub-total">
-            <p>Tạm tính: <span>30$</span></p>
-          </div> 
-          <div class="gr-button">
-            <a href="cart.html">
-              <button>Xem giỏ hàng</button>
-            </a>
-            <a href="checkout.html">
-              <button>Thanh toán</button>
-            </a>
+          <div class="cart-content-bot">
+            <div class="sub-total">
+              <p>Tạm tính: <span>30$</span></p>
+            </div>
+            <div class="gr-button">
+              <a href="cart.html">
+                <button>Xem giỏ hàng</button>
+              </a>
+              <a href="checkout.html">
+                <button>Thanh toán</button>
+              </a>
+            </div>
           </div>
-        </div>
         </div>
       </div>
     </div>
@@ -191,19 +196,19 @@
                   <p>Theo loại</p>
                   <ul class="type-filter">
                     <li class="item-filter">
-                      <input type="radio" name="type" id="type1" />
+                      <input type="radio" name="type" id="type1" value="" onchange="filterType('rau xanh')"/>
                       <label for="type1">Rau xanh</label>
                     </li>
                     <li class="item-filter">
-                      <input type="radio" name="type" id="type2" />
+                      <input type="radio" name="type" id="type2" onchange="filterType('trái cây')"/>
                       <label for="type2">Trái cây</label>
                     </li>
                     <li class="item-filter">
-                      <input type="radio" name="type" id="type3" />
+                      <input type="radio" name="type" id="type3" onchange="filterType('hạt')"/>
                       <label for="type3">Hạt</label>
                     </li>
                     <li class="item-filter">
-                      <input type="radio" name="type" id="type4" checked />
+                      <input type="radio" name="type" id="type4" checked onchange="renderProduct(products)"/>
                       <label for="type4">Tất cả</label>
                     </li>
                   </ul>
@@ -212,44 +217,44 @@
                   <p>Theo xuất xứ</p>
                   <ul class="origin-filter">
                     <li class="item-filter">
-                      <input type="radio" name="origin" id="origin1" />
+                      <input type="radio" name="origin" id="origin1" onchange="filterOrigin1('việt nam')"/>
                       <label for="origin1">Trong nước</label>
                     </li>
                     <li class="item-filter">
-                      <input type="radio" name="origin" id="origin2" />
+                      <input type="radio" name="origin" id="origin2" onchange="filterOrigin2('việt nam')"/>
                       <label for="origin2">Nhập khẩu</label>
                     </li>
                     <li class="item-filter">
-                      <input type="radio" name="origin" id="origin3" checked />
+                      <input type="radio" name="origin" id="origin3" checked onchange="renderProduct(products)"/>
                       <label for="origin3">Tất cả</label>
                     </li>
                   </ul>
                 </div>
                 <div class="filter-by-price">
-                  <p>Theo giá</p>
+                  <p>Theo giá gốc</p>
                   <ul class="price-filter">
                     <li class="item-filter">
-                      <input type="radio" name="price" id="price1" />
+                      <input type="radio" name="price" id="price1" onchange="sortPrice1()"/>
                       <label for="price1">Cao - Thấp</label>
                     </li>
                     <li class="item-filter">
-                      <input type="radio" name="price" id="price2" />
+                      <input type="radio" name="price" id="price2" onchange="sortPrice2()"/>
                       <label for="price2">Thấp - Cao</label>
                     </li>
                     <li class="item-filter">
-                      <input type="radio" name="price" id="price3" />
+                      <input type="radio" name="price" id="price3" onchange="filterPrice2(10)"/>
                       <label for="price3">Dưới 10$</label>
                     </li>
                     <li class="item-filter">
-                      <input type="radio" name="price" id="price4" />
+                      <input type="radio" name="price" id="price4" onchange="filterPrice(20,10)"/>
                       <label for="price4">Từ 10$ - 20$</label>
                     </li>
                     <li class="item-filter">
-                      <input type="radio" name="price" id="price5" />
+                      <input type="radio" name="price" id="price5" onchange="filterPrice3(20)"/>
                       <label for="price5">Trên 20$</label>
                     </li>
                     <li class="item-filter">
-                      <input type="radio" name="price" id="price6" checked />
+                      <input type="radio" name="price" id="price6" checked onchange="renderProduct(products)"/>
                       <label for="price6">Tất cả</label>
                     </li>
                   </ul>
@@ -258,14 +263,19 @@
             </div>
           </div>
           <div class="col-md-8 col-lg-10">
-           <div class="form-search-product">
-            <form action="" class="form-search margin-bot-28">
-              <input type="search" name="" id="" placeholder="Tìm kiếm theo tên" >
-            </form>
-           </div>
+            <div class="form-search-product">
+              <form action="" class="form-search margin-bot-28">
+                <input
+                  type="search"
+                  name=""
+                  id=""
+                  placeholder="Tìm kiếm theo tên"
+                />
+              </form>
+            </div>
             <div class="category-main">
               <div class="row g-3">
-                <div class="col-sm-6 col-lg-3">
+                <!-- <div class="col-sm-6 col-lg-3">
                   <div class="product-item">
                     <div class="discount">17%</div>
                     <div class="product-container">
@@ -520,7 +530,7 @@
                       Add To Cart <i class="fa-solid fa-basket-shopping"></i>
                     </button>
                   </div>
-                </div>
+                </div> -->
               </div>
             </div>
           </div>
@@ -652,7 +662,8 @@
       src="https://kit.fontawesome.com/52ab85cd4c.js"
       crossorigin="anonymous"
     ></script>
-    <script src="js/headerfooter.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/products.js"></script>
+    
   </body>
 </html>

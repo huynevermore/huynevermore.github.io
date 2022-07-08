@@ -5,7 +5,7 @@ const products = [
     sale: 20,
     price: 10,
     origin: "England",
-    type: "fruit",
+    type: "trái cây",
     weight: 1,
     img: "img/acaiberry grande/1.png",
   },
@@ -15,7 +15,7 @@ const products = [
     sale: 17,
     price: 12,
     origin: "Việt Nam",
-    type: "vegetable",
+    type: "Rau xanh",
     weight: 1,
     img: "img/bap cai/bap cai trang-502x502.png",
   },
@@ -25,7 +25,7 @@ const products = [
     sale: 20,
     price: 5,
     origin: "Việt Nam",
-    type: "vegetable",
+    type: "Rau xanh",
     weight: 1,
     img: "img/bau sao/upload_1f43d8c85d4746dca19fdde7ca2371ba_large.png",
   },
@@ -35,7 +35,7 @@ const products = [
     sale: 10,
     price: 10,
     origin: "Việt Nam",
-    type: "vegetable",
+    type: "Rau xanh",
     weight: 1,
     img: "img/bi dao xanh/upload_9fc067dc7f5f4b588c77c35d742ec261_large.png",
   },
@@ -44,8 +44,8 @@ const products = [
     name: "bí xanh non",
     sale: 17,
     price: 12,
-    origin: "Việt Name",
-    type: "vegetable",
+    origin: "Việt Nam",
+    type: "Rau xanh",
     weight: 0.5,
     img: "img/bi xanh non/upload_6081d5ec19714919a95b8133648a60fc_large.png",
   },
@@ -55,7 +55,7 @@ const products = [
     sale: 20,
     price: 15,
     origin: "Việt Nam",
-    type: "fruit",
+    type: "trái cây",
     weight: 1,
     img: "img/buoi da xanh/buoi-502x502.png",
   },
@@ -64,8 +64,8 @@ const products = [
     name: "cải ngọt giống dài",
     sale: 20,
     price: 5,
-    origin: "Việt Name",
-    type: "vegetable",
+    origin: "Việt Nam",
+    type: "Rau xanh",
     weight: 1,
     img: "img/cai ngot giong dai/290011364000_b0f4b55dba594dbd9ad4e0024508692c_aead17f5fab64fb4a25f4de858404b2a_master.png",
   },
@@ -75,7 +75,7 @@ const products = [
     sale: 17,
     price: 12,
     origin: "Việt Nam",
-    type: "vegetable",
+    type: "Rau xanh",
     weight: 1,
     img: "img/cai thao/bap-cai-thao-1.jpg",
   },
@@ -85,7 +85,7 @@ const products = [
     sale: 10,
     price: 20,
     origin: "Úc",
-    type: "fruit",
+    type: "trái cây",
     weight: 1,
     img: "img/cam cara uc/cam-ruot-do-uc-1kg-dac-san-nafarm-502x502.png",
   },
@@ -95,7 +95,7 @@ const products = [
     sale: 20,
     price: 15,
     origin: "Úc",
-    type: "fruit",
+    type: "trái cây",
     weight: 1,
     img: "img/cam navel/Quả-cam-vàng-Navel-Vinfruits-scaled.jpg",
   },
@@ -105,17 +105,17 @@ const products = [
     sale: 20,
     price: 20,
     origin: "Việt Nam",
-    type: "fruit",
+    type: "trái cây",
     weight: 1,
     img: "img/chanh leo tim/upload_598e8d9373ae4d658b6e93fd03dc787d_large.png",
   },
   {
     id: 12,
     name: "cranberry",
-    sale: 10,
+    sale: 20,
     price: 25,
     origin: "Canada",
-    type: "fruit",
+    type: "trái cây",
     weight: 1,
     img: "img/cranberry/upload_42adbc426bed4c8f96a2e954f6925637_large.png",
   },
@@ -125,7 +125,7 @@ const products = [
     sale: 10,
     price: 20,
     origin: "Mỹ",
-    type: "fruit",
+    type: "trái cây",
     weight: 1,
     img: "img/damson plums/upload_7158f37e6dc44409b5088f21da5c4100_large.png",
   },
@@ -135,7 +135,7 @@ const products = [
     sale: 17,
     price: 12,
     origin: "úc",
-    type: "fruit",
+    type: "trái cây",
     weight: 1,
     img: "img/dao tien uc/upload_29119c10f90342c2b7a018c04455f1f3_large.png",
   },
@@ -145,7 +145,7 @@ const products = [
     sale: 30,
     price: 10,
     origin: "Việt Nam",
-    type: "fruit",
+    type: "trái cây",
     weight: 1,
     img: "img/dua leo/acacs__b2c14608960b441a8d22d214f22a1cf8_master.png",
   },
@@ -155,7 +155,7 @@ const products = [
     sale: 10,
     price: 20,
     origin: "Việt Nam",
-    type: "fruit",
+    type: "trái cây",
     weight: 1,
     img: "img/dua luoi vo xanh/dua luoi xanh qua tron-502x502.png",
   },
@@ -165,7 +165,7 @@ const products = [
     sale: 25,
     price: 4,
     origin: "Việt Nam",
-    type: "vegetable",
+    type: "Rau xanh",
     weight: 1,
     img: "img/hanh cu/upload_46eb12192ba94e91ac524896e0d68bb5_large.png",
   },
@@ -175,7 +175,7 @@ const products = [
     sale: 20,
     price: 20,
     origin: "Úc",
-    type: "nuts",
+    type: "Hạt",
     weight: 1,
     img: "img/hat macca/HAT-MACADAMIA-UC-MUA-O-DAU.jpg",
   },
@@ -185,7 +185,7 @@ const products = [
     sale: 10,
     price: 20,
     origin: "Cuba",
-    type: "nuts",
+    type: "hạt",
     weight: 1,
     img: "img/hat oc cho/Superfoods-Hartley-Walnuts.jpg",
   },
@@ -195,7 +195,7 @@ const products = [
     sale: 10,
     price: 10,
     origin: "Thái lan",
-    type: "nuts",
+    type: "hạt",
     weight: 1,
     img: "img/hat re/kisspng-ice-cream-hazelnut-flavor-praline-hazelnuts-5b21b10ddb9c54.4587866615289346698995-removebg-preview.png",
   },
@@ -205,7 +205,7 @@ const products = [
     sale: 10,
     price: 20,
     origin: "Việt nam",
-    type: "nuts",
+    type: "hạt",
     weight: 1,
     img: "img/hat re cuoi/e24b2d4a3ad1f576d4736e76de35eb2d.jpg",
   },
@@ -215,7 +215,7 @@ const products = [
     sale: 10,
     price: 10,
     origin: "Việt Nam",
-    type: "vegetable",
+    type: "Rau xanh",
     weight: 1,
     img: "img/khoai mon/upload_8840c0bebe414c6ab3b9a7d245e91e1e_large.png",
   },
@@ -225,7 +225,7 @@ const products = [
     sale: 10,
     price: 20,
     origin: "Peru",
-    type: "fruit",
+    type: "trái cây",
     weight: 1,
     img: "img/luu peru/94381856-238914210685758-8739762748004499456-n.webp.png",
   },
@@ -235,7 +235,7 @@ const products = [
     sale: 10,
     price: 1,
     origin: "Mỹ",
-    type: "vegetable",
+    type: "Rau xanh",
     weight: 1,
     img: "img/mang tay/1.png",
   },
@@ -245,7 +245,7 @@ const products = [
     sale: 10,
     price: 10,
     origin: "Việt Nam",
-    type: "vegetable",
+    type: "Rau xanh",
     weight: 1,
     img: "img/nam/upload_e7af60c1ded54622928ec21b9d0fad03_large.png",
   },
@@ -255,7 +255,7 @@ const products = [
     sale: 20,
     price: 5,
     origin: "Úc",
-    type: "vegetable",
+    type: "Rau xanh",
     weight: 1,
     img: "img/ot chuong/ot-chuong-vang_5da19014c08e42e992ac7e74cd6e6cfc_master.png",
   },
@@ -265,7 +265,7 @@ const products = [
     sale: 10,
     price: 10,
     origin: "Trung quốc",
-    type: "vegtable",
+    type: "Rau xanh",
     weight: 1,
     img: "img/ot sung/upload_4c8d95ef5ef7499fab59b265179c8641_large.png",
   },
@@ -275,7 +275,7 @@ const products = [
     sale: 20,
     price: 20,
     origin: "Úc",
-    type: "fruit",
+    type: "trái cây",
     weight: 1,
     img: "img/phuc bon tu/upload_8cbf1cd18a0b4e3bafd5778b6eaa23cd_large.png",
   },
@@ -285,7 +285,7 @@ const products = [
     sale: 30,
     price: 10,
     origin: "Việt Nam",
-    type: "vegetable",
+    type: "Rau xanh",
     weight: 1,
     img: "img/rau cang cua/cc_bbcf7c16d6de4b2791fbd50995897c41_master.png",
   },
@@ -295,7 +295,7 @@ const products = [
     sale: 30,
     price: 10,
     origin: "Việt Nam",
-    type: "vegetab;e",
+    type: "rau xanh",
     weight: 1,
     img: "img/rau muong/1.png",
   },
@@ -305,7 +305,7 @@ const products = [
     sale: 10,
     price: 10,
     origin: "Việt Nam",
-    type: "vegetable",
+    type: "Rau xanh",
     weight: 1,
     img: "img/su su non/upload_ff8919654f3e4c5a8109f3fe2a98f95d_grande.png",
   },
@@ -315,7 +315,7 @@ const products = [
     sale: 10,
     price: 10,
     origin: "Việt Nam",
-    type: "vegetable",
+    type: "Rau xanh",
     weight: 1,
     img: "img/sup lo/2644087000000_4d01a1d188bd4069ae4988d787c72bbb.png",
   },
@@ -325,7 +325,7 @@ const products = [
     sale: 20,
     price: 5,
     origin: "Việt Nam",
-    type: "vegetable",
+    type: "Rau xanh",
     weight: 1,
     img: "img/toi/upload_fdd84c27439a406680b755a4051d1093_large.png",
   },
@@ -335,9 +335,9 @@ const products = [
     sale: 20,
     price: 5,
     origin: "Việt Nam",
-    type: "vegetable",
+    type: "Rau xanh",
     weight: 1,
-    img: "img/xa lach/c1_771e32e8dc414ac6bd0123187e3e4405_master.png",
+    img: "img/xa lach/c1_771e32e8dc414ac6bd0123187e3e4405_master.jpg",
   },
   {
     id: 35,
@@ -345,7 +345,7 @@ const products = [
     sale: 10,
     price: 20,
     origin: "Việt Nam",
-    type: "fruit",
+    type: "trái cây",
     weight: 1,
     img: "img/xoai cat/upload_6988d367d0254e8e8252636ea14b4c04_large.png",
   },
@@ -355,29 +355,54 @@ const products = [
     sale: 30,
     price: 30,
     origin: "Mỹ",
-    type: "fruit",
+    type: "trái cây",
     weight: 1,
     img: "img/17.jpg",
   },
 ];
+
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 let btnCart = document.querySelector(".header .nav-cart");
-console.log(btnCart)
-let close =document.querySelector('span.close');
+let close = document.querySelector("span.close");
 let modalCart = document.querySelector(".modal-cart");
-console.log(modalCart)
+let modalCartContent = document.querySelector(".modal-cart-content");
+let countItemCart = document.querySelector(".header .nav-cart span");
 
-btnCart.addEventListener('click',()=>{
-  modalCart.style.display ="block";
-})
+btnCart.addEventListener("click", () => {
+  modalCart.style.display = "block";
+});
 
-close.addEventListener("click",()=>{
-  modalCart.style.display ="none";
-})
+close.addEventListener("click", () => {
+  modalCart.style.display = "none";
+});
 
-window.onclick = function(event) {
+window.onclick = function (event) {
   if (event.target == modalCart) {
     modalCart.style.display = "none";
   }
+};
+
+function renderCart() {
+  if (cart.length) {
+    // nếu có sản phẩm thì render ở đây
+
+  } else {
+    //  Nếu không có show ảnh
+    countItemCart.classList.add("hide");
+    modalCartContent.style="display: flex; flex-direction: column; justify-content: center;"
+    modalCartContent.innerHTML = ` 
+    <span class="close" onclick='modalCart.style.display = "none"'><i class="fa-solid fa-xmark"></i></span>
+    <div class="img-empty-cart">
+    <img src="img/empty-cart.png" alt="">
+    </div>
+     <div class="gr-button" style="padding:32px 0">
+      <a href="products.html">
+        <button>Tiếp tục mua hàng</button>
+      </a>
+  </div>
+    `;
+  }
 }
+
+renderCart()
