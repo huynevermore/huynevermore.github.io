@@ -30,6 +30,10 @@
     />
   </head>
   <body>
+    <!-- scroll on top -->
+    <button onclick="topFunction()" id="go-to-top" title="Go to top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
     <!-- header -->
     <section class="header">
       <nav class="navbar navbar-expand-lg bg-white cus-padding-0 fixed-top">
@@ -60,10 +64,10 @@
                 <a class="nav-link" href="products.html">Sản phẩm</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Chúng tôi</a>
+                <a class="nav-link" href="about-us.html">Chúng tôi</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Liên hệ</a>
+                <a class="nav-link" href="contact.html">Liên hệ</a>
               </li>
             </ul>
             <ul class="navbar-nav mb-2 mb-lg-0">
@@ -106,104 +110,36 @@
         </nav>
       </div>
     </section>
-
+    <!-- section modal -->
+    <div class="modal-cart">
+      <div class="modal-cart-content">
+        <span class="close"><i class="fa-solid fa-xmark"></i></span>
+        <div class="wrap-cart-content">
+          <div class="list-items"></div>
+          <div class="cart-content-bot">
+            <div class="sub-total">
+              <p>Tạm tính: <span>30$</span></p>
+            </div>
+            <div class="gr-button">
+              <a href="cart.html">
+                <button>Xem giỏ hàng</button>
+              </a>
+              <a href="checkout.html">
+                <button>Thanh toán</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- section cart content -->
-    <section class="cart-content">
+    <section class="cart-content margin-bot-40">
       <div class="container-md">
         <div class="row">
           <div class="col-lg-8">
             <h3 class="p-16">Giỏ hàng của bạn</h3>
             <div class="product-list-in-cart">
-              <div class="product-in-cart">
-                <div class="product-info">
-                  <div class="product-img">
-                    <img
-                      src="img/dao tien uc/upload_29119c10f90342c2b7a018c04455f1f3_large.png"
-                      alt=""
-                    />
-                  </div>
-                  <div class="product-info-right">
-                    <div class="product-name">Đào tiên Úc</div>
-                    <span>Giảm giá: </span><span class="sale-off">17%</span>
-                    <div class="product-price">
-                      <span> Đơn giá: </span><span class="old-price">12$</span>
-                      <span class="current-price"> 10$ </span>
-                    </div>
-                  </div>
-                </div>
-                <div class="quantity-product-weight-group">
-                  <button class="minus-quantity-detail-product">-</button>
-                  <input
-                    type="text"
-                    class="quantity-product-weight"
-                    value="1"
-                  />
-                  <button class="plus-quantity-detail-product">+</button>
-                </div>
-                <div class="remove-product">
-                  <i class="fa-solid fa-trash-can"></i>
-                </div>
-              </div>
-              <div class="product-in-cart">
-                <div class="product-info">
-                  <div class="product-img">
-                    <img
-                      src="img/dao tien uc/upload_29119c10f90342c2b7a018c04455f1f3_large.png"
-                      alt=""
-                    />
-                  </div>
-                  <div class="product-info-right">
-                    <div class="product-name">Đào tiên Úc</div>
-                    <span>Giảm giá: </span><span class="sale-off">17%</span>
-                    <div class="product-price">
-                      <span> Đơn giá: </span><span class="old-price">12$</span>
-                      <span class="current-price"> 10$ </span>
-                    </div>
-                  </div>
-                </div>
-                <div class="quantity-product-weight-group">
-                  <button class="minus-quantity-detail-product">-</button>
-                  <input
-                    type="text"
-                    class="quantity-product-weight"
-                    value="1"
-                  />
-                  <button class="plus-quantity-detail-product">+</button>
-                </div>
-                <div class="remove-product">
-                  <i class="fa-solid fa-trash-can"></i>
-                </div>
-              </div>
-              <div class="product-in-cart">
-                <div class="product-info">
-                  <div class="product-img">
-                    <img
-                      src="img/dao tien uc/upload_29119c10f90342c2b7a018c04455f1f3_large.png"
-                      alt=""
-                    />
-                  </div>
-                  <div class="product-info-right">
-                    <div class="product-name">Đào tiên Úc</div>
-                    <span>Giảm giá: </span><span class="sale-off">17%</span>
-                    <div class="product-price">
-                      <span> Đơn giá: </span><span class="old-price">12$</span>
-                      <span class="current-price"> 10$ </span>
-                    </div>
-                  </div>
-                </div>
-                <div class="quantity-product-weight-group">
-                  <button class="minus-quantity-detail-product">-</button>
-                  <input
-                    type="text"
-                    class="quantity-product-weight"
-                    value="1"
-                  />
-                  <button class="plus-quantity-detail-product">+</button>
-                </div>
-                <div class="remove-product">
-                  <i class="fa-solid fa-trash-can"></i>
-                </div>
-              </div>
+              
             </div>
 
             <div class="back-to-shop">
@@ -237,134 +173,6 @@
               </div>
               <button class="check-out">
                 <a href="checkout.html">Thanh toán</a>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Section Featured Products -->
-    <section class="featured-product">
-      <div class="container-md margin-top-40 margin-bot-40">
-        <p class="section-tittle text-center m-auto">sản phẩm nổi bật</p>
-        <div class="row g-3 margin-top-40" style="margin-top: 40px">
-          <div class="col-sm-6 col-lg-3">
-            <div class="wrap-featured-product-cart">
-              <div class="discount">17%</div>
-              <div class="featured-product-cart">
-                <div class="product-img">
-                  <img
-                    src="img/damson plums/upload_7158f37e6dc44409b5088f21da5c4100_large.png"
-                    alt=""
-                  />
-                </div>
-                <p class="product-name cus-margin-top-bot-8px">Damson Plums</p>
-                <div class="product-price cus-margin-top-bot-8px">
-                  <span class="old-price">12$</span>
-                  <span class="current-price">10$</span>
-                </div>
-                <p class="product-origin cus-margin-top-bot-8px">
-                  <span class="bold">Origin:</span> New Zealand
-                </p>
-                <p class="product-type cus-margin-top-bot-8px">
-                  <span class="bold"> Type:</span> Fruit
-                </p>
-                <p class="product-weight cus-margin-top-bot-8px">
-                  <span class="bold">Weight:</span> 1 Kg
-                </p>
-              </div>
-              <button class="add-to-cart">
-                Add To Cart <i class="fa-solid fa-basket-shopping"></i>
-              </button>
-            </div>
-          </div>
-          <div class="col-sm-6 col-lg-3">
-            <div class="wrap-featured-product-cart">
-              <div class="discount">10%</div>
-              <div class="featured-product-cart">
-                <div class="product-img">
-                  <img
-                    src="img/dao tien uc/upload_29119c10f90342c2b7a018c04455f1f3_large.png"
-                    alt=""
-                  />
-                </div>
-                <p class="product-name cus-margin-top-bot-8px">Đào Tiên Úc</p>
-                <div class="product-price cus-margin-top-bot-8px">
-                  <span class="old-price">10$</span>
-                  <span class="current-price">9$</span>
-                </div>
-                <p class="product-origin cus-margin-top-bot-8px">
-                  <span class="bold">Origin:</span> australia
-                </p>
-                <p class="product-type cus-margin-top-bot-8px">
-                  <span class="bold">Type:</span> Fruit
-                </p>
-                <p class="product-weight cus-margin-top-bot-8px">
-                  <span class="bold">Weight:</span> 1 Kg
-                </p>
-              </div>
-              <button class="add-to-cart">
-                Add To Cart <i class="fa-solid fa-basket-shopping"></i>
-              </button>
-            </div>
-          </div>
-          <div class="col-sm-6 col-lg-3">
-            <div class="wrap-featured-product-cart">
-              <div class="discount">30%</div>
-              <div class="featured-product-cart">
-                <div class="product-img">
-                  <img
-                    src="img/bi dao xanh/upload_9fc067dc7f5f4b588c77c35d742ec261_large.png"
-                    alt=""
-                  />
-                </div>
-                <p class="product-name cus-margin-top-bot-8px">Bí đao xanh</p>
-                <div class="product-price cus-margin-top-bot-8px">
-                  <span class="old-price">10$</span>
-                  <span class="current-price">7$</span>
-                </div>
-                <p class="product-origin cus-margin-top-bot-8px">
-                  <span class="bold">Origin:</span> việt nam
-                </p>
-                <p class="product-type cus-margin-top-bot-8px">
-                  <span class="bold">Type:</span> vegetables
-                </p>
-                <p class="product-weight cus-margin-top-bot-8px">
-                  <span class="bold">Weight:</span> 1 Kg
-                </p>
-              </div>
-              <button class="add-to-cart">
-                Add To Cart <i class="fa-solid fa-basket-shopping"></i>
-              </button>
-            </div>
-          </div>
-          <div class="col-sm-6 col-lg-3">
-            <div class="wrap-featured-product-cart">
-              <div class="discount">10%</div>
-              <div class="featured-product-cart">
-                <div class="product-img">
-                  <img
-                    src="img/phuc bon tu/upload_8cbf1cd18a0b4e3bafd5778b6eaa23cd_large.png"
-                    alt=""
-                  />
-                </div>
-                <p class="product-name cus-margin-top-bot-8px">Phúc bồn tử</p>
-                <div class="product-price cus-margin-top-bot-8px">
-                  <span class="old-price">12$</span>
-                  <span class="current-price">10.8$</span>
-                </div>
-                <p class="product-origin cus-margin-top-bot-8px">
-                  <span class="bold">Origin:</span> China
-                </p>
-                <p class="product-type cus-margin-top-bot-8px">
-                  <span class="bold">Type:</span> Fruit
-                </p>
-                <p class="product-weight cus-margin-top-bot-8px">
-                  <span class="bold"> Weight:</span> 1 Kg
-                </p>
-              </div>
-              <button class="add-to-cart">
-                Add To Cart <i class="fa-solid fa-basket-shopping"></i>
               </button>
             </div>
           </div>
@@ -497,5 +305,8 @@
       crossorigin="anonymous"
     ></script>
     <script src="js/main.js"></script>
+    <script src="js/featured-product.js"></script>
+    <script src="js/cart.js"></script>
+
   </body>
 </html>

@@ -29,6 +29,10 @@
     />
   </head>
   <body>
+    <!-- scroll on top -->
+    <button onclick="topFunction()" id="go-to-top" title="Go to top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
     <!-- Section header -->
     <section class="header">
       <nav class="navbar navbar-expand-lg bg-white cus-padding-0 fixed-top">
@@ -84,7 +88,7 @@
                 <div class="nav-link">
                   <div class="nav-cart">
                     <img src="img/icon/cart.png" alt="" />
-                    <span>2</span>
+                    <span></span>
                   </div>
                 </div>
               </li>
@@ -100,7 +104,7 @@
         <span class="close"><i class="fa-solid fa-xmark"></i></span>
         <div class="wrap-cart-content">
           <div class="list-items">
-            <div class="item">
+            <!-- <div class="item">
               <div class="item-main">
                 <div class="item-img">
                   <img
@@ -153,11 +157,11 @@
               <div class="item-remove">
                 <i class="fa-solid fa-trash-can"></i>
               </div>
-            </div>
+            </div> -->
           </div>
           <div class="cart-content-bot">
             <div class="sub-total">
-              <p>Tạm tính: <span>30$</span></p>
+              <p>Tạm tính: <span>0$</span></p>
             </div>
             <div class="gr-button">
               <a href="cart.html">
@@ -188,7 +192,7 @@
     <section id="product-category">
       <div class="container-md margin-bot-40">
         <div class="row g-3">
-          <div class="col-md-4 col-lg-2">
+          <div class="col-md-4 col-lg-2" >
             <div class="wrap-filter-category">
               <p>Bộ lọc sản phẩm</p>
               <div class="wrap-list-filter">
@@ -196,19 +200,42 @@
                   <p>Theo loại</p>
                   <ul class="type-filter">
                     <li class="item-filter">
-                      <input type="radio" name="type" id="type1" value="" onchange="filterType('rau xanh')"/>
+                      <input
+                        type="radio"
+                        name="type"
+                        id="type1"
+                        value=""
+                        onchange="filterType('Rau xanh')"
+                      />
                       <label for="type1">Rau xanh</label>
                     </li>
                     <li class="item-filter">
-                      <input type="radio" name="type" id="type2" onchange="filterType('trái cây')"/>
+                      <input
+                        type="radio"
+                        name="type"
+                        id="type2"
+                        onchange="filterType('Trái cây')"
+                      />
                       <label for="type2">Trái cây</label>
                     </li>
                     <li class="item-filter">
-                      <input type="radio" name="type" id="type3" onchange="filterType('hạt')"/>
+                      <input
+                        type="radio"
+                        name="type"
+                        id="type3"
+                        onchange="filterType('Hạt')"
+                      />
                       <label for="type3">Hạt</label>
                     </li>
                     <li class="item-filter">
-                      <input type="radio" name="type" id="type4" checked onchange="renderProduct(products)"/>
+                      <input
+                        type="radio"
+                        name="type"
+                        id="type4"
+                        class="all"
+                        checked
+                        onchange="showAllItem()"
+                      />
                       <label for="type4">Tất cả</label>
                     </li>
                   </ul>
@@ -217,44 +244,75 @@
                   <p>Theo xuất xứ</p>
                   <ul class="origin-filter">
                     <li class="item-filter">
-                      <input type="radio" name="origin" id="origin1" onchange="filterOrigin1('việt nam')"/>
+                      <input
+                        type="radio"
+                        name="origin"
+                        id="origin1"
+                        onchange="filterOrigin1('Việt Nam')"
+                      />
                       <label for="origin1">Trong nước</label>
                     </li>
                     <li class="item-filter">
-                      <input type="radio" name="origin" id="origin2" onchange="filterOrigin2('việt nam')"/>
+                      <input
+                        type="radio"
+                        name="origin"
+                        id="origin2"
+                        onchange="filterOrigin2('Việt Nam')"
+                      />
                       <label for="origin2">Nhập khẩu</label>
                     </li>
                     <li class="item-filter">
-                      <input type="radio" name="origin" id="origin3" checked onchange="renderProduct(products)"/>
+                      <input
+                        type="radio"
+                        name="origin"
+                        id="origin3"
+                        class="all"
+                        checked
+                        onchange="showAllItem()"
+                      />
                       <label for="origin3">Tất cả</label>
                     </li>
                   </ul>
                 </div>
                 <div class="filter-by-price">
-                  <p>Theo giá gốc</p>
+                  <p>Theo giá</p>
                   <ul class="price-filter">
                     <li class="item-filter">
-                      <input type="radio" name="price" id="price1" onchange="sortPrice1()"/>
-                      <label for="price1">Cao - Thấp</label>
-                    </li>
-                    <li class="item-filter">
-                      <input type="radio" name="price" id="price2" onchange="sortPrice2()"/>
-                      <label for="price2">Thấp - Cao</label>
-                    </li>
-                    <li class="item-filter">
-                      <input type="radio" name="price" id="price3" onchange="filterPrice2(10)"/>
+                      <input
+                        type="radio"
+                        name="price"
+                        id="price3"
+                        onchange="filterPrice1()"
+                      />
                       <label for="price3">Dưới 10$</label>
                     </li>
                     <li class="item-filter">
-                      <input type="radio" name="price" id="price4" onchange="filterPrice(20,10)"/>
+                      <input
+                        type="radio"
+                        name="price"
+                        id="price4"
+                        onchange="filterPrice2()"
+                      />
                       <label for="price4">Từ 10$ - 20$</label>
                     </li>
                     <li class="item-filter">
-                      <input type="radio" name="price" id="price5" onchange="filterPrice3(20)"/>
+                      <input
+                        type="radio"
+                        name="price"
+                        id="price5"
+                        onchange="filterPrice3()"
+                      />
                       <label for="price5">Trên 20$</label>
                     </li>
                     <li class="item-filter">
-                      <input type="radio" name="price" id="price6" checked onchange="renderProduct(products)"/>
+                      <input
+                        type="radio"
+                        name="price"
+                        id="price6"
+                        class="all"
+                        checked
+                        onchange="showAllItem()"
+                      />
                       <label for="price6">Tất cả</label>
                     </li>
                   </ul>
@@ -664,6 +722,5 @@
     ></script>
     <script src="js/main.js"></script>
     <script src="js/products.js"></script>
-    
   </body>
 </html>

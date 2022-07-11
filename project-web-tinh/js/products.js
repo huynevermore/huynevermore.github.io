@@ -1,66 +1,15 @@
-window.onload = function () {
-
-};
-renderCart()
 let perPage = 12;
 let currentPage = 1;
 let start = 0;
 let end = perPage;
 let searchProduct = document.querySelector(`.form-search input[type="search"]`);
 
-
-// function tim kiem
-function onSearchProduct() {
-  let x = searchProduct.value.toLowerCase();
-  console.log(x);
-  const content = products.map(function (e, index) {
-    if (e.name.toLowerCase().includes(x)) {
-      return `<div class="col-sm-6 col-lg-3">
-                  <div class="product-item">
-                    <div class="product-container">
-                      <div class="discount">${e.sale}%</div>
-                      <div class="product-img">
-                        <img
-                          src="${e.img}"
-                          alt=""
-                        />
-                      </div>
-                      <p class="product-name cus-margin-top-bot-8px">
-                        ${e.name}
-                      </p>
-                      <div class="product-price cus-margin-top-bot-8px">
-                        <span class="old-price">${e.price.toFixed(2)}$</span>
-                        <span class="current-price">${parseFloat(
-                          e.price * (1 - e.sale / 100)
-                        ).toFixed(2)}$</span>
-                      </div>
-                      <p class="product-origin cus-margin-top-bot-8px">
-                        <span class="bold">Xuất xứ:</span> ${e.origin}
-                      </p>
-                      <p class="product-type cus-margin-top-bot-8px">
-                        <span class="bold"> Loại sản phẩm:</span> ${e.type}
-                      </p>
-                      <p class="product-weight cus-margin-top-bot-8px">
-                        <span class="bold">Khối lượng:</span> ${e.weight} Kg
-                      </p>
-                    </div>
-                    <button class="add-to-cart">
-                      Add To Cart <i class="fa-solid fa-basket-shopping"></i>
-                    </button>
-                  </div>
-                </div>`;
-    }
-  });
-  document.querySelector("#product-category .category-main .row").innerHTML =
-    content.join("");
-}
-
-searchProduct.addEventListener("keyup", onSearchProduct);
+// searchProduct.addEventListener("keyup", onSearchProduct);
 
 // function render product
 function renderProduct(arr) {
   const content = arr.map(function (e, index) {
-    return `<div class="col-sm-6 col-lg-3">
+    return `<div class="col-sm-6 col-md-6 col-lg-3">
                   <div class="product-item">
                     <div class="product-container">
                       <div class="discount">${e.sale}%</div>
@@ -83,7 +32,9 @@ function renderProduct(arr) {
                         <span class="bold">Xuất xứ:</span> ${e.origin}
                       </p>
                       <p class="product-type cus-margin-top-bot-8px">
-                        <span class="bold"> Loại sản phẩm:</span> <span>${e.type}</span>  
+                        <span class="bold"> Loại sản phẩm:</span> <span>${
+                          e.type
+                        }</span>  
                       </p>
                       <p class="product-weight cus-margin-top-bot-8px">
                         <span class="bold">Khối lượng:</span> ${e.weight} Kg
@@ -100,64 +51,113 @@ function renderProduct(arr) {
 }
 
 renderProduct(products);
-onSearchProduct();
+// onSearchProduct();
+// add to cart
+let listItems = document.querySelectorAll(".category-main .col-sm-6");
+let listBtnAddToCart = document.querySelectorAll("button.add-to-cart");
 
-
-function filterType(x){
-
-    let arrFilter= products.filter((e)=>{
-       return e.type.toLocaleLowerCase()==x;
-    })
-    renderProduct(arrFilter)
-
+// function tim kiem
+function onSearchProduct() {
+  let x = searchProduct.value.toLowerCase();
+  console.log(x);
+  listItems.forEach((item) => {
+    item.classList.add("hide");
+    let nameProduct = item
+      .querySelector(".product-name")
+      .innerText.toLocaleLowerCase();
+    if (nameProduct.includes(x)) {
+      item.classList.remove("hide");
+    }
+  });
 }
 
-function filterOrigin1(x){
-    let arrFilter= products.filter((e)=>{
-        return e.origin.toLocaleLowerCase() == x;
-     })
-     renderProduct(arrFilter)
+searchProduct.addEventListener("keyup", onSearchProduct);
+
+function filterType(x) {
+  listItems.forEach((item) => {
+    item.classList.add("hide");
+    let type = item.querySelector(".product-type").textContent;
+    if (type.includes(x)) {
+      item.classList.remove("hide");
+    }
+  });
 }
 
-function filterOrigin2(x){
-    let arrFilter= products.filter((e)=>{
-        return e.origin.toLocaleLowerCase() != x;
-     })
-     renderProduct(arrFilter)
+function showAllItem() {
+  listItems.forEach((item) => {
+    item.classList.remove("hide");
+  });
 }
 
-function sortPrice1(){
-    let sortArr =[...products].sort((a,b)=>{return b.price-a.price})
-    renderProduct(sortArr)
+//function loc xuat xu Viet Nam
+function filterOrigin1(x) {
+  listItems.forEach((item) => {
+    item.classList.add("hide");
+    let origin = item.querySelector(".product-origin").textContent;
+    if (origin.includes(x)) {
+      item.classList.remove("hide");
+    }
+  });
+}
+//function filter xuat xu ko phai Viet nam
+function filterOrigin2(x) {
+  listItems.forEach((item) => {
+    item.classList.add("hide");
+    let origin = item.querySelector(".product-origin").textContent;
+    if (!origin.includes(x)) {
+      item.classList.remove("hide");
+    }
+  });
 }
 
-function sortPrice2(){
-    let sortArr =[...products].sort((a,b)=>{return a.price-b.price})
-    renderProduct(sortArr)
+//fuction sort gia tu cao xuong thap
+
+function filterPrice1() {
+  listItems.forEach((item) => {
+    item.classList.add("hide");
+    let price = item.querySelector(".current-price").textContent;
+    if (parseFloat(price) < 10) {
+      item.classList.remove("hide");
+    }
+  });
 }
 
-function filterPrice(x,y){
-    let arrFilter= products.filter((e)=>{
-        return e.price < x && e.price>=y;
-    })
-    renderProduct(arrFilter)
-
+function filterPrice2() {
+  listItems.forEach((item) => {
+    item.classList.add("hide");
+    let price = item.querySelector(".current-price").textContent;
+    if (parseFloat(price) >= 10 && parseFloat(price) < 20) {
+      item.classList.remove("hide");
+    }
+  });
 }
 
-function filterPrice2(x){
-    let arrFilter= products.filter((e)=>{
-        return e.price < x 
-    })
-    renderProduct(arrFilter)
-
-}
-function filterPrice3(x){
-    let arrFilter= products.filter((e)=>{
-        return e.price >= x 
-    })
-    renderProduct(arrFilter)
-
+function filterPrice3() {
+  listItems.forEach((item) => {
+    item.classList.add("hide");
+    let price = item.querySelector(".current-price").textContent;
+    if (parseFloat(price) >= 20) {
+      item.classList.remove("hide");
+    }
+  });
 }
 
+//add to cart
+listBtnAddToCart.forEach((btn, index) => {
+  let product = listItems[index];
+  btn.addEventListener("click", () => {
+    let nameProduct = product.querySelector(".product-name").innerText;
+    products.forEach((element) => {
+      if (element.name.toLocaleLowerCase() == nameProduct.toLowerCase()) {
+        checkItem(element);
+      }
+    });
+    document.querySelector(".header .nav-cart span").textContent = cart.length;
+    if (cart.length) {
+      renderCart();
+      totalModal();
+    }
 
-
+    alert(" may da them vao gio hang");
+  });
+});

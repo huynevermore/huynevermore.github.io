@@ -5,7 +5,7 @@ const products = [
     sale: 20,
     price: 10,
     origin: "England",
-    type: "trái cây",
+    type: "Trái cây",
     weight: 1,
     img: "img/acaiberry grande/1.png",
   },
@@ -55,7 +55,7 @@ const products = [
     sale: 20,
     price: 15,
     origin: "Việt Nam",
-    type: "trái cây",
+    type: "Trái cây",
     weight: 1,
     img: "img/buoi da xanh/buoi-502x502.png",
   },
@@ -85,7 +85,7 @@ const products = [
     sale: 10,
     price: 20,
     origin: "Úc",
-    type: "trái cây",
+    type: "Trái cây",
     weight: 1,
     img: "img/cam cara uc/cam-ruot-do-uc-1kg-dac-san-nafarm-502x502.png",
   },
@@ -95,7 +95,7 @@ const products = [
     sale: 20,
     price: 15,
     origin: "Úc",
-    type: "trái cây",
+    type: "Trái cây",
     weight: 1,
     img: "img/cam navel/Quả-cam-vàng-Navel-Vinfruits-scaled.jpg",
   },
@@ -105,7 +105,7 @@ const products = [
     sale: 20,
     price: 20,
     origin: "Việt Nam",
-    type: "trái cây",
+    type: "Trái cây",
     weight: 1,
     img: "img/chanh leo tim/upload_598e8d9373ae4d658b6e93fd03dc787d_large.png",
   },
@@ -115,7 +115,7 @@ const products = [
     sale: 20,
     price: 25,
     origin: "Canada",
-    type: "trái cây",
+    type: "Trái cây",
     weight: 1,
     img: "img/cranberry/upload_42adbc426bed4c8f96a2e954f6925637_large.png",
   },
@@ -125,7 +125,7 @@ const products = [
     sale: 10,
     price: 20,
     origin: "Mỹ",
-    type: "trái cây",
+    type: "Trái cây",
     weight: 1,
     img: "img/damson plums/upload_7158f37e6dc44409b5088f21da5c4100_large.png",
   },
@@ -135,7 +135,7 @@ const products = [
     sale: 17,
     price: 12,
     origin: "úc",
-    type: "trái cây",
+    type: "Trái cây",
     weight: 1,
     img: "img/dao tien uc/upload_29119c10f90342c2b7a018c04455f1f3_large.png",
   },
@@ -145,7 +145,7 @@ const products = [
     sale: 30,
     price: 10,
     origin: "Việt Nam",
-    type: "trái cây",
+    type: "Trái cây",
     weight: 1,
     img: "img/dua leo/acacs__b2c14608960b441a8d22d214f22a1cf8_master.png",
   },
@@ -155,7 +155,7 @@ const products = [
     sale: 10,
     price: 20,
     origin: "Việt Nam",
-    type: "trái cây",
+    type: "Trái cây",
     weight: 1,
     img: "img/dua luoi vo xanh/dua luoi xanh qua tron-502x502.png",
   },
@@ -171,7 +171,7 @@ const products = [
   },
   {
     id: 18,
-    name: "hạt macca",
+    name: "Hạt macca",
     sale: 20,
     price: 20,
     origin: "Úc",
@@ -181,31 +181,31 @@ const products = [
   },
   {
     id: 19,
-    name: "hạt óc chó",
+    name: "Hạt óc chó",
     sale: 10,
     price: 20,
     origin: "Cuba",
-    type: "hạt",
+    type: "Hạt",
     weight: 1,
     img: "img/hat oc cho/Superfoods-Hartley-Walnuts.jpg",
   },
   {
     id: 20,
-    name: "hạt rẻ",
+    name: "Hạt rẻ",
     sale: 10,
     price: 10,
     origin: "Thái lan",
-    type: "hạt",
+    type: "Hạt",
     weight: 1,
     img: "img/hat re/kisspng-ice-cream-hazelnut-flavor-praline-hazelnuts-5b21b10ddb9c54.4587866615289346698995-removebg-preview.png",
   },
   {
     id: 21,
-    name: "hạt rẻ cười",
+    name: "Hạt rẻ cười",
     sale: 10,
     price: 20,
-    origin: "Việt nam",
-    type: "hạt",
+    origin: "Việt Nam",
+    type: "Hạt",
     weight: 1,
     img: "img/hat re cuoi/e24b2d4a3ad1f576d4736e76de35eb2d.jpg",
   },
@@ -225,7 +225,7 @@ const products = [
     sale: 10,
     price: 20,
     origin: "Peru",
-    type: "trái cây",
+    type: "Trái cây",
     weight: 1,
     img: "img/luu peru/94381856-238914210685758-8739762748004499456-n.webp.png",
   },
@@ -275,7 +275,7 @@ const products = [
     sale: 20,
     price: 20,
     origin: "Úc",
-    type: "trái cây",
+    type: "Trái cây",
     weight: 1,
     img: "img/phuc bon tu/upload_8cbf1cd18a0b4e3bafd5778b6eaa23cd_large.png",
   },
@@ -295,7 +295,7 @@ const products = [
     sale: 30,
     price: 10,
     origin: "Việt Nam",
-    type: "rau xanh",
+    type: "Rau xanh",
     weight: 1,
     img: "img/rau muong/1.png",
   },
@@ -345,7 +345,7 @@ const products = [
     sale: 10,
     price: 20,
     origin: "Việt Nam",
-    type: "trái cây",
+    type: "Trái cây",
     weight: 1,
     img: "img/xoai cat/upload_6988d367d0254e8e8252636ea14b4c04_large.png",
   },
@@ -355,7 +355,7 @@ const products = [
     sale: 30,
     price: 30,
     origin: "Mỹ",
-    type: "trái cây",
+    type: "Trái cây",
     weight: 1,
     img: "img/17.jpg",
   },
@@ -368,9 +368,31 @@ let close = document.querySelector("span.close");
 let modalCart = document.querySelector(".modal-cart");
 let modalCartContent = document.querySelector(".modal-cart-content");
 let countItemCart = document.querySelector(".header .nav-cart span");
+// go to top
+mybutton = document.getElementById("go-to-top");
 
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+// nav cart
 btnCart.addEventListener("click", () => {
   modalCart.style.display = "block";
+  renderCart();
+  removeItemCart();
+  totalModal();
 });
 
 close.addEventListener("click", () => {
@@ -384,25 +406,125 @@ window.onclick = function (event) {
 };
 
 function renderCart() {
-  if (cart.length) {
+  if (cart.length > 0) {
     // nếu có sản phẩm thì render ở đây
-
-  } else {
-    //  Nếu không có show ảnh
-    countItemCart.classList.add("hide");
-    modalCartContent.style="display: flex; flex-direction: column; justify-content: center;"
-    modalCartContent.innerHTML = ` 
-    <span class="close" onclick='modalCart.style.display = "none"'><i class="fa-solid fa-xmark"></i></span>
-    <div class="img-empty-cart">
-    <img src="img/empty-cart.png" alt="">
+    let htmls = cart.map((e) => {
+      return `<div class="item">
+      <div class="item-main">
+        <div class="item-img">
+          <img
+            src="${e.img}"
+            alt=""
+          />
+        </div>
+        <div class="item-info">
+          <p class="item-info-name">${e.name}</p>
+          <p class="item-info-unit-price">Đơn giá: <span>${parseFloat(
+            e.price * (1 - e.sale / 100)
+          ).toFixed(2)}$</span></p>
+          <p class="item-info-weight">Khối lượng: ${e.weight}Kg</p>
+        </div>
+      </div>
+      <div class="item-remove">
+        <i class="fa-solid fa-trash-can"></i>
+      </div>
     </div>
-     <div class="gr-button" style="padding:32px 0">
-      <a href="products.html">
-        <button>Tiếp tục mua hàng</button>
-      </a>
-  </div>
-    `;
+      `;
+    });
+
+    document.querySelector(".modal-cart .list-items").innerHTML =
+      htmls.join("");
+    document.querySelector(
+      ".modal-cart .gr-button"
+    ).innerHTML = `<a href="cart.html" class="hide">
+    <button>Xem giỏ hàng</button>
+  </a>
+  <a href="checkout.html" class="hide">
+    <button>Thanh toán</button>
+  </a>`;
+
+    countItemCart.classList.remove("hide");
+    document.querySelector(".header .nav-cart span").textContent = cart.length;
+  } else {
+    countItemCart.classList.add("hide");
+    document.querySelector(
+      ".modal-cart .list-items"
+    ).innerHTML = `<span class="close" onclick='modalCart.style.display = "none"'><i class="fa-solid fa-xmark"></i></span>
+      <div class="img-empty-cart">
+      <img src="img/empty-cart.png" alt="">
+      </div>
+      `;
+    document.querySelector(
+      ".modal-cart .gr-button"
+    ).innerHTML = `<a href="products.html" >
+    <button>Tiếp tục mua hàng</button>
+  </a>`;
+  document.querySelector(".modal-cart .sub-total span").textContent="0$"
+  }
+
+  removeItemCart();
+  // renderCart();
+  document.querySelector(".header .nav-cart span").textContent = cart.length;
+}
+renderCart();
+
+//Tinh tong tien
+function totalModal() {
+  if (cart.length) {
+    let total = cart.reduce((total, item) => {
+      return total + item.price * (1 - item.sale / 100) * item.weight;
+    }, 0);
+    document.querySelector(
+      ".modal-cart .sub-total span"
+    ).innerHTML = `${total.toFixed(2)}$`;
   }
 }
 
-renderCart()
+//xoa item
+function removeItemCart() {
+  let listItemsModal = document.querySelectorAll(".modal-cart .item");
+  let btnRemoveItemCart = document.querySelectorAll(".modal-cart .item-remove");
+
+  if (btnRemoveItemCart.length) {
+    btnRemoveItemCart.forEach((btn, index) => {
+      let item = listItemsModal[index];
+      btn.addEventListener("click", () => {
+        item.remove();
+        let nameItem = item.querySelector(".item .item-info-name").textContent;
+        // Lấy index của item
+        let indexItem = cart.findIndex((item) => {
+          return nameItem == item.name;
+        });
+        if (indexItem >= 0) {
+          cart.splice(indexItem, 1);
+          localStorage.setItem("cart", JSON.stringify(cart));
+        }
+
+        document.querySelector(".header .nav-cart span").textContent =
+          cart.length;
+        renderCart();
+        totalModal();
+      });
+    });
+  }
+}
+
+// check item cart
+// check item
+function checkItem(objProduct) {
+  // Nêu khác tên thì add vào cart
+  if (cart.findIndex((arrItem) => arrItem.name === objProduct.name) == -1) {
+    cart.push(objProduct);
+    console.log(cart.length);
+    // span = cai này
+    window.localStorage.setItem("cart", JSON.stringify(cart));
+  } else {
+    // giống tên thì + weight
+    cart.forEach((e) => {
+      if (e.name == objProduct.name) {
+        return (e.weight = e.weight + objProduct.weight);
+      }
+    });
+    window.localStorage.setItem("cart", JSON.stringify(cart));
+  }
+}

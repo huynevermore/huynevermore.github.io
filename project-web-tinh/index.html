@@ -18,7 +18,7 @@
     />
 
     <!-- css animation -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <!-- css font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -35,6 +35,10 @@
   </head>
 
   <body>
+    <!-- scroll on top -->
+    <button onclick="topFunction()" id="go-to-top" title="Go to top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
     <!-- Section header -->
     <section class="header">
       <nav class="navbar navbar-expand-lg bg-white cus-padding-0 fixed-top">
@@ -105,73 +109,18 @@
       <div class="modal-cart-content">
         <span class="close"><i class="fa-solid fa-xmark"></i></span>
         <div class="wrap-cart-content">
-          <div class="list-items">
-            <div class="item">
-              <div class="item-main">
-                <div class="item-img">
-                  <img
-                    src="img/dao tien uc/upload_29119c10f90342c2b7a018c04455f1f3_large.png"
-                    alt=""
-                  />
-                </div>
-                <div class="item-info">
-                  <p class="item-info-name">Đào tiên úc</p>
-                  <p class="item-info-unit-price">Đơn giá: <span>10$</span></p>
-                  <p class="item-info-weight">Khối lượng: 1Kg</p>
-                </div>
-              </div>
-              <div class="item-remove">
-                <i class="fa-solid fa-trash-can"></i>
-              </div>
-            </div>
-            <div class="item">
-              <div class="item-main">
-                <div class="item-img">
-                  <img
-                    src="img/dao tien uc/upload_29119c10f90342c2b7a018c04455f1f3_large.png"
-                    alt=""
-                  />
-                </div>
-                <div class="item-info">
-                  <p class="item-info-name">Đào tiên úc</p>
-                  <p class="item-info-unit-price">Đơn giá: <span>10$</span></p>
-                  <p class="item-info-weight">Khối lượng: 1Kg</p>
-                </div>
-              </div>
-              <div class="item-remove">
-                <i class="fa-solid fa-trash-can"></i>
-              </div>
-            </div>
-            <div class="item">
-              <div class="item-main">
-                <div class="item-img">
-                  <img
-                    src="img/dao tien uc/upload_29119c10f90342c2b7a018c04455f1f3_large.png"
-                    alt=""
-                  />
-                </div>
-                <div class="item-info">
-                  <p class="item-info-name">Đào tiên úc</p>
-                  <p class="item-info-unit-price">Đơn giá: <span>10$</span></p>
-                  <p class="item-info-weight">Khối lượng: 1Kg</p>
-                </div>
-              </div>
-              <div class="item-remove">
-                <i class="fa-solid fa-trash-can"></i>
-              </div>
-            </div>
-          </div>
+          <div class="list-items"></div>
           <div class="cart-content-bot">
             <div class="sub-total">
               <p>Tạm tính: <span>30$</span></p>
             </div>
             <div class="gr-button">
-              <a href="cart.html">
+              <!-- <a href="cart.html" class="hide">
                 <button>Xem giỏ hàng</button>
               </a>
-              <a href="checkout.html">
+              <a href="checkout.html" class="hide">
                 <button>Thanh toán</button>
-              </a>
+              </a> -->
             </div>
           </div>
         </div>
@@ -273,7 +222,7 @@
                 <p>
                   Ưu đãi lên đến 15% cho khách hàng khi đặt online tại website
                 </p>
-                <button>Xem ngay</button> 
+                <button>Xem ngay</button>
               </div>
             </div>
           </div>
@@ -320,28 +269,40 @@
             </p>
             <div class="container margin-top-40">
               <div class="row g-3">
-                <div class="col-6 col-lg-3 cus-flex-center-vertical p-0" data-aos="zoom-in">
+                <div
+                  class="col-6 col-lg-3 cus-flex-center-vertical p-0"
+                  data-aos="zoom-in"
+                >
                   <div class="about-icon">
                     <img src="img/icon/shipping truck.png" alt="" />
                   </div>
                   <p class="about-tittle cus-flex-center m-auto">FREESHIP</p>
                   <p class="about-content m-auto">ORDER > 500$</p>
                 </div>
-                <div class="col-6 col-lg-3 cus-flex-center-vertical p-0" data-aos="zoom-in">
+                <div
+                  class="col-6 col-lg-3 cus-flex-center-vertical p-0"
+                  data-aos="zoom-in"
+                >
                   <div class="about-icon">
                     <img src="img/icon/headphone.png" alt="" />
                   </div>
                   <p class="about-tittle m-auto">SUPPORT</p>
                   <p class="about-content m-auto">SUPPORT 24/24</p>
                 </div>
-                <div class="col-6 col-lg-3 cus-flex-center-vertical p-0" data-aos="zoom-in">
+                <div
+                  class="col-6 col-lg-3 cus-flex-center-vertical p-0"
+                  data-aos="zoom-in"
+                >
                   <div class="about-icon">
                     <img src="img/icon/High quality.png" alt="" />
                   </div>
                   <p class="about-tittle m-auto">QUALITY</p>
                   <p class="about-content m-auto">QUALITY ASSURANCE</p>
                 </div>
-                <div class="col-6 col-lg-3 cus-flex-center-vertical p-0" data-aos="zoom-in">
+                <div
+                  class="col-6 col-lg-3 cus-flex-center-vertical p-0"
+                  data-aos="zoom-in"
+                >
                   <div class="about-icon">
                     <img src="img/icon/Contactless.png" alt="" />
                   </div>
@@ -359,8 +320,12 @@
     <section class="featured-product bg-section">
       <div class="container-md margin-top-40 margin-bot-40">
         <p class="section-tittle text-center m-auto">sản phẩm nổi bật</p>
-        <div class="row margin-top-40 g-3" >
-          <div class="col-sm-6 col-lg-3" data-aos="zoom-in" data-aos-duration="00">
+        <div class="row margin-top-40 g-3">
+          <div
+            class="col-sm-6 col-lg-3"
+            data-aos="zoom-in"
+            data-aos-duration="00"
+          >
             <div class="wrap-featured-product-cart">
               <div class="discount">17%</div>
               <div class="featured-product-cart">
@@ -390,7 +355,11 @@
               </button>
             </div>
           </div>
-          <div class="col-sm-6 col-lg-3" data-aos="zoom-in" data-aos-duration="00">
+          <div
+            class="col-sm-6 col-lg-3"
+            data-aos="zoom-in"
+            data-aos-duration="00"
+          >
             <div class="wrap-featured-product-cart">
               <div class="discount">10%</div>
               <div class="featured-product-cart">
@@ -420,7 +389,11 @@
               </button>
             </div>
           </div>
-          <div class="col-sm-6 col-lg-3" data-aos="zoom-in" data-aos-duration="00">
+          <div
+            class="col-sm-6 col-lg-3"
+            data-aos="zoom-in"
+            data-aos-duration="00"
+          >
             <div class="wrap-featured-product-cart">
               <div class="discount">30%</div>
               <div class="featured-product-cart">
@@ -450,7 +423,11 @@
               </button>
             </div>
           </div>
-          <div class="col-sm-6 col-lg-3" data-aos="zoom-in" data-aos-duration="00">
+          <div
+            class="col-sm-6 col-lg-3"
+            data-aos="zoom-in"
+            data-aos-duration="00"
+          >
             <div class="wrap-featured-product-cart">
               <div class="discount">10%</div>
               <div class="featured-product-cart">
@@ -518,7 +495,11 @@
         </p>
         <div class="row margin-top-40">
           <div class="col-md-4">
-            <div class="policy-wrap-item margin-top-40" data-aos="flip-left" data-aos-duration="1000">
+            <div
+              class="policy-wrap-item margin-top-40"
+              data-aos="flip-left"
+              data-aos-duration="1000"
+            >
               <div class="policy-img-item">
                 <img src="img/about us/policy-item-image-1.png" alt="" />
               </div>
@@ -528,7 +509,11 @@
                 có nhiều giá trị dinh dưỡng thiết thực</span
               >
             </div>
-            <div class="policy-wrap-item margin-top-40" data-aos="flip-left" data-aos-duration="1000">
+            <div
+              class="policy-wrap-item margin-top-40"
+              data-aos="flip-left"
+              data-aos-duration="1000"
+            >
               <div class="policy-img-item">
                 <img src="img/about us/icon2.png" alt="" />
               </div>
@@ -541,13 +526,21 @@
           </div>
 
           <div class="col-md-4 cus-flex-center">
-            <div class="policy-wrap-item-center" data-aos="flip-up" data-aos-duration="1000">
+            <div
+              class="policy-wrap-item-center"
+              data-aos="flip-up"
+              data-aos-duration="1000"
+            >
               <img src="img/about us/policy-big-image.png" alt="" />
             </div>
           </div>
 
           <div class="col-md-4">
-            <div class="policy-wrap-item margin-top-40" data-aos="flip-right" data-aos-duration="1000">
+            <div
+              class="policy-wrap-item margin-top-40"
+              data-aos="flip-right"
+              data-aos-duration="1000"
+            >
               <div class="policy-img-item">
                 <img src="img/about us/iocn3.png" alt="" />
               </div>
@@ -557,7 +550,11 @@
                 toàn hữu cơ tối thiểu theo chứng nhận tốt nhất</span
               >
             </div>
-            <div class="policy-wrap-item margin-top-40" data-aos="flip-right" data-aos-duration="1000">
+            <div
+              class="policy-wrap-item margin-top-40"
+              data-aos="flip-right"
+              data-aos-duration="1000"
+            >
               <div class="policy-img-item">
                 <img src="img/about us/icon4.png" alt="" />
               </div>
@@ -990,9 +987,9 @@
     ></script>
     <script src="js/main.js"></script>
     <script src="js/headerfooter.js"></script>
+    <script src="js/featured-product.js"></script>
     <script>
-
-
+      
     </script>
   </body>
 </html>

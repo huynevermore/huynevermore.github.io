@@ -30,6 +30,10 @@
     />
   </head>
   <body>
+    <!-- scroll on top -->
+    <button onclick="topFunction()" id="go-to-top" title="Go to top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
     <!-- Section header -->
     <section class="header">
       <nav class="navbar navbar-expand-lg bg-white cus-padding-0 fixed-top">
@@ -692,6 +696,7 @@
     ></script>
     <script src="js/headerfooter.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/featured-product.js"></script>
     <script>
       let addBtn = document.querySelector(
         "button.plus-quantity-detail-product"
@@ -702,8 +707,8 @@
       let inputQuantity = document.querySelector(
         "input.quantity-product-weight"
       );
-      let btnBuyNow = document.querySelector('button.buy-now')
-      let btnAddToCart =document.querySelector('button.add-to-cart')
+      let btnBuyNow = document.querySelector("button.buy-now");
+      let btnAddToCart = document.querySelector("button.add-to-cart");
 
       addBtn.addEventListener("click", add);
       minusBtn.addEventListener("click", minus);
@@ -720,9 +725,9 @@
           inputQuantity.value = currentValue;
         }
       }
-      btnBuyNow.addEventListener('click',function(){
-        window.location.href='checkout.html'
-      })
+      btnBuyNow.addEventListener("click", function () {
+        window.location.href = "checkout.html";
+      });
     </script>
   </body>
 </html>

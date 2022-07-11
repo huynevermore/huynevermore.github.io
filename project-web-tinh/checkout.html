@@ -29,6 +29,10 @@
     />
   </head>
   <body>
+    <!-- scroll on top -->
+    <button onclick="topFunction()" id="go-to-top" title="Go to top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
     <!-- header -->
     <section class="header">
       <nav class="navbar navbar-expand-lg bg-white cus-padding-0 fixed-top">
@@ -108,7 +112,28 @@
         </nav>
       </div>
     </section>
-
+    <!-- section modal -->
+    <div class="modal-cart">
+      <div class="modal-cart-content">
+        <span class="close"><i class="fa-solid fa-xmark"></i></span>
+        <div class="wrap-cart-content">
+          <div class="list-items"></div>
+          <div class="cart-content-bot">
+            <div class="sub-total">
+              <p>Tạm tính: <span>30$</span></p>
+            </div>
+            <div class="gr-button">
+              <a href="cart.html">
+                <button>Xem giỏ hàng</button>
+              </a>
+              <a href="checkout.html">
+                <button>Thanh toán</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- section check out  -->
     <section id="check-out">
       <div class="container-md">
