@@ -9,7 +9,7 @@ let searchProduct = document.querySelector(`.form-search input[type="search"]`);
 // function render product
 function renderProduct(arr) {
   const content = arr.map(function (e, index) {
-    return `<div class="col-sm-6 col-md-6 col-lg-3">
+    return `<div class="col-sm-6 col-lg-6 col-xl-3">
                   <div class="product-item">
                     <div class="product-container">
                       <div class="discount">${e.sale}%</div>
