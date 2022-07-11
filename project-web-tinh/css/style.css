@@ -1533,7 +1533,9 @@
   padding: 16px;
   border-radius: 8px;
 }
-
+#check-out .summary{
+  height: 100%;
+}
 #check-out .summary .wrap-content-summary {
   margin-bottom: 32px;
 }
