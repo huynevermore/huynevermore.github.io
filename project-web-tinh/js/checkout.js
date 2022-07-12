@@ -13,7 +13,7 @@ function renderCheckOut() {
           <div class="item-order-info">
             <div class="item-order-name bold">${item.name}</div>
             <div class="item-order-unit-price">
-              <span>Đơn giá: </span><span${parseFloat(
+              <span>Đơn giá: </span><span>${parseFloat(
                 item.price * (1 - item.sale / 100)
               ).toFixed(2)}$</span>
             </div>
@@ -45,7 +45,7 @@ listBtnRemoveCheckOut.forEach((btn, index) => {
     let nameItem = item.querySelector(
       ".item-order .item-order-name "
     ).textContent;
-    console.log(nameItem)
+    console.log(nameItem);
     // Lấy index của item
     let indexItem = cart.findIndex((item) => {
       return nameItem == item.name;
@@ -55,5 +55,36 @@ listBtnRemoveCheckOut.forEach((btn, index) => {
       localStorage.setItem("cart", JSON.stringify(cart));
     }
     document.querySelector(".header .nav-cart span").textContent = cart.length;
+    totalPriceCheckOut();
   });
 });
+
+function totalPriceCheckOut() {
+  let totalPrice = document.querySelector(
+    "#check-out .wrap-content-summary .total-price span:last-child"
+  );
+  let priceShipping = document.querySelector(
+    "#check-out .wrap-content-summary .shipping-cost span:last-child"
+  );
+  let grandTotal = document.querySelector(
+    "#check-out .wrap-content-summary .total span:last-child"
+  );
+  if (cart.length) {
+    let price = cart.reduce((total, item) => {
+      return total + item.price * (1 - item.sale / 100) * item.weight;
+    }, 0);
+    totalPrice.textContent = `${price.toFixed(2)}$`;
+    if (
+      parseFloat(totalPrice.textContent) < 200 &&
+      parseFloat(totalPrice.textContent) > 0
+    ) {
+      priceShipping.textContent = `5$`;
+    } else {
+      priceShipping.textContent = `0$`;
+    }
+    grandTotal.textContent =
+      parseFloat(totalPrice.textContent) +
+      parseFloat(priceShipping.textContent);
+  }
+}
+totalPriceCheckOut();
