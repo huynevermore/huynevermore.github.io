@@ -41,19 +41,20 @@ function renderCartMain() {
   cartContent.innerHTML = content.join("");
 }
 renderCartMain();
-const  listQuantityProductWeight = document.querySelectorAll(
+
+const listQuantityProductWeight = document.querySelectorAll(
   ".cart-content .quantity-product-weight"
 );
-const  listBtnAdd = document.querySelectorAll(
+const listBtnAdd = document.querySelectorAll(
   ".cart-content .product-in-cart .plus-quantity-detail-product"
 );
-const  listBtnMinus = document.querySelectorAll(
+const listBtnMinus = document.querySelectorAll(
   ".cart-content .product-in-cart .minus-quantity-detail-product"
 );
-const  listItemInCartMain = document.querySelectorAll(
+const listItemInCartMain = document.querySelectorAll(
   ".cart-content .product-in-cart"
 );
-const  listRemoveProduct = document.querySelectorAll(
+const listRemoveProduct = document.querySelectorAll(
   ".product-in-cart .remove-product"
 );
 
@@ -77,6 +78,7 @@ listBtnAdd.forEach((item, index) => {
       }
     });
     localStorage.setItem("cart", JSON.stringify(cart));
+    totalPriceCart();
   });
 });
 
@@ -104,13 +106,14 @@ listBtnMinus.forEach((item, index) => {
       }
     });
     localStorage.setItem("cart", JSON.stringify(cart));
+    totalPriceCart();
   });
 });
 
 // Thay doi input cap nhap lai Cart
 listQuantityProductWeight.forEach((input, index) => {
   let cartItem = listItemInCartMain[index];
-  input.addEventListener("change", () => {
+  input.addEventListener("keyup", () => {
     let nameProduct = cartItem.querySelector(".product-name").textContent;
 
     cart.forEach((element) => {
@@ -119,14 +122,18 @@ listQuantityProductWeight.forEach((input, index) => {
       }
     });
     localStorage.setItem("cart", JSON.stringify(cart));
+    totalPriceCart();
   });
 });
-
+//remove
 listRemoveProduct.forEach((btn, index) => {
   let cartItem = listItemInCartMain[index];
   btn.addEventListener("click", () => {
     cartItem.remove();
-    let nameItem = cartItem.querySelector(".product-in-cart .product-name").textContent;
+    let nameItem = cartItem.querySelector(
+      ".product-in-cart .product-name"
+    ).textContent;
+    console.log(nameItem)
     // Lấy index của item
     let indexItem = cart.findIndex((item) => {
       return nameItem == item.name;
@@ -135,7 +142,36 @@ listRemoveProduct.forEach((btn, index) => {
       cart.splice(indexItem, 1);
       localStorage.setItem("cart", JSON.stringify(cart));
     }
-    document.querySelector(".header .nav-cart span").textContent =
-      cart.length;
+    document.querySelector(".header .nav-cart span").textContent = cart.length;
+    totalPriceCart();
   });
 });
+
+//total price
+
+function totalPriceCart() {
+  let totalPrice = document.querySelector(
+    ".cart-content .summary .total-price span:last-child"
+  );
+  let priceShipping = document.querySelector(
+    ".cart-content .summary .shipping-cost span:last-child"
+  );
+  let grandTotal = document.querySelector(
+    ".cart-content .summary .total span:last-child"
+  );
+  if (cart.length) {
+    let price = cart.reduce((total, item) => {
+      return total + item.price * (1 - item.sale / 100) * item.weight;
+    }, 0);
+    totalPrice.textContent = `${price.toFixed(2)}$`;
+    if (parseFloat(totalPrice.textContent) <200 && parseFloat(totalPrice.textContent)>0) {
+      priceShipping.textContent = `5$`;
+    } else {
+      priceShipping.textContent = `0$`;
+    }
+    grandTotal.textContent =
+      parseFloat(totalPrice.textContent) +
+      parseFloat(priceShipping.textContent);
+  }
+}
+totalPriceCart();
