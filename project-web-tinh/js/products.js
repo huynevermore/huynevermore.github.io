@@ -51,11 +51,19 @@ function renderProduct(arr) {
 }
 
 renderProduct(products);
+
+
 // onSearchProduct();
 // add to cart
 let listItems = document.querySelectorAll(".category-main .col-sm-6");
 let listBtnAddToCart = document.querySelectorAll("button.add-to-cart");
 
+listItems.forEach((item)=>{
+  item.onclick=function(){
+    window.location.href = './detail.html'
+  }
+
+})
 // function tim kiem
 function onSearchProduct() {
   let x = searchProduct.value.toLowerCase();
@@ -145,7 +153,8 @@ function filterPrice3() {
 //add to cart
 listBtnAddToCart.forEach((btn, index) => {
   let product = listItems[index];
-  btn.addEventListener("click", () => {
+  btn.addEventListener("click", (e) => {
+    e.stopPropagation();
     let nameProduct = product.querySelector(".product-name").innerText;
     products.forEach((element) => {
       if (element.name.toLocaleLowerCase() == nameProduct.toLowerCase()) {
