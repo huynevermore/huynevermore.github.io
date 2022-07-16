@@ -170,8 +170,8 @@ function totalPriceCart() {
       priceShipping.textContent = `0$`;
     }
     grandTotal.textContent =
-      parseFloat(totalPrice.textContent) +
-      parseFloat(priceShipping.textContent);
+      (parseFloat(totalPrice.textContent) +
+      parseFloat(priceShipping.textContent)).toFixed(2)+'$';
   }
 }
 totalPriceCart();

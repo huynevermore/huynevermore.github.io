@@ -182,7 +182,9 @@
         <nav style="--bs-breadcrumb-divider: '/'" aria-label="breadcrumb">
           <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="index.html">Trang chủ</a></li>
-            <li class="breadcrumb-item"><a href="#">Sản phẩm</a></li>
+            <li class="breadcrumb-item">
+              <a href="products.html">Sản phẩm</a>
+            </li>
             <li class="breadcrumb-item active" aria-current="page">Xà lách</li>
           </ol>
         </nav>
@@ -445,7 +447,7 @@
     <!-- Section Featured Products -->
     <section class="featured-product">
       <div class="container-md margin-top-40 margin-bot-40">
-        <p class="section-tittle text-center m-auto">sản phẩm nổi bật</p>
+        <p class="section-tittle text-center m-auto">sản phẩm liên quan</p>
         <div class="row g-3 margin-top-40" style="margin-top: 40px">
           <div class="col-sm-6 col-lg-3">
             <div class="wrap-featured-product-cart">
@@ -463,17 +465,17 @@
                   <span class="current-price">10$</span>
                 </div>
                 <p class="product-origin cus-margin-top-bot-8px">
-                  <span class="bold">Origin:</span> New Zealand
+                  <span class="bold">Xuất xứ:</span> New Zealand
                 </p>
                 <p class="product-type cus-margin-top-bot-8px">
-                  <span class="bold"> Type:</span> Fruit
+                  <span class="bold"> Loại sản phẩm:</span> Trái Cây
                 </p>
                 <p class="product-weight cus-margin-top-bot-8px">
-                  <span class="bold">Weight:</span> 1 Kg
+                  <span class="bold">Khối lượng:</span> 1 Kg
                 </p>
               </div>
               <button class="add-to-cart">
-                Add To Cart <i class="fa-solid fa-basket-shopping"></i>
+                Thêm vào giỏ hàng <i class="fa-solid fa-basket-shopping"></i>
               </button>
             </div>
           </div>
@@ -493,17 +495,17 @@
                   <span class="current-price">9$</span>
                 </div>
                 <p class="product-origin cus-margin-top-bot-8px">
-                  <span class="bold">Origin:</span> australia
+                  <span class="bold">Xuất Xứ:</span> Úc
                 </p>
                 <p class="product-type cus-margin-top-bot-8px">
-                  <span class="bold">Type:</span> Fruit
+                  <span class="bold">Loại sản phẩm:</span> Trái cây
                 </p>
                 <p class="product-weight cus-margin-top-bot-8px">
-                  <span class="bold">Weight:</span> 1 Kg
+                  <span class="bold">Khối lượng:</span> 1 Kg
                 </p>
               </div>
               <button class="add-to-cart">
-                Add To Cart <i class="fa-solid fa-basket-shopping"></i>
+                Thêm vào giỏ hàng <i class="fa-solid fa-basket-shopping"></i>
               </button>
             </div>
           </div>
@@ -523,17 +525,17 @@
                   <span class="current-price">7$</span>
                 </div>
                 <p class="product-origin cus-margin-top-bot-8px">
-                  <span class="bold">Origin:</span> việt nam
+                  <span class="bold">Xuất xứ:</span> việt nam
                 </p>
                 <p class="product-type cus-margin-top-bot-8px">
-                  <span class="bold">Type:</span> vegetables
+                  <span class="bold">Loại sản phẩm:</span> rau xanh
                 </p>
                 <p class="product-weight cus-margin-top-bot-8px">
-                  <span class="bold">Weight:</span> 1 Kg
+                  <span class="bold">Khối lượng:</span> 1 Kg
                 </p>
               </div>
               <button class="add-to-cart">
-                Add To Cart <i class="fa-solid fa-basket-shopping"></i>
+                Thêm vào giỏ hàng <i class="fa-solid fa-basket-shopping"></i>
               </button>
             </div>
           </div>
@@ -553,17 +555,17 @@
                   <span class="current-price">10.8$</span>
                 </div>
                 <p class="product-origin cus-margin-top-bot-8px">
-                  <span class="bold">Origin:</span> China
+                  <span class="bold">Xuất xứ:</span> Trung Quốc
                 </p>
                 <p class="product-type cus-margin-top-bot-8px">
-                  <span class="bold">Type:</span> Fruit
+                  <span class="bold">Loại sản phẩm:</span> Trái cây
                 </p>
                 <p class="product-weight cus-margin-top-bot-8px">
-                  <span class="bold"> Weight:</span> 1 Kg
+                  <span class="bold"> Khối lượng:</span> 1 Kg
                 </p>
               </div>
               <button class="add-to-cart">
-                Add To Cart <i class="fa-solid fa-basket-shopping"></i>
+                Thêm vào giỏ hàng <i class="fa-solid fa-basket-shopping"></i>
               </button>
             </div>
           </div>
@@ -696,37 +698,7 @@
     ></script>
     <script src="js/headerfooter.js"></script>
     <script src="js/main.js"></script>
-    <script>
-      let addBtn = document.querySelector(
-        "button.plus-quantity-detail-product"
-      );
-      let minusBtn = document.querySelector(
-        "button.minus-quantity-detail-product"
-      );
-      let inputQuantity = document.querySelector(
-        "input.quantity-product-weight"
-      );
-      let btnBuyNow = document.querySelector("button.buy-now");
-      let btnAddToCart = document.querySelector("button.add-to-cart");
-
-      addBtn.addEventListener("click", add);
-      minusBtn.addEventListener("click", minus);
-
-      function add() {
-        let currentValue = parseInt(inputQuantity.value) + 1;
-        inputQuantity.value = currentValue;
-      }
-      function minus() {
-        let currentValue = parseInt(inputQuantity.value) - 1;
-        if (currentValue < 1) {
-          inputQuantity.value = 1;
-        } else {
-          inputQuantity.value = currentValue;
-        }
-      }
-      btnBuyNow.addEventListener("click", function () {
-        window.location.href = "checkout.html";
-      });
-    </script>
+    <script src="js/featured-product.js"></script>
+    <script src="js/detail.js"></script>
   </body>
 </html>

@@ -41,7 +41,7 @@ function renderProduct(arr) {
                       </p>
                     </div>
                     <button class="add-to-cart">
-                      Add To Cart <i class="fa-solid fa-basket-shopping"></i>
+                      Thêm vào giỏ hàng <i class="fa-solid fa-basket-shopping"></i>
                     </button>
                   </div>
                 </div>`;

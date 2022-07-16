@@ -91,6 +91,13 @@
   text-align: center;
   width: 80%;
 }
+/* Toast message */
+#toast {
+  position: fixed;
+  top: 32px;
+  right: 32px;
+  z-index: 999999;
+}
 
 /* go to top */
 #go-to-top {
@@ -656,6 +663,7 @@
 .partner-logo img {
   display: block;
   margin: 0 auto;
+  max-width: 100%;
 }
 
 /* Review */
@@ -987,6 +995,12 @@
 .fa-heart {
   color: var(--secondary);
 }
+@media screen and (max-width:575px) {
+  .footer .col-sm-6{
+    text-align: center;
+  }
+  
+}
 
 /* detail */
 /* breadcrumb */
@@ -1007,6 +1021,7 @@
   color: var(--secondary);
   font-weight: 500;
 }
+
 
 /*  section product info*/
 
@@ -1373,7 +1388,9 @@
 .product-in-cart .product-info {
   display: flex;
   align-items: center;
+  min-width: 230px;
 }
+
 .product-in-cart .product-info .product-img {
   width: 80px;
   height: 80px;
@@ -1426,7 +1443,9 @@
 @media screen and (max-width: 420px) {
   .product-in-cart .product-info {
     flex-direction: column;
+    min-width: unset;
   }
+
 }
 
 .summary {
@@ -1480,7 +1499,7 @@
 }
 
 .summary .check-out:hover a,
-.summary .place-order:hover a {
+.summary .place-order:hover {
   color: var(--primary);
 }
 
@@ -1533,7 +1552,7 @@
   padding: 16px;
   border-radius: 8px;
 }
-#check-out .summary{
+#check-out .summary {
   height: 100%;
 }
 #check-out .summary .wrap-content-summary {
@@ -1617,7 +1636,8 @@
   margin-top: 8px;
 }
 
-#check-out span.form-message {
+#check-out span.form-message,
+#check-out span.select-message {
   display: none;
   margin: 8px 0;
   color: red;
@@ -1625,7 +1645,8 @@
 }
 
 @media screen and (max-width: 768px) {
-  #check-out span.form-message {
+  #check-out span.form-message,
+  #check-out span.select-message {
     margin: 8px 0;
   }
 }
@@ -1724,8 +1745,9 @@
 
 .order-detail td,
 .order-detail th {
-  text-align: center;
+  text-align: left;
   padding: 8px;
+  text-transform: capitalize;
 }
 
 .order-detail th {
@@ -1736,7 +1758,8 @@
   font-size: 14px;
 }
 
-.order-detail table tr:nth-child(even) {
+.order-detail table tr:nth-child(even),
+.order-detail table th{
   background-color: var(--border);
 }
 

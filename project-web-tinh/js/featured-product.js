@@ -1,5 +1,5 @@
 let listItems = document.querySelectorAll(".featured-product .col-sm-6");
-let listBtnAddToCart = document.querySelectorAll("button.add-to-cart");
+let listBtnAddToCart = document.querySelectorAll(".featured-product button.add-to-cart");
 
 listBtnAddToCart.forEach((btn, index) => {
   let product = listItems[index];

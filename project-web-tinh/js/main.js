@@ -331,7 +331,7 @@ const products = [
   },
   {
     id: 34,
-    name: "xa lach",
+    name: "xà lách",
     sale: 20,
     price: 5,
     origin: "Việt Nam",

@@ -32,7 +32,9 @@
   </head>
   <body>
     <!-- scroll on top -->
-    <button onclick="topFunction()" id="go-to-top" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
+    <button onclick="topFunction()" id="go-to-top" title="Go to top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
     <!-- header -->
     <section class="header">
       <nav class="navbar navbar-expand-lg bg-white cus-padding-0 fixed-top">
@@ -97,7 +99,28 @@
         </div>
       </nav>
     </section>
-
+    <!-- section modal -->
+    <div class="modal-cart">
+      <div class="modal-cart-content">
+        <span class="close"><i class="fa-solid fa-xmark"></i></span>
+        <div class="wrap-cart-content">
+          <div class="list-items"></div>
+          <div class="cart-content-bot">
+            <div class="sub-total">
+              <p>Tạm tính: <span>30$</span></p>
+            </div>
+            <div class="gr-button">
+              <!-- <a href="cart.html" class="hide">
+            <button>Xem giỏ hàng</button>
+          </a>
+          <a href="checkout.html" class="hide">
+            <button>Thanh toán</button>
+          </a> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- Section breadcrumb -->
     <section id="breadcrumb">
       <div class="container-md margin-top-100 margin-bot-28">
@@ -124,14 +147,14 @@
                 <img src="img/Check Circle.svg" alt="" />
               </div>
 
-              <h3>Thanks you for your order</h3>
+              <h3>Cảm ơn bạn vì đã đặt hàng</h3>
               <p class="bot">
-                Your order has been received and now being processed. Your order
-                detail are shown below for your reference:
+                Đơn đặt hàng của bạn đã được nhận và hiện đang được xử lý. Chi
+                tiết đơn hàng của bạn được hiển thị bên dưới để bạn tham khảo
               </p>
             </div>
 
-            <button><a href="products.html"> Tiếp tục mua hàng </a></button>
+            <button class="continue-shopping "><a href="products.html"> Tiếp tục mua hàng </a></button>
           </div>
           <div class="col-lg-6">
             <div class="wrap-confirm-right">
@@ -153,24 +176,6 @@
                     <th>Đơn giá</th>
                     <th>Khối lượng</th>
                     <th>Thành tiền</th>
-                  </tr>
-                  <tr>
-                    <td>Đào tiên úc</td>
-                    <td>10$</td>
-                    <td>1 Kg</td>
-                    <td>10$</td>
-                  </tr>
-                  <tr>
-                    <td>Đào tiên úc</td>
-                    <td>10$</td>
-                    <td>1 Kg</td>
-                    <td>10$</td>
-                  </tr>
-                  <tr>
-                    <td>Đào tiên úc</td>
-                    <td>10$</td>
-                    <td>1 Kg</td>
-                    <td>10$</td>
                   </tr>
                 </table>
               </div>
@@ -314,7 +319,7 @@
       src="https://kit.fontawesome.com/52ab85cd4c.js"
       crossorigin="anonymous"
     ></script>
-    <script src="js/headerfooter.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/confirm.js"></script>
   </body>
 </html>
