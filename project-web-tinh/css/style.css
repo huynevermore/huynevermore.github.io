@@ -98,6 +98,70 @@
   right: 32px;
   z-index: 999999;
 }
+/* toast */
+#cus-toast{
+  position: fixed;
+  top:32px;
+  right: 0px;
+  z-index: 1040;
+}
+.cus-toast {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: var(--bg-section);
+  border-radius: 4px;
+  padding: 18px 0;
+  border-left: 4px solid var(--primary);
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.08);
+  max-width: 320px;
+  transition: all linear 0.3s;
+  animation: slideInLeft ease 0.3s, cusFadeOut linear 1s 2s forwards;
+}
+.cus-toast + .cus-toast{
+  margin-top: 16px;
+}
+.toast__body{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 8px;
+}
+.toast__icon{
+  padding: 0 8px;
+}
+.toast__icon {
+  font-size: 24px;
+  color: var(--primary);
+}
+
+.toast__tittle {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  color: var(--primary);
+  margin-bottom: 0;
+}
+.toast__msg {
+  font-size: 14px;
+  color: #888;
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+@keyframes slideInLeft {
+  from{
+    transform: translateX(calc(100% + 32px));
+    opacity: 0;
+  }
+  to{
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes cusFadeOut {
+  to { opacity: 0;}
+  
+}
 
 /* go to top */
 #go-to-top {

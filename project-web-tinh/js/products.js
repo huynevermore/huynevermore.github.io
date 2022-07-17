@@ -52,18 +52,16 @@ function renderProduct(arr) {
 
 renderProduct(products);
 
-
 // onSearchProduct();
 // add to cart
 let listItems = document.querySelectorAll(".category-main .col-sm-6");
 let listBtnAddToCart = document.querySelectorAll("button.add-to-cart");
 
-listItems.forEach((item)=>{
-  item.onclick=function(){
-    window.location.href = './detail.html'
-  }
-
-})
+listItems.forEach((item) => {
+  item.onclick = function () {
+    window.location.href = "./detail.html";
+  };
+});
 // function tim kiem
 function onSearchProduct() {
   let x = searchProduct.value.toLowerCase();
@@ -166,7 +164,24 @@ listBtnAddToCart.forEach((btn, index) => {
       renderCart();
       totalModal();
     }
-
-    alert(" may da them vao gio hang");
+  });
+  btn.addEventListener("click", () => {
+    const main = document.querySelector("#cus-toast");
+    if (main) {
+      const toast = document.createElement("div");
+      toast.classList.add("cus-toast");
+      toast.innerHTML = `<div class="toast__icon">
+      <i class="fa-solid fa-circle-check"></i>
+    </div>
+    <div class="toast__body">
+      <h5 class="toast__tittle">Thành công</h5>
+      <p class="toast__msg">Bạn đã thêm sản phẩm vào giỏ hàng!</p>
+    </div>
+   `;
+      main.appendChild(toast);
+      setTimeout(() => {
+        main.removeChild(toast);
+      }, 3000);
+    }
   });
 });
