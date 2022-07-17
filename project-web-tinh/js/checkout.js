@@ -27,17 +27,36 @@ function renderCheckOut() {
         </div>
       </div>`;
   });
+  if (cart.length) {
+    cartCheckOut.innerHTML += content.join("");
+    countItemCart.classList.remove("hide");
+  } else {
+    countItemCart.classList.add("hide");
+    cartCheckOut.innerHTML += `<div class="img-empty-cart">
+    <img src="img/empty-cart.png" alt="" />
+  </div>`;
+    document.querySelector(
+      "#check-out .total-price span:last-child"
+    ).textContent = "0$";
+    document.querySelector(
+      "#check-out .shipping-cost span:last-child"
+    ).textContent = "0$";
 
-  cartCheckOut.innerHTML += content.join("");
+    document.querySelector("#check-out .total span:last-child").textContent =
+      "0$";
+    let btn = document.querySelector("#check-out .place-order");
+    btn.textContent = "Quay lại trang sản phẩm";
+    btn.addEventListener("click", (e) => {
+      window.location.href = "products.html";
+    });
+  }
 }
-
 renderCheckOut();
 
 let listItemCheckOut = document.querySelectorAll("#check-out .item-order");
 let listBtnRemoveCheckOut = document.querySelectorAll(
   "#check-out .remove-item-order"
 );
-
 listBtnRemoveCheckOut.forEach((btn, index) => {
   let item = listItemCheckOut[index];
   btn.addEventListener("click", () => {
@@ -55,7 +74,13 @@ listBtnRemoveCheckOut.forEach((btn, index) => {
       localStorage.setItem("cart", JSON.stringify(cart));
     }
     document.querySelector(".header .nav-cart span").textContent = cart.length;
+    // renderCheckOut();
+    // renderCheckOut();
+    if (cart.length == 0) {
+      renderCheckOut();
+    }
     totalPriceCheckOut();
+    // renderCheckOut();
   });
 });
 
@@ -83,9 +108,10 @@ function totalPriceCheckOut() {
       priceShipping.textContent = `0$`;
     }
     grandTotal.textContent =
-      (parseFloat(totalPrice.textContent) +
-      parseFloat(priceShipping.textContent)).toFixed(2) +
-      "$";
+      (
+        parseFloat(totalPrice.textContent) +
+        parseFloat(priceShipping.textContent)
+      ).toFixed(2) + "$";
   }
 }
 totalPriceCheckOut();
@@ -133,7 +159,7 @@ btnPlaceOrder.addEventListener("click", () => {
   customerInfo.push(note.value);
   localStorage.setItem("customerInfo", JSON.stringify(customerInfo));
 
-  if (customerInfo && customerInfo.length >6) {
+  if (customerInfo && customerInfo.length > 6) {
     window.location.href = "confirm.html";
   }
 });

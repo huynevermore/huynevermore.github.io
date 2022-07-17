@@ -3,7 +3,8 @@ function renderCartMain() {
     ".cart-content .product-list-in-cart"
   );
   let content = cart.map((item) => {
-    return `<div class="product-in-cart">
+    return `
+    <div class="product-in-cart">
         <div class="product-info">
           <div class="product-img">
             <img
@@ -36,9 +37,35 @@ function renderCartMain() {
         <div class="remove-product">
           <i class="fa-solid fa-trash-can"></i>
         </div>
+    
       </div>`;
   });
-  cartContent.innerHTML = content.join("");
+
+  if (cart.length > 0) {
+    cartContent.innerHTML = content.join("");
+    countItemCart.classList.remove("hide");
+
+  } else {
+    countItemCart.classList.add("hide");
+
+    cartContent.innerHTML = `<div class="img-empty-cart">
+    <img src="img/empty-cart.png" alt="" />
+  </div>`;
+    document.querySelector(
+      ".cart-content .total-price span:last-child"
+    ).textContent = "0$";
+    document.querySelector(
+      ".cart-content .shipping-cost span:last-child"
+    ).textContent = "0$";
+
+    document.querySelector(".cart-content .total span:last-child").textContent =
+      "0$";
+    let btnCheckOut = document.querySelector(".cart-content .check-out");
+    btnCheckOut.style.opacity = "0.3";
+    btnCheckOut.addEventListener("click", (e) => {
+      e.preventDefault();
+    });
+  }
 }
 renderCartMain();
 
@@ -133,7 +160,7 @@ listRemoveProduct.forEach((btn, index) => {
     let nameItem = cartItem.querySelector(
       ".product-in-cart .product-name"
     ).textContent;
-    console.log(nameItem)
+    console.log(nameItem);
     // Lấy index của item
     let indexItem = cart.findIndex((item) => {
       return nameItem == item.name;
@@ -143,7 +170,11 @@ listRemoveProduct.forEach((btn, index) => {
       localStorage.setItem("cart", JSON.stringify(cart));
     }
     document.querySelector(".header .nav-cart span").textContent = cart.length;
+    if(cart.length==0){
+      renderCartMain();
+    }
     totalPriceCart();
+
   });
 });
 
@@ -164,14 +195,24 @@ function totalPriceCart() {
       return total + item.price * (1 - item.sale / 100) * item.weight;
     }, 0);
     totalPrice.textContent = `${price.toFixed(2)}$`;
-    if (parseFloat(totalPrice.textContent) <200 && parseFloat(totalPrice.textContent)>0) {
+    if (
+      parseFloat(totalPrice.textContent) < 200 &&
+      parseFloat(totalPrice.textContent) > 0
+    ) {
       priceShipping.textContent = `5$`;
     } else {
       priceShipping.textContent = `0$`;
     }
     grandTotal.textContent =
-      (parseFloat(totalPrice.textContent) +
-      parseFloat(priceShipping.textContent)).toFixed(2)+'$';
+      (
+        parseFloat(totalPrice.textContent) +
+        parseFloat(priceShipping.textContent)
+      ).toFixed(2) + "$";
   }
 }
 totalPriceCart();
+
+// renderCartMain();
+// window.onload=function(){
+//   renderCartMain();
+// }

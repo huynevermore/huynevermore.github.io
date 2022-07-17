@@ -60,6 +60,7 @@ function addToCartDetail() {
   );
   document.querySelector("#detail-product .quantity-product-weight").value = 1;
   checkItem(objectDetail);
+  document.querySelector(".header .nav-cart span").classList.remove("hide");
   document.querySelector(".header .nav-cart span").textContent = cart.length;
   alert(
     `may da them vao gio hang ${objectDetail.weight}kg ${objectDetail.name}`
