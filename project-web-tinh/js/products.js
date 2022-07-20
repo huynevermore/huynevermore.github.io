@@ -1,10 +1,10 @@
-let perPage = 12;
-let currentPage = 1;
-let start = 0;
-let end = perPage;
+// let perPage = 12;
+// let currentPage = 1;
+// let start = 0;
+// let end = perPage;
+const btnNext = document.querySelector(".cus-pagination .next");
+const btnPrev = document.querySelector(".cus-pagination .prev");
 let searchProduct = document.querySelector(`.form-search input[type="search"]`);
-
-// searchProduct.addEventListener("keyup", onSearchProduct);
 
 // function render product
 function renderProduct(arr) {
@@ -185,3 +185,6 @@ listBtnAddToCart.forEach((btn, index) => {
     }
   });
 });
+
+// pagination
+// let listItems = document.querySelectorAll(".category-main .col-sm-6");
