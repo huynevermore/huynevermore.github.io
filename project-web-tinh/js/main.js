@@ -444,6 +444,7 @@ function renderCart() {
   </a>`;
 
     countItemCart.classList.remove("hide");
+    document.querySelector(".modal-cart .sub-total").classList.remove("hide");
     document.querySelector(".header .nav-cart span").textContent = cart.length;
   } else {
     countItemCart.classList.add("hide");
