@@ -459,7 +459,7 @@ function renderCart() {
     ).innerHTML = `<a href="products.html" >
     <button>Tiếp tục mua hàng</button>
   </a>`;
-  document.querySelector(".modal-cart .sub-total span").textContent="0$"
+  document.querySelector(".modal-cart .sub-total").classList.add("hide");
   }
 
   removeItemCart();

@@ -1223,8 +1223,8 @@
 
 .wrap-detail-product-btn .add-to-cart,
 .wrap-detail-product-btn .buy-now {
-  min-width: 180px;
-  padding: 6px 0;
+  min-width: 220px;
+  padding: 6px 0px;
   font-size: 20px;
   background-color: #fff;
   border-radius: 8px;
@@ -1383,6 +1383,7 @@
   border-radius: 8px;
   border: 1px solid rgba(210, 210, 210, 1);
   position: relative;
+  cursor: pointer;
 }
 
 .product-item .old-price {
