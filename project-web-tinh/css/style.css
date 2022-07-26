@@ -1131,7 +1131,7 @@
   padding: 0px 0 20px 0;
 }
 
-#detail-product .quantity-product-weight-group {
+.quantity-product-weight-group {
   display: flex;
 }
 .detail-product-img {
@@ -1582,9 +1582,11 @@
   }
   .cart-content .minus-quantity-detail-product {
     border-top: none;
+    border-right: 2px solid var(--primary) ;
   }
   .cart-content .plus-quantity-detail-product {
     border-bottom: none;
+    border-left: 2px solid var(--primary) ;
   }
   .wrap-filter-category {
     padding: 4px;
