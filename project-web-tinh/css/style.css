@@ -1131,6 +1131,9 @@
   padding: 0px 0 20px 0;
 }
 
+#detail-product .quantity-product-weight-group {
+  display: flex;
+}
 .detail-product-img {
   width: 100%;
   height: 500px;
@@ -1152,6 +1155,13 @@
   height: 40px;
   border: 2px solid var(--primary);
   background-color: #fff;
+}
+
+.minus-quantity-detail-product{
+  border-right: none ;
+}
+.plus-quantity-detail-product{
+  border-left: none ;
 }
 
 .minus-quantity-detail-product:hover,
@@ -1223,9 +1233,9 @@
 
 .wrap-detail-product-btn .add-to-cart,
 .wrap-detail-product-btn .buy-now {
-  min-width: 220px;
+  min-width: 180px;
   padding: 6px 0px;
-  font-size: 20px;
+  font-size: 18px;
   background-color: #fff;
   border-radius: 8px;
   font-weight: 400;
