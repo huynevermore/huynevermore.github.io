@@ -33,9 +33,9 @@ function renderOrderDetail() {
   let content = cart.map((item) => {
     return `<tr>
             <td>${item.name}</td>
-            <td>${parseFloat(item.price * (1 - item.sale / 100)).toFixed(2)}$</td>
+            <td>${parseFloat(item.price * (1 - item.sale / 100)).toFixed(2)} VNĐ</td>
             <td>${item.weight} Kg</td>
-            <td>${(parseFloat(item.price * (1 - item.sale / 100)).toFixed(2) * parseFloat(item.weight)).toFixed(2)}$</td>
+            <td>${(parseFloat(item.price * (1 - item.sale / 100)).toFixed(2) * parseFloat(item.weight)).toFixed(2)} VNĐ</td>
           </tr>`;
   });
   tableProduct.innerHTML+=content.join('');
@@ -56,19 +56,19 @@ function totalPriceCheckOut() {
       let price = cart.reduce((total, item) => {
         return total + item.price * (1 - item.sale / 100) * item.weight;
       }, 0);
-      totalPrice.textContent = `${price.toFixed(2)}$`;
+      totalPrice.textContent = `${price.toFixed(2)} VNĐ`;
       if (
         parseFloat(totalPrice.textContent) < 200 &&
         parseFloat(totalPrice.textContent) > 0
       ) {
-        priceShipping.textContent = `5$`;
+        priceShipping.textContent = `5.00 VNĐ`;
       } else {
-        priceShipping.textContent = `0$`;
+        priceShipping.textContent = `0 VNĐ`;
       }
       grandTotal.textContent =
         parseFloat(totalPrice.textContent) +
         parseFloat(priceShipping.textContent) +
-        "$";
+        " VNĐ";
     }
   }
   totalPriceCheckOut();

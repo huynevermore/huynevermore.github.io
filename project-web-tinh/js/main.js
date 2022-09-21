@@ -421,7 +421,7 @@ function renderCart() {
           <p class="item-info-name">${e.name}</p>
           <p class="item-info-unit-price">Đơn giá: <span>${parseFloat(
             e.price * (1 - e.sale / 100)
-          ).toFixed(2)}$</span></p>
+          ).toFixed(2)} VNĐ</span></p>
           <p class="item-info-weight">Khối lượng: ${e.weight}Kg</p>
         </div>
       </div>
@@ -477,7 +477,7 @@ function totalModal() {
     }, 0);
     document.querySelector(
       ".modal-cart .sub-total span"
-    ).innerHTML = `${total.toFixed(2)}$`;
+    ).innerHTML = `${total.toFixed(2)} VNĐ`;
   }
 }
 

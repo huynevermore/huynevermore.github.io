@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS v5.2.0-beta1 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="top">
+      <h1>Cấu hình tỷ giá</h1>
+      <btn class="cus-btn"><i class="fa-solid fa-plus"></i>Thêm mới</btn>
+    </section>
+    <section class="main">
+      <div class="main-top">
+        <form action="">
+          <div class="category">
+            <label for="cate">Danh Mục</label>
+            <select name="" id="cate">
+              <option value="1">Sale Exchange Rate</option>
+              <option value="2">Sale Exchange Rate 2</option>
+              <option value="3">Sale Exchange Rate 3</option>
+            </select>
+          </div>
+          <div class="filter-by-money">
+            <label for="money">Lọc theo tiền tệ</label>
+            <select name="" id="money">
+              <option value="1">--Chọn---</option>
+              <option value="2">1</option>
+              <option value="3">2</option>
+            </select>
+          </div>
+          <div class="date">
+            <label for="date">Ngày</label>
+            <input type="text" />
+          </div>
+          <div class="gr-btn-main">
+            <button class="btn-filter-main">
+              <i class="fa-solid fa-filter"></i> Lọc
+            </button>
+            <button class="btn-change-main">
+              <i class="fa-solid fa-arrow-right-arrow-left"></i>
+            </button>
+            <button class="btn-search-main">
+              <i class="fa-solid fa-magnifying-glass"></i
+              ><i class="fa-solid fa-chevron-down"></i>
+            </button>
+          </div>
+        </form>
+      </div>
+      <div class="main-table">
+        <table>
+          <tr>
+            <th>STT</th>
+            <th></th>
+            <th>Tiền Tệ</th>
+            <th>Tiền Tệ Quy Đổi</th>
+            <th>Ngày Bắt Đầu- Ngày Kết Thúc</th>
+            <th>Tỷ Giá Quy Đổi</th>
+            <th>Tỷ Giá Chia</th>
+            <th>Mô Tả</th>
+            <th>Ngày Tạo</th>
+            <th>Thao Tác</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>
+              <button><i class="fa-solid fa-pencil"></i></button
+              ><button><i class="fa-regular fa-clone"></i></button>
+            </td>
+            <td>USD</td>
+            <td>VND</td>
+            <td>T6,01 Thg 01,2021 - T7, 31 Thg 12,2022</td>
+            <td>23,000</td>
+            <td>
+              <button><i class="fa-solid fa-xmark"></i></button>
+            </td>
+            <td>De quy doi USD sang VND cho bao cao ke toan</td>
+            <td>T7, 01 Thg 04, 2017</td>
+            <td>
+              <button><i class="fa-solid fa-trash-can"></i></button>
+            </td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td><button><i class="fa-solid fa-pencil"></i></button><button><i class="fa-regular fa-clone"></i></button></td>
+            <td>VND</td>
+            <td>USD</td>
+            <td>T6,01 Thg 01,2021 - T7, 31 Thg 12,2022 </td>
+            <td>23,000</td>
+            <td><button><i class="fa-solid fa-check"></i></button></td>
+            <td>Đổi từ VNĐ sang USD</td>
+            <td>T7, 01 Thg 04, 2017</td>
+            <td><button><i class="fa-solid fa-trash-can"></i></button></td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>
+              <button><i class="fa-solid fa-pencil"></i></button
+              ><button><i class="fa-regular fa-clone"></i></button>
+            </td>
+            <td>USD</td>
+            <td>HKD</td>
+            <td>T6,01 Thg 01,2021 - T7, 31 Thg 12,2022</td>
+            <td>23,000</td>
+            <td>
+              <button><i class="fa-solid fa-xmark"></i></button>
+            </td>
+            <td></td>
+            <td>T7, 01 Thg 04, 2017</td>
+            <td>
+              <button><i class="fa-solid fa-trash-can"></i></button>
+            </td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>
+              <button><i class="fa-solid fa-pencil"></i></button
+              ><button><i class="fa-regular fa-clone"></i></button>
+            </td>
+            <td>MMK</td>
+            <td>VND</td>
+            <td>T6,01 Thg 01,2021 - T7, 31 Thg 12,2022</td>
+            <td>23,000</td>
+            <td>
+              <button><i class="fa-solid fa-xmark"></i></button>
+            </td>
+            <td></td>
+            <td>T7, 01 Thg 04, 2017</td>
+            <td>
+              <button><i class="fa-solid fa-trash-can"></i></button>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </section>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+      integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+      integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/52ab85cd4c.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -23,10 +23,10 @@ function renderProduct(arr) {
                         ${e.name}
                       </p>
                       <div class="product-price cus-margin-top-bot-8px">
-                        <span class="old-price">${e.price.toFixed(2)}$</span>
+                        <span class="old-price">${e.price.toFixed(2)} VNĐ</span>
                         <span class="current-price">${parseFloat(
                           e.price * (1 - e.sale / 100)
-                        ).toFixed(2)}$</span>
+                        ).toFixed(2)} VNĐ</span>
                       </div>
                       <p class="product-origin cus-margin-top-bot-8px">
                         <span class="bold">Xuất xứ:</span> ${e.origin}

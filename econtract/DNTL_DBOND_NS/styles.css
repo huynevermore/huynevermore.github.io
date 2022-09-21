@@ -1,0 +1,182 @@
+* {
+  font-family: "Times New Roman", Times, serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+p {
+  margin: 0;
+  line-height: 1.6;
+}
+li {
+  margin-left: 10px;
+}
+body {
+  background-color: lightslategrey;
+}
+
+.section {
+  background-color: #fff;
+  height: 842px;
+  width: 595px;
+  margin: 20px auto;
+  padding: 60px;
+}
+
+.m-0 {
+  margin: 0;
+}
+
+.p-0 {
+  padding: 0;
+}
+.mx-4{
+  margin: 4px 0;
+}
+.mx-8{
+  margin: 8px 0;
+}
+.mx-12{
+  margin: 4px 0;
+}
+
+.mb-4{
+  margin-bottom: 4px;
+}
+.mb-8{
+  margin-bottom: 8px;
+}
+.mb-12{
+  margin-bottom: 12px;
+}
+
+.mb-24{
+  margin-bottom: 24px;
+}
+.mb-36{
+  margin-bottom: 36px;
+}
+.mb-48{
+  margin-bottom: 48px;
+}
+
+.mb-54{
+  margin-bottom: 54px;
+}
+
+.mr-36{
+  margin-right: 36px;
+}
+
+.ml-4{
+  margin-left: 4px;
+}
+.ml-8{
+  margin-left: 8px;
+}
+.mt-4{
+  margin-top: 4px;
+}
+
+.mt-8{
+  margin-top: 4px;
+}
+.mt-12{
+  margin-top: 4px;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+.text-right {
+  text-align: right;
+}
+.text-center {
+  text-align: center;
+}
+.underline {
+  text-decoration: underline;
+}
+.bold {
+  font-weight: bold;
+}
+
+.f-weight-600 {
+  font-weight: 600;
+}
+.center-y {
+  display: flex;
+  align-items: center;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.italic {
+  font-style: italic;
+}
+
+.f-12 {
+  font-size: 12px;
+}
+.f-11 {
+  font-size: 11px;
+}
+.f-10 {
+  font-size: 10px;
+}
+
+.f-9 {
+  font-size: 9px;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+.w-60 {
+  width: 60%;
+}
+
+.w-40 {
+  width: 40%;
+}
+
+.w-33 {
+  width: 33.33%;
+}
+
+.column {
+  flex-direction: column;
+}
+.relative {
+  position: relative;
+}
+.cus-line {
+  margin-top: auto;
+}
+.cus-line::before {
+  content: "";
+  width: 200px;
+  height: 2px;
+  background-color: black;
+  position: absolute;
+  left: 0;
+  top: -4px;
+}
+.cus-list-style{
+  list-style: "-    ";
+}
+
+.justify-space-between{
+  justify-content: space-between;
+}
+
+hr{
+  background-color: black;
+}

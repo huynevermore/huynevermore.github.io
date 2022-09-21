@@ -18,10 +18,10 @@ function renderCartMain() {
             <div class="product-price">
               <span> Đơn giá: </span><span class="old-price">${
                 item.price
-              }$</span>
+              } VNĐ</span>
               <span class="current-price"> ${parseFloat(
                 item.price * (1 - item.sale / 100)
-              ).toFixed(2)}$ </span>
+              ).toFixed(2)} VNĐ</span>
             </div>
           </div>
         </div>
@@ -53,10 +53,10 @@ function renderCartMain() {
   </div>`;
     document.querySelector(
       ".cart-content .total-price span:last-child"
-    ).textContent = "0$";
+    ).textContent = "0 VNĐ";
     document.querySelector(
       ".cart-content .shipping-cost span:last-child"
-    ).textContent = "0$";
+    ).textContent = "0 VNĐ";
 
     document.querySelector(".cart-content .total span:last-child").textContent =
       "0$";
@@ -194,20 +194,20 @@ function totalPriceCart() {
     let price = cart.reduce((total, item) => {
       return total + item.price * (1 - item.sale / 100) * item.weight;
     }, 0);
-    totalPrice.textContent = `${price.toFixed(2)}$`;
+    totalPrice.textContent = `${price.toFixed(2)} VNĐ`;
     if (
       parseFloat(totalPrice.textContent) < 200 &&
       parseFloat(totalPrice.textContent) > 0
     ) {
-      priceShipping.textContent = `5$`;
+      priceShipping.textContent = `5.00 VNĐ`;
     } else {
-      priceShipping.textContent = `0$`;
+      priceShipping.textContent = `0 VNĐ`;
     }
     grandTotal.textContent =
       (
         parseFloat(totalPrice.textContent) +
         parseFloat(priceShipping.textContent)
-      ).toFixed(2) + "$";
+      ).toFixed(2) + " VNĐ";
   }
 }
 totalPriceCart();

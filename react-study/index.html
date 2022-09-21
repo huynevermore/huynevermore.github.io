@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script
+      src="https://unpkg.com/react@18/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+    <script src="like_button.js"></script>
+    <script>
+      function Car(props) {
+        return <li> I am a {props.brand}</li>;
+      }
+
+      function Garage() {
+        const cars = ["Ford", "BMW", "Audi"];
+        return (
+          <>
+            <h1>Who lives in my garage?</h1>
+            <ul>
+              {cars.map((car) => (
+                <Car brand={car} />
+              ))}
+            </ul>
+          </>
+        );
+      }
+
+      const root = ReactDOM.createRoot(document.getElementById("root"));
+      root.render(<Garage />);
+    </script>
+  </body>
+</html>

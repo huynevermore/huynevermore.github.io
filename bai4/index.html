@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Bài 4</title>
+  </head>
+  <body onresize="resizeFunc()">
+    <nav>
+      <div class="nav-top">
+        <div class="nav-logo">
+          <img src="img/logo DHome-01.png" alt="" />
+        </div>
+        <div class="nav-btn">
+          <div class="nav-btn-bars">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+          <div class="nav-btn-close hide">
+            <i class="fa-solid fa-xmark"></i>
+          </div>
+        </div>
+      </div>
+      <div class="nav-menu hide">
+        <div class="input-pc">
+          <input type="text" placeholder="Search by keywords" />
+        </div>
+
+        <div class="nav-menu-top">
+          <div class="menu-item">List your property</div>
+          <div class="menu-item">Trips</div>
+          <div class="menu-item">Messages</div>
+          <div class="user">
+            <div class="user-avatar"><img src="img/avt.png" alt="" /></div>
+            <div class="user-name">Isla Schoger</div>
+          </div>
+          <div class="nav-menu-bottom">
+            <div class="nav-menu-bottom-item">Account Settings</div>
+            <div class="nav-menu-bottom-item">Support</div>
+            <div class="nav-menu-bottom-item">Sign out</div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="filter">
+      <input type="text" name="" id="" placeholder="Search by keywords" />
+      <button><i class="fa-solid fa-filter"></i> Filters</button>
+    </div>
+
+    <div class="filter-box hide">
+      <div class="filter-box-top">
+        <div class="bedrooms">
+          <label>Bedrooms</label>
+
+          <select name="" id="">
+            <option value="">1</option>
+            <option value="">2</option>
+            <option value="">3</option>
+            <option value="">4</option>
+          </select>
+        </div>
+        <div class="bathrooms">
+          <label>Bathrooms</label>
+
+          <select name="" id="">
+            <option value="">1</option>
+            <option value="">2</option>
+            <option value="">3</option>
+          </select>
+        </div>
+        <div class="price-range">
+          <label>Price Range</label>
+          <select name="" id="">
+            <option value="">1</option>
+            <option value="">2</option>
+            <option value="">3</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="filter-box-middle">
+        <div class="filter-property-type">
+          <p>Property Type</p>
+          <div class="wrap-property-type-item">
+            <div class="property-type-item">
+              <input type="radio" name="type" /><span>House</span>
+            </div>
+            <div class="property-type-item">
+              <input type="radio" name="type" /><span>Apartment</span>
+            </div>
+            <div class="property-type-item">
+              <input type="radio" name="type" /><span>Loft</span>
+            </div>
+            <div class="property-type-item">
+              <input type="radio" name="type" /><span>Townhouse</span>
+            </div>
+          </div>
+        </div>
+        <div class="filter-amenities">
+          <p>Amenities</p>
+          <div class="wap-amenities-item">
+            <div class="amenities-item">
+              <input type="checkbox" name="amenities" id="" />
+              <span>Balcony</span>
+            </div>
+            <div class="amenities-item">
+              <input type="checkbox" name="amenities" id="" />
+              <span>Air conditioning</span>
+            </div>
+            <div class="amenities-item">
+              <input type="checkbox" name="amenities" id="" />
+              <span>Pool</span>
+            </div>
+            <div class="amenities-item">
+              <input type="checkbox" name="amenities" id="" />
+              <span>Beach</span>
+            </div>
+            <div class="amenities-item">
+              <input type="checkbox" name="amenities" id="" />
+              <span>Pet friendly</span>
+            </div>
+            <div class="amenities-item">
+              <input type="checkbox" name="amenities" id="" />
+              <span>Kid friendly</span>
+            </div>
+            <div class="amenities-item">
+              <input type="checkbox" name="amenities" id="" />
+              <span>Parking</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="filter-box-bot">
+        <button>Update results</button>
+      </div>
+    </div>
+
+    <div class="main">
+      <div class="main-item">
+        <div class="item-top">
+          <h3>Los Angeles</h3>
+          <p>
+            Live like the stars in these luxurious Southern California estates.
+          </p>
+        </div>
+        <div class="item">
+          <div class="item-content">
+            <div class="item-content-top">
+              <div class="plus">Plus</div>
+              <div class="beds">3 BEDS</div>
+              <div class="baths">2 BATHS</div>
+            </div>
+            <div class="item-name">Modern home in city center</div>
+            <div class="item-price">$<span>1,400</span>/<span>wk</span></div>
+            <div class="more">
+              <div class="star">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <span class="rate">34 Reviews</span>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="item-content">
+            <div class="item-content-top">
+              <div class="plus">Plus</div>
+              <div class="beds">3 BEDS</div>
+              <div class="baths">2 BATHS</div>
+            </div>
+            <div class="item-name">Modern home in city center</div>
+            <div class="item-price">$<span>1,400</span>/<span>wk</span></div>
+            <div class="more">
+              <div class="star">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <span class="rate">34 Reviews</span>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="item-content">
+            <div class="item-content-top">
+              <div class="plus">Plus</div>
+              <div class="beds">3 BEDS</div>
+              <div class="baths">2 BATHS</div>
+            </div>
+            <div class="item-name">Modern home in city center</div>
+            <div class="item-price">$<span>1,400</span>/<span>wk</span></div>
+            <div class="more">
+              <div class="star">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <span class="rate">34 Reviews</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="main-item">
+        <div class="item-top">
+          <h3>Los Angeles</h3>
+          <p>
+            Live like the stars in these luxurious Southern California estates.
+          </p>
+        </div>
+        <div class="item">
+          <div class="item-content">
+            <div class="item-content-top">
+              <div class="plus">Plus</div>
+              <div class="beds">3 BEDS</div>
+              <div class="baths">2 BATHS</div>
+            </div>
+            <div class="item-name">Modern home in city center</div>
+            <div class="item-price">$<span>1,400</span>/<span>wk</span></div>
+            <div class="more">
+              <div class="star">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <span class="rate">34 Reviews</span>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="item-content">
+            <div class="item-content-top">
+              <div class="plus">Plus</div>
+              <div class="beds">3 BEDS</div>
+              <div class="baths">2 BATHS</div>
+            </div>
+            <div class="item-name">Modern home in city center</div>
+            <div class="item-price">$<span>1,400</span>/<span>wk</span></div>
+            <div class="more">
+              <div class="star">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <span class="rate">34 Reviews</span>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="item-content">
+            <div class="item-content-top">
+              <div class="plus">Plus</div>
+              <div class="beds">3 BEDS</div>
+              <div class="baths">2 BATHS</div>
+            </div>
+            <div class="item-name">Modern home in city center</div>
+            <div class="item-price">$<span>1,400</span>/<span>wk</span></div>
+            <div class="more">
+              <div class="star">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <span class="rate">34 Reviews</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://kit.fontawesome.com/52ab85cd4c.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="main.js"></script>
+  </body>
+</html>
