@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "react-tooltip": "^4.2.21",
+    "yarn": "^1.22.19"
+  }
+}

@@ -1,0 +1,32 @@
+#watchlist {
+    background: #2f3240;
+    margin: 1px;
+    height: 45%;
+    font-size: 13px;
+}
+
+#watchlist .watchlist-table{
+    padding-top: 5px;
+}
+
+#watchlist .watchlist-table-head{
+    display: grid;
+    grid-template-columns: 25% 18% 16% 16% 25% ;
+    height: 27px;
+    background-color: #78787826;
+}
+
+#watchlist .watchlist-table-row{
+    display: grid;
+    grid-template-columns: 25% 18% 16% 16% 25% ;
+    height: 27px;
+}
+
+#watchlist .watchlist-table-row >p{
+    padding: 0 5px;
+    line-height:27px ;
+}
+
+#watchlist .watchlist-table-row:nth-child(odd){
+    background-color: #78787826;
+}

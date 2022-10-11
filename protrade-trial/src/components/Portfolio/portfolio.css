@@ -1,0 +1,36 @@
+.tab-open-position .command-list {
+  display: grid;
+  grid-template-columns: 60px 40px 60px 60px 140px 1fr;
+  height: 46px;
+  text-align: center;
+  font-weight: 400;
+}
+
+.tab-close-position .command-list {
+  display: grid;
+  grid-template-columns: 80px 60px 80px 80px 1fr;
+  height: 46px;
+  text-align: center;
+  font-weight: 400;
+}
+#portfolio-box-container .nav-pills .nav-link.active {
+  color: #f7941d;
+  font-weight: 700;
+  background-color: #2f3240;
+  font-size: 12px;
+}
+
+#portfolio-box-container .nav-pills .nav-link {
+  color: #fff;
+  background-color: #2f3240;
+  font-size: 12px;
+  padding: 0 50px;
+}
+
+#portfolio-box-container .tab-open-position > p,
+#portfolio-box-container .tab-close-position > p {
+  line-height: 50px;
+  font-size: 15px;
+  text-align: center;
+  color: #777;
+}

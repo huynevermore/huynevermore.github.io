@@ -119,7 +119,7 @@ function App() {
       {filterTypes.map((filterType) => {
         return (
           <Button
-            colorScheme={filterType === selectedFilterType ? "teal" : undefined}
+            colorScheme={filterType ``=== selectedFilterType ? "teal" : undefined}
             className={"mr-4"}
             key={filterType}
             onClick={() => {

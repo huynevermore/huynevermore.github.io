@@ -1,0 +1,52 @@
+@import "bootstrap/dist/css/bootstrap.min.css";
+
+* {
+  font-family: Helvetica, Arial, Sans-Serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  line-height: 1.666666667em;
+}
+
+input:focus {
+  outline: none;
+}
+
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #393939;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.txt-green {
+  color: #0f0 !important;
+}
+
+.tc {
+  text-align: center;
+}
+
+.f-15 {
+  font-size: 15px;
+}
+
+

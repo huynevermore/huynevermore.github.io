@@ -1,0 +1,165 @@
+.login-page {
+  position: relative;
+}
+
+.login-page .toast-error {
+  background-color: #fbc4bb;
+  border-top: 2px solid #de2a0c;
+  width: 300px;
+  padding: 10px 12px;
+  line-height: 1.8;
+  font-size: 13px;
+  color: #333;
+  position: absolute;
+  top: 45px;
+  right: 8px;
+  z-index: 9999;
+  border-radius: 2px;
+  color: #333;
+}
+.login-page .overlay {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  background-image: url(../../assets/imgs/logo.svg),
+    url(https://static-01.vndirect.com.vn/images/dpro/dpro_login_bg.jpg);
+  background-repeat: no-repeat, no-repeat;
+  background-position: 50% 14%, center bottom;
+  background-size: 340px, cover;
+  display: block;
+}
+
+.login-page .dialog {
+  width: 350px;
+  height: 450px;
+  position: fixed;
+  top: 52%;
+  left: 50%;
+  margin: -175px 0px 0px -175px;
+  background-color: rgb(248, 248, 248);
+  border-radius: 10px;
+  z-index: 100;
+  padding: 5px;
+  box-shadow: rgb(0 0 0 / 14%) 0px 0px 4px, rgb(0 0 0 / 28%) 0px 4px 8px;
+  opacity: 0.93;
+  display: block;
+}
+
+#login-popup form[name="login"] {
+  margin-top: 15px;
+}
+
+#login-popup p {
+  text-align: center;
+}
+
+#login-popup p.login-with-trade-acc {
+  font-size: 14px;
+  font-weight: 700;
+  color: #444;
+  margin-bottom: 16px;
+}
+
+#login-popup form[name="login"] label {
+  display: block;
+  width: 200px;
+  color: #444;
+  font-size: 14px;
+  margin: 5px auto 3px;
+}
+
+#login-popup form[name="login"] input[type="password"],
+#login-popup form[name="login"] input[type="text"] {
+  background: #dbe2f1;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  font-size: 14px;
+  padding: 2px 7px;
+  width: 195px;
+  display: block;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  margin: 0 auto 10px;
+  color: #333;
+}
+
+#login-popup form[name="login"] input[type="password"]:focus,
+#login-popup form[name="login"] input[type="text"]:focus {
+  border: 1px solid #f7941d;
+  background: #fff;
+  color: #333;
+}
+
+#remember-me {
+  margin: 0 6px;
+}
+
+.icon-info {
+  margin-left: 6px;
+}
+.sign-in-btn {
+  background-color: #f7941d;
+  border: none;
+  color: #fff;
+  padding: 6px;
+  font-size: 13px;
+  font-weight: 700;
+  margin: 20px auto 10px;
+  width: 200px;
+  border-radius: 5px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: block;
+}
+
+.sign-in-btn:hover {
+  background-color: #f89b2c !important;
+  box-shadow: 0 0 6px 0.5px #f8a036;
+  outline: none;
+}
+
+.login-divider {
+  border: 1px dotted #ddd;
+}
+.register-wrp {
+  display: flex;
+  justify-content: center;
+}
+.register-btn {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: #18c451;
+  color: #fff;
+  font-weight: 700;
+  padding: 6px;
+  width: 200px;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 3px;
+  outline: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  font-size: 13px;
+}
+
+.register-btn:hover {
+  background-color: #1ad257 !important;
+  box-shadow: 0 0 6px 0.5px #1bdb5a;
+  outline: none;
+}
+
+#login-popup p.login-helper a {
+  color: #000;
+  text-decoration: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  font-size: 13px;
+}
+
+#login-popup p.login-helper a:focus,
+#login-popup p.login-helper a:hover {
+  color: #f7941d;
+}

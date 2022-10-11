@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        * {
+            font-family: "Times New Roman", Times, serif;
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        p {
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        li {
+            margin-left: 10px;
+        }
+
+        body {
+            background-color: lightslategrey;
+        }
+
+        .section {
+            background-color: #fff;
+            width: 595px;
+            margin: 20px auto;
+            padding: 40px;
+        }
+
+        .m-0 {
+            margin: 0;
+        }
+
+        .p-0 {
+            padding: 0;
+        }
+
+        .mx-4 {
+            margin: 4px 0;
+        }
+
+        .mx-8 {
+            margin: 8px 0;
+        }
+
+        .mx-12 {
+            margin: 4px 0;
+        }
+
+        .mb-4 {
+            margin-bottom: 4px;
+        }
+
+        .mb-8 {
+            margin-bottom: 8px;
+        }
+
+        .mb-12 {
+            margin-bottom: 12px;
+        }
+
+        .mb-24 {
+            margin-bottom: 24px;
+        }
+
+        .mb-36 {
+            margin-bottom: 36px;
+        }
+
+        .mb-48 {
+            margin-bottom: 48px;
+        }
+
+        .mb-54 {
+            margin-bottom: 54px;
+        }
+
+        .mr-36 {
+            margin-right: 36px;
+        }
+
+        .ml-4 {
+            margin-left: 4px;
+        }
+
+        .ml-8 {
+            margin-left: 8px;
+        }
+
+        .ml-36 {
+            margin-left: 36px;
+        }
+
+        .ml-40 {
+            margin-left: 40px;
+        }
+
+        .ml-50 {
+            margin-left: 50px;
+        }
+
+        .ml-75 {
+            margin-left: 75px;
+        }
+
+        .ml-100 {
+            margin-left: 100px;
+        }
+
+        .ml-120 {
+            margin-left: 120px;
+        }
+
+        .ml-124 {
+            margin-left: 124px;
+        }
+
+        .ml-150 {
+            margin-left: 150px;
+        }
+
+        .ml-164 {
+            margin-left: 164px;
+        }
+
+        .ml-200 {
+            margin-left: 200px;
+        }
+
+        .ml-240 {
+            margin-left: 240px;
+        }
+
+        .mt-4 {
+            margin-top: 4px;
+        }
+
+        .mt-8 {
+            margin-top: 4px;
+        }
+
+        .mt-12 {
+            margin-top: 4px;
+        }
+
+        .uppercase {
+            text-transform: uppercase;
+        }
+
+        .text-right {
+            text-align: right;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .underline {
+            text-decoration: underline;
+        }
+
+        .bold {
+            font-weight: bold;
+        }
+
+        .f-weight-600 {
+            font-weight: 600;
+        }
+
+        .center-y {
+            display: flex;
+            align-items: center;
+        }
+
+        .center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .italic {
+            font-style: italic;
+        }
+
+        .f-12 {
+            font-size: 12px;
+        }
+
+        .f-11 {
+            font-size: 11px;
+        }
+
+        .f-10 {
+            font-size: 10px;
+        }
+
+        .f-9 {
+            font-size: 9px;
+        }
+
+        .d-flex {
+            display: flex;
+        }
+
+        .w-50 {
+            width: 50%;
+        }
+
+        .w-60 {
+            width: 60%;
+        }
+
+        .w-40 {
+            width: 40%;
+        }
+
+        .w-33 {
+            width: 33.33%;
+        }
+
+        .min-w180 {
+            min-width: 180px;
+        }
+
+        .column {
+            flex-direction: column;
+        }
+
+        .relative {
+            position: relative;
+        }
+
+        .cus-line {
+            margin-top: auto;
+        }
+
+        .cus-line::before {
+            content: "";
+            width: 200px;
+            height: 2px;
+            background-color: black;
+            position: absolute;
+            left: 0;
+            top: -4px;
+        }
+
+        .cus-list-style {
+            list-style-type: lower-latin;
+        }
+
+        .justify-space-between {
+            justify-content: space-between;
+        }
+
+        .align-center {
+            align-items: center;
+        }
+
+        hr {
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="section">
+        <p class="f-12 bold text-center">HỢP ĐỒNG MUA BÁN TRÁI PHIẾU</p>
+        <p class="f-11 bold text-center italic">BOND PURCHASE CONTRACT</p>
+        <p class="f-10 ml-164 mb-12">Số/<span class="italic">No:</span></p>
+        <p class="f-10">
+            Hợp Đồng Mua Bán Trái Phiếu (“Hợp Đồng”) này được giao kết ngày
+            <span class="ml-50">bởi và giữa các Bên:</span>
+        </p>
+        <p class="f-9 italic">
+            This Bond Purchase Contract ("Contract") is formed on
+            <span class="ml-50">by and between the Parties:</span>
+        </p>
+        <div class="d-flex f-10 f-weight-600">
+            <p class="min-w180">BÊN MUA:</p>
+            <p>CÔNG TY CỔ PHẦN CHỨNG KHOÁN VNDIRECT</p>
+        </div>
+        <div class="d-flex f-9 f-weight-600 italic">
+            <p class="min-w180">THE PURCHASER:</p>
+            <p>VNDIRECT SECURITIES CORPORATION</p>
+        </div>
+        <div class="d-flex f-10">
+            <p class="min-w180">Địa chỉ trụ sở:</p>
+            <p>
+                Số 1 Nguyễn Thượng Hiền, phường Nguyễn Du, quận Hai Bà Trưng, Hà Nội
+            </p>
+        </div>
+        <div class="d-flex f-9 italic">
+            <p class="min-w180">Headquarter address:</p>
+            <p>
+                1 Nguyen Thuong Hien Street, Nguyen Du Ward, Hai Ba Trung District,
+                Hanoi
+            </p>
+        </div>
+        <div class="d-flex f-10">
+            <p class="min-w180">Số ĐKKD:</p>
+            <p>22/UBCK-GPHĐKD do Ủy ban chứng khoán Nhà nước cấp ngày 16/11/2006</p>
+        </div>
+        <div class="d-flex f-9 italic">
+            <p class="min-w180">Registration no:</p>
+            <p>
+                22/UBCK-GPHDKD issued by the State Securities Commission of Vietnam on
+                16/11/2006
+            </p>
+        </div>
+        <div class="d-flex">
+            <div class="w-50">
+                <div class="d-flex align-center">
+                    <div class="min-w180">
+                        <p class="f-10">Điện thoại:</p>
+                        <p class="f-9 italic">Phone no.:</p>
+                    </div>
+                    <p class="f-10">024.3.8724596</p>
+                </div>
+            </div>
+            <div class="w-50">
+                <div class="d-flex align-center ml-50">
+                    <div class="">
+                        <p class="f-10">Fax:</p>
+                        <p class="f-9 italic">Fax no.:</p>
+                    </div>
+                    <p class="f-10 ml-36">024.3.9724600</p>
+                </div>
+            </div>
+        </div>
+        <p class="f-10">Người đại diện:</p>
+        <p class="f-9 italic">Representative (if applicable):</p>
+        <p class="f-10">
+            Theo ủy quyền số
+            <span class="ml-200">của CTCP Chứng khoán VNDIRECT</span>
+        </p>
+        <p class="f-9">
+            According to the Power of Attorney no.:
+            <span class="ml-124"> of VNDIRECT Securities Corporation </span>
+        </p>
+        <p class="f-10">
+            (Sau đây gọi tắt là <span class="italic">"Bên Mua"</span> hoặc
+            <span class="italic">"VNDIRECT"</span>)
+        </p>
+        <p class="f-9 italic">
+            (Hereinafter referred to as "The Purchaser" or "VNDIRECT")
+        </p>
+        <p class="f-10">Và / <span class="italic">And</span></p>
+        <p class="f-10 f-weight-600">BÊN BÁN:</p>
+        <p class="f-9 italic f-weight-600">THE SELLER:</p>
+        <p class="f-10">Địa chỉ:</p>
+        <p class="f-9 italic">Address:</p>
+        <p class="f-10">CMND/CCCD/MSDN:</p>
+        <p class="f-9 italic">Identity/Registration No.:</p>
+        <!--  -->
+        <p class="f-10">Ngày cấp:</p>
+        <p class="f-9 italic">Date of issue:</p>
+        <p class="f-10">Nơi cấp:</p>
+        <p class="f-9 italic">Place of issue:</p>
+        <p class="f-10">Điện thoại:</p>
+        <p class="f-9 italic">Phone no.:</p>
+
+        <p class="f-10">
+            Tài khoản chứng khoán: <span class="ml-200">mở tại</span>
+            <span class="ml-36">CTCP Chứng khoán VNDIRECT</span>
+        </p>
+        <p class="f-9 italic">
+            Account no.: <span class="ml-240">opened at</span>
+            <span class="ml-36">VNDIRECT Securities Corporation</span>
+        </p>
+
+        <p class="f-10">Người đại diện (nếu có):</p>
+        <p class="f-9 italic">Representative (if applicable):</p>
+        <p class="f-10">Theo ủy quyền số:</p>
+        <p class="f-9 italic">According to the Power of Attorney no.:</p>
+        <p class="f-10">
+            (Sau đây gọi tắt là <span class="italic">"Bên Bán"</span>)
+        </p>
+        <p class="f-9 italic mb-8">(Hereinafter referred to as “The Seller”)></p>
+        <p class="italic f-10 f-weight-600">
+            Hai Bên cùng giao kết Hợp Đồng này với những điều khoản và điều kiện như
+            sau:
+        </p>
+        <p class="f-9 italic mb-12">
+            Two parties hereby enter into this Contract with the following terms and
+            conditions :
+        </p>
+        <p class="f-10 f-weight-600">ĐIỀU 1. ĐỐI TƯỢNG MUA BÁN</p>
+        <p class="f-10">
+            Bên Bán đồng ý bán cho Bên Mua và Bên Mua đồng ý mua từ Bên Bán trái
+            phiếu được mô tả dưới đây (sau đây gọi là
+            <span class="f-weight-600">"Trái Phiếu"</span> )
+        </p>
+        <p class="italic f-weight-600 f-10">1.1. Trái Phiếu mua bán:</p>
+        <ul class="f-10 cus-list-style">
+            <li>Tên Trái Phiếu:</li>
+            <li>Tổ chức phát hành:</li>
+            <li>
+                <p>Mệnh giá Trái Phiếu:</p>
+                <p class="italic">(Bằng chữ:)</p>
+            </li>
+            <li class="mb-48">Lãi suất Trái Phiếu:</li>
+            <li>Ngày phát hành:</li>
+            <li class="mb-8">Ngày đáo hạn:</li>
+        </ul>
+        <p class="f-10 f-weight-600 italic">1.2. Số lượng Trái Phiếu mua:</p>
+        <p class="f-10 f-weight-600 italic">1.3. Giá mua mỗi Trái Phiếu:</p>
+        <p class="f-10 f-weight-600 italic">
+            1.4. Tổng giá trị chuyển nhượng Trái Phiếu:
+        </p>
+        <p class="f-10 italic">(Bằng chữ:</p>
+        <p class="f-10 f-weight-600 italic mb-8">1.5. Ngày giao dịch:</p>
+        <p class="f-10 italic f-weight-600">ARTICLE 1. PURCHASING OBJECT</p>
+        <p class="f-10 italic">
+            The Seller hereby agreed to sell to the Purchaser and the Purchaser
+            agreed to purchase from the Seller the bonds as described below
+            (hereinafter referred to as <span class="f-weight-600">"Bond"</span> )
+        </p>
+        <p class="f-10 italic f-weight-600">1.1. Bonds in sale and purchase:</p>
+        <ul class="f-10 cus-list-style italic">
+            <li>Name: <span class="ml-50">Bonds of</span></li>
+            <li>The Issuer:
+            </li>
+            <li>
+                <p>Par value: <span class="ml-50">VND</span></p>
+                </p>
+                <p class="italic">(In words:)
+                </p>
+            </li>
+            <li class="mb-48">Interest rate:</li>
+            <li>Issuance date:
+            </li>
+            <li class="mb-8">Maturity date:</li>
+        </ul>
+        <p class="f-10 italic f-weight-600">1.2.Number of Bonds purchased:</p>
+        <p class="f-10 italic f-weight-600">1.3. Purchase price of each Bond:</p>
+        <p class="f-10 italic f-weight-600">1.4. Total value of transaction:</p>
+        <p class="italic f-10">(In words:)</p>
+        <p class="f-10 italic f-weight-600 mb-8">1.5. Trading day:</p>
+        <p class="f-10 f-weight-600">ĐIỀU 2. THANH TOÁN VÀ CHUYỂN NHƯỢNG</p>
+        <p class="f-10">2.1 Sau khi Hợp đồng được giao kết, chậm nhất trước 14h30 Ngày giao dịch, Bên Bán có nghĩa vụ
+            chuyển giao cho
+            Bên Mua bản gốc Giấy chứng nhận quyền sở hữu số Trái Phiếu nêu tại Điều 1 Hợp đồng này (nếu đã được cấp).
+        </p>
+        <p class="f-10">2.2 Sau khi nhận được các tài liệu nêu trên của Bên Bán, trong Ngày giao dịch, Bên Mua sẽ thực
+            hiện việc thanh
+            toán Tổng giá trị chuyển nhượng Trái Phiếu quy định tại Điều 1 cho Bên Bán bằng cách chuyển khoản/nộp tiền
+            (với số tiền bằng Tổng giá trị chuyển nhượng Trái Phiếu sau khi khấu trừ các khoản thuế, phí mà Bên Bán phải
+            nộp theo quy định) vào tài khoản chứng khoán của Bên Bán mở tại Công ty Cổ Phần Chứng khoán VNDIRECT </p>
+        <p class="f-10 mb-8">2.3 Bên Bán đồng ý và ủy quyền cho Bên Mua, sau khi đã thanh toán cho Bên Bán và nhận được
+            các
+            tài liệu nêu tại
+            Khoản 2.1 Điều 2 trên đây, thực hiện các thủ tục chuyển quyền sở hữu Trái Phiếu từ Bên Bán sang cho Bên
+            Mua.
+        </p>
+        <p class="f-10 f-weight-600 italic">ARTICLE 2. PAYMENT AND TRANSFER </p>
+        <p class="f-10 italic">2.1 After the Contract is entered into, no later than 14:30 on the Trading Day, the
+            Seller is obliged to transfer to the
+            Purchaser with original Bond Ownership Certificate as stated in Article 1 of this Contract (if already
+            granted).
+        </p>
+        <p class="f-10 italic">2.2 After receiving above documents of the Seller, in the Trading Day, the Purchaser
+            shall make payment for Total
+            Value of Bond Purchase as specified in Article 1 to the Seller by transferring/depositing (with an amount
+            equal
+            to the Total Value of Bonds purchased after deducting taxes, fees payable by the Seller as prescribed) into
+            the
+            Seller's securities account opened at VNDIRECT Securities Corporation.
+        </p>
+        <p class="f-10 italic mb-8">2.3 The Seller agrees and authorizes the Purchaser, after making payment to the
+            Seller
+            and receiving the documents
+            mentioned in Clause 2.1 of Article 2 above, to carry procedures to transfer ownership of the Bonds from the
+            Seller to the Purchaser
+        </p>
+        <p class="f-10 f-weight-600">ĐIỀU 3. QUYỀN VÀ NGHĨA VỤ CỦA BÊN BÁN</p>
+        <p class="f-10">3.1 Bên Bán có quyền được nhận được đầy đủ và đúng hạn Tổng giá trị chuyển nhượng Trái Phiếu do
+            Bên Mua
+            thanh toán theo Hợp Đồng này.</p>
+        <p class="f-10">3.2 Bên Bán cam kết rằng Bên Bán là chủ thể có quyền sở hữu và có quyền chuyển nhượng số Trái
+            Phiếu nêu tại
+            Điều 1 cho Bên Mua.</p>
+        <p class="f-10">3.3 Bên Bán có nghĩa vụ thực hiện thủ tục để chuyển quyền sở hữu số Trái Phiếu nêu tại Điều 1
+            cho Bên Mua theo
+            đúng quy định tại Điều 2.</p>
+        <p class="f-10">3.4 Bên Bán có nghĩa vụ bảo vệ quyền lợi của Bên Mua và chịu trách nhiệm bồi thường thiệt hại
+            cho Bên Mua nếu
+            phát sinh tranh chấp về quyền sở hữu đối với số Trái Phiếu nêu tại Điều 1</p>
+        <p class="f-10">3.5 Bên Bán cung cấp trung thực các thông tin, tài liệu về Trái Phiếu theo yêu cầu của Bên Mua
+        </p>
+        <p class="f-10 mb-8">3.6 Bên Bán ủy quyền cho Bên Mua thực hiện các công việc và thủ tục cần thiết để chuyển
+            quyền sở
+            hữu Trái phiếu
+            từ Bên Bán sang cho Bên Mua theo Hợp đồng này</p>
+        <p class="f-10 f-weight-600 italic">ARTICLE 3. RIGHTS AND OBLIGATIONS OF THE SELLER</p>
+        <p class="f-10 italic">3.1 The Seller has the right to fully and punctually receive Total Value of Transaction
+            paid by the Purchaser
+            pursuant to this Contract.</p>
+        <p class="f-10 italic">3.2 The Seller commits that the Seller is the owner and has the right to transfer the
+            Bonds referred to in Article 1 to
+            the Purchaser.
+        </p>
+        <p class="f-10 italic">33.3 The Seller is obliged to carry out procedures to transfer the ownership of the Bonds
+            referred to in Article 1 to the Purchaser as specified in Article 2.</p>
+        <p class="f-10 italic">3.4 The Seller is obliged to protect the Purchaser’s rights and is responsible for
+            compensating the Purchaser for
+            any damage arising from the ownership of the Bonds referred to in Article 1.</p>
+        <p class="f-10 italic">3.5 The Seller provides truthful information about Bonds at the request of the Purchaser
+        </p>
+        <p class="f-10 italic mb-8">3.6 The Seller authorized the Purchaser to carry out necessary procedures to
+            transfer the
+            ownership of the Bonds
+            from the Seller to the Purchaser according to this Contract.
+        </p>
+        <p class="f-10 f-weight-600">ĐIỀU 4. QUYỀN VÀ NGHĨA VỤ CỦA BÊN MUA
+        </p>
+        <p class="f-10">4.1 Bên Mua có nghĩa vụ hoàn tất thanh toán Tổng giá trị chuyển nhượng Trái Phiếu cho Bên Bán
+            theo đúng thời
+            hạn và quy định tại Điều 2.</p>
+        <p class="f-10">4.2 Bên Mua có quyền sở hữu toàn bộ số Trái Phiếu và được thụ hưởng các quyền và lợi ích phát
+            sinh từ Trái phiếu
+            sau khi Bên Mua thực hiện xong thực hiện xong việc thanh toán và hoàn thành thủ tục chuyển quyền sở hữu Trái
+            Phiếu tại Tổ chức phát hành và/hoặc Đại lý Đăng ký Trái phiếu.</p>
+        <p class="f-10">4.3 Bên Mua tự chịu trách nhiệm về tính hợp pháp của tiền mua Trái Phiếu và thực hiện đầy đủ các
+            thủ tục có liên
+            quan đến việc thanh toán, chuyển tiền mua Trái Phiếu theo quy định của pháp luật Việt Nam.</p>
+        <p class="f-10">4.4 Bên Mua có quyền sở hữu Trái Phiếu và được thụ hưởng các quyền và lợi ích phát sinh từ Trái
+            phiếu kể từ khi
+            thực hiện xong việc thanh toán cho Bên Bán.
+        </p>
+        <p class="f-10">4.5 Bên Mua có quyền chuyển nhượng lại Trái Phiếu cho người khác sau khi Bên Mua có quyền sở hữu
+            Trái phiếu.</p>
+        <p class="f-10">4.6 Bên Mua có nghĩa vụ cùng với Bên Bán thực hiện thủ tục chuyển quyền sở hữu số Trái Phiếu nêu
+            tại Điều 1
+            Hợp Đồng này cho Bên Mua</p>
+        <p class="f-10 mb-8">4.7 Bên Mua có quyền đơn phương chấm dứt Hợp đồng này nhưng phải thông báo cho Bên Bán biết
+            trước và chỉ
+            có thể chấm dứt thực hiện Hợp Đồng này khi số Trái Phiếu nêu tại Điều 1 chưa được Bên Bán thực hiện chuyển
+            quyền sở hữu cho Bên Mua.
+        </p>
+        <p class="f-10 f-weight-600 italic">ARTICLE 4. RIGHTS AND OBLIGATIONS OF THE PURCHASER</p>
+        <p class="f-10 italic">4.1 The Purchaser is obliged to complete its payment for Total Value of Transaction to
+            the Seller in accordance with
+            the time limit and provisions in Article 2.
+        </p>
+        <p class="f-10 italic">4.2 The Purchaser has the right to own all of the Bonds and is entitled to receive the
+            rights and benefits arising from
+            the Bonds after completing the payment and procedure to transfer Bond ownership at the Issuer and/or the
+            Bond
+            Registering Agency</p>
+        <p class="f-10 italic">4.3 The Purchaser is solely responsible for the legality of the purchase amount and fully
+            carries out procedures
+            related to the payment and money transfer for the purchase of Bonds in accordance with the laws of Vietnam.
+        </p>
+        <p class="f-10 italic">4.4 The Purchaser has the right to own the Bonds and is entitled to receive the rights
+            and benefits arising from the
+            Bonds upon completion of payment to the Seller.</p>
+        <p class="f-10 italic">4.5 The Purchaser has the right to transfer the Bonds to another person after the
+            Purchaser has its ownership to the
+            Bonds</p>
+        <p class="f-10 italic">4.6 The Purchaser is obliged together with the Seller to carry out procedures to transfer
+            ownership of the Bonds
+            referred to in Article 1 of this Contract to the Purchaser.
+        </p>
+        <p class="f-10 italic">4.7 The Purchaser has the right to unilaterally terminate this Contract but must notify
+            the Seller in advance and can
+            only terminate this Contract when the Seller has not transferred the ownership of the Bonds referred to in
+            Article
+            1 to the Purchaser.
+        </p>
+        <p class="f-10 f-weight-600">ĐIỀU 5. BẢO MẬT THÔNG TIN, CHUYỂN NHƯỢNG HỢP ĐỒNG</p>
+        <p class="f-10">5.1 Các Bên cam kết không thông báo hoặc tiết lộ công khai các điều khoản hoặc quy định của Hợp
+            đồng này mà
+            không có sự chấp thuận trước bằng văn bản của Bên kia, trừ trường hợp theo yêu cầu cơ quan Nhà nước và quy
+            định của pháp luật.
+        </p>
+        <p class="f-10 mb-8">5.2 Không Bên nào được chuyển nhượng và/hoặc chuyển giao Hợp đồng này và bất kỳ quyền hay
+            nghĩa vụ tương
+            ứng nào của mỗi Bên quy định tại Hợp đồng này cho Bên thứ ba nếu không có sự chấp thuận trước bằng văn
+            bản của Bên kia
+        </p>
+        <p class="f-10 italic f-weigth-600">ARTICLE 5. INFORMATION SECURITY, CONTRACT TRANSFER</p>
+        <p class="f-10 italic">5.1 The Parties undertake not to notify or publicly disclose any terms or provisions of
+            this Contract without prior
+            written consent of the other Party, except as required by State authorities and regulations of the law.</p>
+        <p class="f-10 italic mb-8">5.2 Neither Party may assign and/or transfer this Contract and any respective rights
+            or
+            obligations of each Party
+            provided in this Contract to any Third Party without the other Party's prior written consent.
+        </p>
+        <p class="f-10 f-weight-600">ĐIỀU 6. CHẤM DỨT HỢP ĐỒNG</p>
+        <p class="f-10">Hợp Đồng này chấm dứt trong các trường hợp sau đây:</p>
+        <p class="f-10">6.1 Mỗi Bên đã thực hiện xong các nghĩa vụ của mình đối với Bên kia theo quy định của Hợp Đồng
+            này</p>
+        <p class="f-10">6.2 Hai Bên có văn bản thoả thuận về việc chấm dứt Hợp Đồng trước thời hạn.</p>
+        <p class="f-10">6.3 Các trường hợp khác theo quy định của pháp luật.
+        </p>
+
+        <p class="f-10 italic f-weight-600">ARTICLE 6. TERMINATION OF CONTRACT</p>
+        <p class="f-10 italic">This Contract shall terminate in the following cases:</p>
+        <p class="f-10 italic">6.1 Each Party has fulfilled its obligations to the other Party in accordance with this
+            Contract</p>
+        <p class="f-10 italic">6.2 The Parties have a written agreement on termination of this Contract ahead of time.
+        </p>
+        <p class="f-10 italic mb-8">6.3 Other cases as prescribed by the law.
+        </p>
+        <p class="f-10 f-weight-600">ĐIỀU 7. TRÁCH NHIỆM DO VI PHẠM HỢP ĐỒNG</p>
+        <p class="f-10 mb-8">Trường hợp một Bên vi phạm bất kỳ quy định nào của Hợp Đồng này gây thiệt hại cho Bên kia
+            thì
+            Bên vi phạm phải
+            bồi thường mọi thiệt hại gây ra cho Bên kia.</p>
+        <p class="f-10 italic f-weight-600">ARTICLE 7. RESPONSIBILITY FOR VIOLATION OF CONTRACT</p>
+        <p class="f-10 italic mb-8">If either Party violates any provision of this Contract and causes damage to the
+            other
+            Party, such Party shall
+            compensate any caused damage to the other Party.
+        </p>
+        <p class="f-10 f-weight-600">ĐIỀU 8. ĐIỀU KHOẢN CHUNG</p>
+        <p class="f-10">8.1 Hợp Đồng này được giải thích và áp dụng bởi pháp luật Việt Nam.</p>
+        <p class="f-10">8.2 Mọi tranh chấp phát sinh từ Hợp Đồng này sẽ được giải quyết tại Tòa án nhân dân có thẩm
+            quyền của Việt Nam
+            nếu hai Bên không giải quyết được bằng thương lượng thiện chí. </p>
+        <p class="f-10">8.3 Các Bên cam kết bảo mật tất cả những giấy tờ, tài liệu, thông tin trao đổi giữa các Bên liên
+            quan đến Hợp Đồng
+            này và chỉ tiết lộ cho bên thứ ba nếu được Bên kia đồng ý trước bằng văn bản trừ trường hợp tiết lộ cho Tổ
+            chức
+            phát hành, những người ủy quyền, người kế nhiệm hợp pháp và những người này phải tuân thủ nghĩa vụ bảo mật
+            như là một bên của Hợp đồng. </p>
+        <p class="f-10 mb-8">Hợp Đồng này có hiệu lực kể từ khi được giao kết, được lập thành một hoặc nhiều bản có giá
+            trị pháp lý như
+            nhau.</p>
+        <p class="f-10 f-weight-600 italic">ARTICLE 8. GENERAL PROVISIONS</p>
+        <p class="f-10 italic">8.1 This Contract is explained and applied by Vietnamese law.
+        </p>
+        <p class="f-10 italic">8.2 Any dispute arising from this Contract shall be settled at the competent People's
+            Court of Vietnam if two Parties are impossible to resolve it by negotiation and goodwill.</p>
+        <p class="f-10 italic">8.3 The Parties undertake to keep all exchanged documents, records and information
+            between the Parties in relation
+            to this Contract and only disclose to third parties if the other Party has written approval unless otherwise
+            disclosed to the Issuer, the authorized persons, legal successors and these persons must comply with
+            confidentiality obligations as a party of the Contract.
+        </p>
+        <p class="f-10 italic mb-12">This Contract takes effect from the time it is entered into, is made into one or more
+            copies with the same legal validity
+        </p>
+        <div class="d-flex">
+            <div class="w-50 text-center">
+                <p class="f-10 f-weight-600">BÊN BÁN
+                </p>
+                <p class="f-10 f-weight-600 italic">THE SELLER
+                </p>
+
+            </div>
+            <div class="w-50 text-center">
+                <p class="f-10 f-weight-600">BÊN MUA
+                    </p>
+                <p class="f-10 f-weight-600 italic">THE PURCHASER</p>
+            </div>
+
+        </div>
+
+    </div>
+</body>
+
+</html>
+XF

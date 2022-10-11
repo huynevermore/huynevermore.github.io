@@ -1,0 +1,32 @@
+.assets-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 36px;
+    padding: 0 5px;
+    margin: 0;
+    line-height: 36px;
+    font-weight: 700;
+    border-bottom: 1px solid hsla(0,0%,47.1%,.15);
+    background: #78787826;
+    color: #f7941d;
+    
+}
+
+
+.assets-action span{
+    cursor: pointer;
+}
+
+.net-worth,
+.margin-blance,
+.tax-fees{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 30px;
+    border-bottom: 1px solid #78787826;
+    font-size: 13px;
+    font-weight: 400;
+    padding: 0 5px;
+}

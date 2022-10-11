@@ -1,0 +1,98 @@
+#order-box-container {
+  position: relative;
+}
+
+#order-box-container .cus-tab-order-box {
+  color: #000;
+}
+
+.icon-order-box {
+  font-size: 18px;
+  margin-left: auto;
+  color: orange;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+#order-box-container .nav-pills .nav-link.active {
+  color: #f7941d;
+  font-weight: 700;
+  background-color: #2f3240;
+  font-size: 12px;
+}
+
+#order-box-container .nav-pills .nav-link {
+  color: #fff;
+  background-color: #2f3240;
+  font-size: 12px;
+  padding: 0 36px;
+}
+#order-box-container .inactive {
+  display: grid;
+  grid-template-columns: 22px 50px 90px 70px 60px 1fr;
+  font-size: 13px;
+  line-height: 32px;
+  height: 32px;
+  align-items: center;
+}
+
+#order-box-container .inactive:nth-child(odd) {
+  background-color: #78787826;
+}
+.command-list {
+  display: grid;
+  line-height: 32px;
+  height: 32px;
+  font-weight: 700;
+  font-size: 13px;
+  align-items: center;
+
+  background-color: #78787826;
+}
+
+.tab-order-day .command-list {
+  grid-template-columns: 22px 50px 90px 70px 60px 1fr;
+}
+
+.tab-order-day > p,
+.tab-conditional-order > p {
+  line-height: 50px;
+  font-size: 15px;
+  text-align: center;
+  color: #777;
+}
+
+.tab-conditional-order .command-list {
+  grid-template-columns: 40px 60px 60px 40px 40px 80px 30px 1fr;
+  height: 54px;
+  text-align: center;
+}
+
+#order-box-container .btn-yes:hover {
+  background: #cc7001;
+}
+#order-box-container .btn-yes {
+  background: #f7941d;
+}
+
+#order-box-container .btn-no {
+  background: #acacac;
+}
+#order-box-container .btn-no:hover {
+  background: #7a7a7a;
+}
+
+#order-box-container .btn-no,
+#order-box-container .btn-yes {
+  width: 42px;
+  height: 20px;
+  text-align: center;
+  border-radius: 3px;
+  font-size: 11px;
+  color: #fff;
+  border: 0;
+  display: inline-block;
+  cursor: pointer;
+  margin-right: 2px;
+}

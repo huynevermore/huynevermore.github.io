@@ -1,0 +1,110 @@
+#history {
+  background: #2f3240;
+  margin: 1px;
+  flex: 1 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  color: #fff;
+  font-size: 13px;
+}
+
+.red {
+  color: red !important;
+}
+
+#history .derivative-info {
+  display: grid;
+  grid-template-columns: 34% 22% 22% 22%;
+  border-bottom: 1px solid #444;
+  height: 42px;
+}
+
+#history .derivative-info > div {
+  padding: 0 5px;
+}
+
+#history .derivative-info.fl {
+  color: #00c5c5;
+  cursor: pointer;
+}
+#history .derivative-info.ref {
+  color: #ffd900;
+  cursor: pointer;
+}
+
+#history .derivative-info.cl {
+  color: #ff25ff;
+  cursor: pointer;
+}
+
+#history .derivative-info .symbol {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+#history .nav-pills .nav-link {
+  color: #fff;
+  background-color: #2f3240;
+  font-size: 12px;
+  padding: 0 36px;
+}
+
+#history .nav-pills .nav-link.active {
+  color: #f7941d;
+  font-weight: 700;
+  background-color: #2f3240;
+  font-size: 12px;
+}
+
+#history .command-list {
+  line-height: 27px;
+  height: 27px;
+  font-weight: 400;
+  font-size: 13px;
+  align-items: center;
+  text-align: center;
+  background-color: #78787826;
+}
+
+#history .tab-step-price .command-list,
+#history .tab-step-price .derivative-info-row-price {
+  display: grid;
+  grid-template-columns: 15% 35% 35% 15%;
+}
+
+#history .tab-command-match-history .command-list,
+#history .tab-command-match-history .derivative-info-row {
+  display: grid;
+  grid-template-columns: 20% 18% 17% 17% 1fr;
+}
+
+#history .tab-step-price .derivative-info-row-price:nth-child(odd),
+#history .tab-command-match-history .derivative-info-row:nth-child(odd) {
+  background-color: #2f3240;
+}
+
+#history .tab-step-price .derivative-info-row-price,
+#history .tab-command-match-history .derivative-info-row {
+  height: 27px;
+}
+.derivative-info-row-price > div {
+  border-left: 1px solid #444;
+  border-top: 1px solid #444;
+  border-bottom: 1px solid #444;
+  padding: 0 5px;
+  margin-top: -1px;
+  line-height: 27px;
+}
+
+.txt-green {
+  color: #0f0 !important;
+}
+
+.txt-red {
+  color: red !important;
+}
+
+.derivative-info-row > div {
+  border-left: 1px solid #444;
+  padding: 0 5px;
+}

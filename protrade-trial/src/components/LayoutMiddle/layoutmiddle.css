@@ -1,0 +1,8 @@
+.layout-middle {
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+}
+
+
